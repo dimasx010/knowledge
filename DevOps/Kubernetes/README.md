@@ -2,6 +2,8 @@
 
 ## General
 Kubernetes is a portable and extensible open source platform for managing workloads and services. Kubernetes facilitates automation and declarative configuration. It has a large and rapidly growing ecosystem. Support, tools and services for Kubernetes are widely available.
+
+
 ![image](https://github.com/dimasx010/knowledge/assets/25352560/476f131c-6005-4c00-a7a3-6867b917e4f0)
 
 ## What is?
