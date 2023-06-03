@@ -25,7 +25,7 @@ When talking about services again, the power of autoscaling and administration i
 ## Characteristics
 - Pods (Minions)
 - Clusters
-- Networking
+- Services (Networking)
 - Deployment
 - Nodes
 - LoadBalancer (ingress and others)
