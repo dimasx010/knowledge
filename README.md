@@ -1,2 +1,2 @@
 # knowledge
-Knowledge in general tech
+Knowledge in general tech **ENGLISH**
