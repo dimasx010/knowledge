@@ -6,7 +6,7 @@ This is a space where different topics will be discussed, but mainly oriented to
 Being a space where all the information is easily accessible and as transparent as possible for everyone.
 
 
-![image](https://github.com/dimasx010/knowledge/assets/25352560/5e41d840-165e-47bf-a3b6-c68bb9400b3d)
+![image](https://github.com/dimasx010/knowledge/assets/25352560/b5819788-b1f1-4719-a923-9b9ef3ecbc23)
 
 
 ## Why?
@@ -28,4 +28,4 @@ So if you plan to dedicate yourself to the world of technology in general, Engli
 _Knowledge in general tech **ENGLISH**_
 
 
-_More in [Di Mas Cloud](https://dimascloud.com)
+_More in [Di Mas Cloud](https://dimascloud.com)_
