@@ -6,7 +6,7 @@ This is a space where different topics will be discussed, but mainly oriented to
 Being a space where all the information is easily accessible and as transparent as possible for everyone.
 
 <p align="center" width="100%">
-    <img width="33%" src="https://github.com/dimasx010/knowledge/assets/25352560/036c2383-33a2-4036-9e3d-ef76cca08925"> 
+    <img src="https://github.com/dimasx010/knowledge/assets/25352560/036c2383-33a2-4036-9e3d-ef76cca08925"> 
 </p>
 
 ## Why?
