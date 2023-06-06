@@ -1,4 +1,4 @@
-# ESCAMIENTOS VERTICAL 
+# ESCALADO VERTICAL 
 
 El escalado vertical tiene mucho que ver con el hardware del servidor de la aplicación. Se consigue de una manera muy sencilla: aumentando los recursos del servidor. Principalmente, en lo que respecta a la capacidad de procesamiento, memoria y almacenamiento. Este tipo de escalado es bastante sencillo de alcanzar, ya que únicamente requiere una intervención en el hardware del equipo, aumentando los recursos o incluso cambiando completamente de servidor. Sin embargo, el beneficio que se puede llegar a obtener también es limitado.
 
