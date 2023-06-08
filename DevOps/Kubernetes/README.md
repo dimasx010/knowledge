@@ -23,7 +23,7 @@ Kubernetes has several features. You can think of Kubernetes as:
 When talking about services again, the power of autoscaling and administration is something extremely important, so with kubernetes we can perform in an optimal way all the administration of both scaling and management of our applications, using the tools based mainly on containers
 
 ## Characteristics
-- Pods (Minions)
+- [Pods (Minions)](https://github.com/dimasx010/knowledge/blob/pods-kubernetes-profesional/DevOps/Kubernetes/Pods.md)
 - Clusters
 - Services (Networking)
 - Deployment
