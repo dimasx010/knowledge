@@ -27,7 +27,7 @@ When talking about services again, the power of autoscaling and administration i
 - [Clusters](https://github.com/dimasx010/knowledge/blob/clusters-kubernetes-profesional/DevOps/Kubernetes/Clusters.md)
 - Services (Networking)
 - Deployment
-- [Nodes](https://github.com/dimasx010/knowledge/blob/clusters-kubernetes-profesional/DevOps/Kubernetes/Nodes.md)
+- [Nodes](https://github.com/dimasx010/knowledge/blob/nodo-kubernetes-profesional/DevOps/Kubernetes/Nodes.md)
 - LoadBalancer (ingress and others)
 - Package control(Helm)
 
