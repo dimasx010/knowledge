@@ -1,4 +1,4 @@
-# Pods
+# Replicasets
 
 ## General
 
