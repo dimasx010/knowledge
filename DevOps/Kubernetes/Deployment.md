@@ -34,5 +34,6 @@ Uno de los casos de uso de este controlador se da cuando el ReplicaSet se encarg
 
 Otro de los casos de uso del controlador de Deployment es que permite limpiar los recursos de ReplicaSet que sean más antiguos y que ya no se necesiten en el sistema.
 
-##Escalado
+## Escalado
+
 Deployment también se caracteriza por permitir el escalado de tipo horizontal, lo que contribuye a que el controlador aumente su capacidad para soportar las diferentes cargas de trabajo.
