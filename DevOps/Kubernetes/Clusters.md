@@ -20,5 +20,9 @@ Al utilizar la consola para crear un cluster, si no selecciona ninguna función 
 
 Al utilizar la CLI o la API para crear un cluster, puede especificar si desea crear un clúster básico o un cluster mejorado. Si no especifica explícitamente el tipo de cluster que se va a crear, se crea un nuevo clúster como clúster básico por defecto.
 
+En la siguiente imagen podremos analizar gráfica lo que serían los clústers
+
+![image](https://github.com/dimasx010/knowledge/assets/105082657/e59fe88d-412f-468c-af99-7fe98e116cf0)
+
 ## Referencias
 - https://docs.oracle.com/es-ww/iaas/Content/ContEng/Concepts/contengclustersnodes.htm#:~:text=Engine%20for%20Kubernetes.-,Clusters%20de%20Kubernetes,define%20al%20crear%20el%20nodo.
