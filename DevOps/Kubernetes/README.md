@@ -25,10 +25,10 @@ When talking about services again, the power of autoscaling and administration i
 ## Characteristics
 - [Pods (Minions)](https://github.com/dimasx010/knowledge/blob/pods-kubernetes-profesional/DevOps/Kubernetes/Pods.md)
 - [Clusters](https://github.com/dimasx010/knowledge/blob/clusters-kubernetes-profesional/DevOps/Kubernetes/Clusters.md)
-- [Services (Networking)](https://github.com/dimasx010/knowledge/blob/deployment-kubernetes-profesional/DevOps/Kubernetes/Services.md)
+- [Services (Networking)](https://github.com/dimasx010/knowledge/blob/servicios-kubernetes-profesional/DevOps/Kubernetes/Services.md)
 - [Deployment](https://github.com/dimasx010/knowledge/blob/deployment-kubernetes-profesional/DevOps/Kubernetes/Deployment.md)
 - [Nodes](https://github.com/dimasx010/knowledge/blob/nodo-kubernetes-profesional/DevOps/Kubernetes/Nodes.md)
-- LoadBalancer (ingress and others)
+- [LoadBalancer (ingress and others)](https://github.com/dimasx010/knowledge/blob/servicios-kubernetes-profesional/DevOps/Kubernetes/Services.md)
 - Package control(Helm)
 
 ## Benefits
