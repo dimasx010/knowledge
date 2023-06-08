@@ -26,10 +26,12 @@ Además de esto, si sucede que el cliente quiere implementar un caso de uso que 
 
 Algunos de los casos de uso que normalmente lleva a cabo el controlador de Deployment son:
 
-##Despliegue de ReplicaSet
+## Despliegue de ReplicaSet
+
 Uno de los casos de uso de este controlador se da cuando el ReplicaSet se encarga de la creación de los recursos de pods que funcionan en un segundo plano. Además de esto, el controlador de Deployment cumple la función de verificar el estado de despliegue del recurso con el objetivo de comprobar que este sea el ideal o no.
 
-##Limpieza de ReplicaSet
+## Limpieza de ReplicaSet
+
 Otro de los casos de uso del controlador de Deployment es que permite limpiar los recursos de ReplicaSet que sean más antiguos y que ya no se necesiten en el sistema.
 
 ##Escalado
