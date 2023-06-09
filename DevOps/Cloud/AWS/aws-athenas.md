@@ -2,7 +2,9 @@
 
 Amazon Athena es un servicio de consultas interactivo que facilita el análisis de datos directamente en Amazon Simple Storage Service (Amazon S3) con SQL estándar. Con unas pocas acciones en la AWS Management Console, puede apuntar Athena a los datos almacenados en Amazon S3 y comenzar a utilizar SQL estándar para ejecutar consultas ad hoc y obtener resultados en cuestión de segundos.
 
-![athena](https://github.com/dimasx010/knowledge/assets/105082657/dfc75e63-0b42-43cf-9c7a-43b126efc8e3)
+<p align="center">
+  <img width="460" height="300" src="https://github.com/dimasx010/knowledge/assets/105082657/dfc75e63-0b42-43cf-9c7a-43b126efc8e3">
+</p>
 
 Si deseamos analizar el tema de configuración básica podemos consultar la siguiente url:
 
