@@ -28,6 +28,7 @@ When talking about services again, the power of autoscaling and administration i
 - Services (Networking)
 - Deployment
 - [Nodes](https://github.com/dimasx010/knowledge/blob/main/DevOps/Kubernetes/Characteristics/Nodes.md)
+- [Replicasets](https://github.com/dimasx010/knowledge/blob/main/DevOps/Kubernetes/Characteristics/Replicasets.md)
 - LoadBalancer (ingress and others)
 - Package control(Helm)
 
