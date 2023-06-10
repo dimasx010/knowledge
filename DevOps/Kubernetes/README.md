@@ -23,13 +23,13 @@ Kubernetes has several features. You can think of Kubernetes as:
 When talking about services again, the power of autoscaling and administration is something extremely important, so with kubernetes we can perform in an optimal way all the administration of both scaling and management of our applications, using the tools based mainly on containers
 
 ## Characteristics
-- [Pods (Minions)](https://github.com/dimasx010/knowledge/blob/pods-kubernetes-profesional/DevOps/Kubernetes/Pods.md)
-- [Clusters](https://github.com/dimasx010/knowledge/blob/clusters-kubernetes-profesional/DevOps/Kubernetes/Clusters.md)
-- [Services (Networking)](https://github.com/dimasx010/knowledge/blob/servicios-kubernetes-profesional/DevOps/Kubernetes/Services.md)
-- [Deployment](https://github.com/dimasx010/knowledge/blob/deployment-kubernetes-profesional/DevOps/Kubernetes/Deployment.md)
-- [Nodes](https://github.com/dimasx010/knowledge/blob/nodo-kubernetes-profesional/DevOps/Kubernetes/Nodes.md)
-- [LoadBalancer (ingress and others)](https://github.com/dimasx010/knowledge/blob/servicios-kubernetes-profesional/DevOps/Kubernetes/Services.md)
-- [Package control(Helm)](https://github.com/dimasx010/knowledge/blob/helm-kubernetes-profesional/DevOps/Kubernetes/Helm.md)
+- [Pods (Minions)](https://github.com/dimasx010/knowledge/blob/main/DevOps/Kubernetes/Characteristics/Pods.md)
+- [Clusters](https://github.com/dimasx010/knowledge/blob/main/DevOps/Kubernetes/Characteristics/Clusters.md)
+- [Nodes](https://github.com/dimasx010/knowledge/blob/main/DevOps/Kubernetes/Characteristics/Nodes.md)
+- [Replicasets](https://github.com/dimasx010/knowledge/blob/main/DevOps/Kubernetes/Characteristics/Replicasets.md)
+- [Deployment](https://github.com/dimasx010/knowledge/blob/main/DevOps/Kubernetes/Characteristics/Deployment.md)
+- [Sevices](https://github.com/dimasx010/knowledge/blob/main/DevOps/Kubernetes/Characteristics/Services.md)
+- [Package control(Helm)](https://github.com/dimasx010/knowledge/blob/main/DevOps/Kubernetes/Characteristics/Helm.md)
 
 ## Benefits
 - Multi environment with namespaces
