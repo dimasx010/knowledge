@@ -29,8 +29,7 @@ When talking about services again, the power of autoscaling and administration i
 - [Replicasets](https://github.com/dimasx010/knowledge/blob/main/DevOps/Kubernetes/Characteristics/Replicasets.md)
 - [Deployment](https://github.com/dimasx010/knowledge/blob/main/DevOps/Kubernetes/Characteristics/Deployment.md)
 - [Sevices](https://github.com/dimasx010/knowledge/blob/main/DevOps/Kubernetes/Characteristics/Services.md)
-- LoadBalancer (ingress and others)
-- Package control(Helm)
+- [Package control(Helm)](https://github.com/dimasx010/knowledge/blob/main/DevOps/Kubernetes/Characteristics/Helm.md)
 
 ## Benefits
 - Multi environment with namespaces
