@@ -25,10 +25,9 @@ When talking about services again, the power of autoscaling and administration i
 ## Characteristics
 - [Pods (Minions)](https://github.com/dimasx010/knowledge/blob/main/DevOps/Kubernetes/Characteristics/Pods.md)
 - [Clusters](https://github.com/dimasx010/knowledge/blob/main/DevOps/Kubernetes/Characteristics/Clusters.md)
-- Services (Networking)
-- Deployment
 - [Nodes](https://github.com/dimasx010/knowledge/blob/main/DevOps/Kubernetes/Characteristics/Nodes.md)
 - [Replicasets](https://github.com/dimasx010/knowledge/blob/main/DevOps/Kubernetes/Characteristics/Replicasets.md)
+- [Deployment](https://github.com/dimasx010/knowledge/blob/main/DevOps/Kubernetes/Characteristics/Deployment.md)
 - LoadBalancer (ingress and others)
 - Package control(Helm)
 
