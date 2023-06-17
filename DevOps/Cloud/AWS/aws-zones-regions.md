@@ -28,28 +28,7 @@ Este aislamiento permite que los usuario puedan construir sus aplicaciones y lle
 
 Además, estas zonas permiten que los usuarios operen bases de datos y múltiples aplicaciones de producción con un nivel alto de tolerancia a errores y escalabilidad y, al tratarse de dos zonas por región o más, se garantiza que estas ventajas sean mayores que las pudiera ofrecer un solo centro de datos.
 
-<p align="center">
-  <img width="460" height="300" src="https://github.com/dimasx010/knowledge/assets/105082657/a28b1b16-3344-41c2-88c6-9cd8168dd585">
-</p>
-
-Seleccionamos la storage y luego nos da la opción de crear un nuevo diagrama o ver uno ya existente.  
-
-<p align="center">
-  <img width="460" height="300" src="https://github.com/dimasx010/knowledge/assets/105082657/89c16162-a47a-4831-b5f4-9b1bf6c32e32">
-</p>
-
-Seguidamente si este es nuevo, seleccionamos el tipo de diagrama, en la siguiente imagen podremos ver las opciones:
-
-<p align="center">
-  <img width="460" height="300" src="https://github.com/dimasx010/knowledge/assets/105082657/299a4ec7-5d8d-44a4-a7c6-1035e090dcdb">
-</p>
-
-Dependiendo del tipo de diagrama podremos ver una panel de gestión parecido al siguiente: 
-
-<p align="center">
-  <img width="460" height="300" src="https://github.com/dimasx010/knowledge/assets/105082657/b01d7c68-b612-4bf0-9a73-ec314944afd7">
-</p>
-
 ## Referencias
 - https://keepcoding.io/blog/regiones-y-zonas-de-disponibilidad-de-aws/
+- https://aws.amazon.com/es/about-aws/global-infrastructure/?p=ngi&loc=1
 
