@@ -26,4 +26,4 @@ La implementación de la plataforma de Amazon CloudWatch incluye una serie de ve
 - Solución de problemas operativos gracias a la visualización de registros.
 
 ## Referencias
-- https://aws.amazon.com/es/cli/#:~:text=La%20Interfaz%20de%20la%20l%C3%ADnea,comandos%20y%20automatizarlos%20mediante%20scripts.​
+- https://keepcoding.io/blog/que-es-amazon-cloudwatch/​
