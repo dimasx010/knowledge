@@ -1,4 +1,4 @@
-# Runtime Environment
+# AWS CLI
 
 La Interfaz de la línea de comandos de AWS (AWS CLI) es una herramienta unificada para administrar los servicios de AWS. Solo tendrá que descargar y configurar una única herramienta para poder controlar varios servicios de AWS desde la línea de comandos y automatizarlos mediante scripts
 
