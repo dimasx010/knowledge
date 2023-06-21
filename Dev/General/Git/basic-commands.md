@@ -83,5 +83,5 @@ git checkout
 git remote remove origin
 ```
 
-## Referencias
+## References
 - https://www.atlassian.com/es/git/tutorials/what-is-git
