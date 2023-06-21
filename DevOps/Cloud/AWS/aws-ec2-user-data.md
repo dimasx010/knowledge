@@ -1,4 +1,4 @@
-# AWS Amazon Virtual Private Cloud VPC
+# User-data - Amazon EC2
 
 Básicamente User-data nos permite ejecutar comandos en la instancia de linux (EC2) durante su lanzamiento. 
 
