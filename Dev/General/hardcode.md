@@ -1,17 +1,17 @@
 # Hardcode
 
-Este término se utiliza para definir a un programador que codifica casi toda su rutina en un largo procedimiento o función y que, a la hora de cambiar algo, debe rectificar miles de líneas para lograrlo.
+This term is used to define a programmer who codes almost his entire routine in a long procedure or function and, when it is time to change something, must rectify thousands of lines to achieve it.
 
 <p align="center">
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/0e184b76-1044-464d-90c1-24de60e6205f">
 </p>
 
-Básicamente se infiere a la gestión de seteo manual de las rutinas para que estás se adapten al escenario en donde la deseamos implementar.
+Basically it is inferred to the management of manual setting of the routines so that they adapt to the scenario where we want to implement it.
 
-Por ejemplo un conversor de monedas en donde los valores iniciales se tengan que colocar directamente en las rutinas y no obtener por un medio foráneo, sea por ejemplo a través de una api o solicitándolo al usuario final.  
+For example, a currency converter where the initial values must be placed directly in the routines and not obtained by a foreign means, either through an api or by requesting it to the end user.
 
 
-## Referencias
+## References
 - https://www.glosarioit.com/Hard-code
 
 
