@@ -1,21 +1,21 @@
 # Content Delivery Network(CDN)
 
-Una CDN (Content Delivery Network o Red de Distribución de Contenido en español) es básicamente un conjunto de servidores ubicados en diferentes puntos de una red que contienen copias locales de ciertos contenidos (vídeos, imágenes, música, documentos, webs, etc.) que están almacenados en otros servidores generalmente alejados geográficamente, de forma que sea posible servir dichos contenidos de manera más eficiente.
+A CDN (Content Delivery Network) is basically a set of servers located at different points of a network that contain local copies of certain content (videos, images, music, documents, websites, etc.) that are stored on other servers, generally geographically distant, so that it is possible to serve such content more efficiently.
 
-Esta mejora en la eficiencia se logra con un mejor balanceo de la carga a la que están sometidos tanto los servidores que alojan los contenidos como los enlaces que interconectan las distintas secciones de la red, eliminando posibles cuellos de botella y sirviendo los datos en función de la cercanía geográfica del usuario final.
+This improvement in efficiency is achieved by better load balancing of both the servers that host the content and the links that interconnect the different sections of the network, eliminating possible bottlenecks and serving the data according to the geographical proximity of the end user.
 
 
 <p align="center">
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/76ae6800-a792-4498-99d8-8fae8c5fba69">
 </p>
 
-La idea es que haya una copia del contenido cerca del usuario para mejorar la velocidad de acceso
+The idea is to have a copy of the content close to the user to improve access speed.
 
-Es decir, en estos CDNs se replican los contenidos en diferentes redes y países, dirigiendo las solicitudes de los usuarios hasta las copias más cercanas a su red. De este modo se evita que algunos servidores se colapsen por exceso de peticiones, gracias a la distribución geográfica de los datos, y se minimizan los retardos, ya que el camino hasta el contenido es el mínimo posible.
+In other words, these CDNs replicate content in different networks and countries, directing users' requests to the copies closest to their network. This prevents some servers from collapsing due to excessive requests, thanks to the geographical distribution of the data, and minimizes delays, since the path to the content is as short as possible.
 
-Por ejemplo, supongamos que desde Madrid queremos ver un vídeo de YouTube que originalmente esté alojado en EEUU. Podríamos acceder directamente a él junto con otros millones de usuarios de todo el mundo a través de los cada vez más saturados enlaces intercontinentales, o bien podríamos acceder a una copia local en un servidor de la red CDN que una empresa tuviera instalado en Madrid, lo que mejoraría la velocidad de acceso y reduciría la latencia.
+For example, let's suppose that from Madrid we want to watch a YouTube video originally hosted in the USA. We could access it directly along with millions of other users around the world through the increasingly saturated intercontinental links, or we could access a local copy on a CDN server that a company has installed in Madrid, which would improve access speed and reduce latency.
 
-Uno de los CDN más populares a nivel mundial es Cloudflare. Por eso cuando Cloudflare se cae o falla, una enorme cantidad de páginas webs se vienen abajo. Cloudflare actúa como intermediaria entre el cliente y el servidor, usando unos sistemas llamados proxies reversos (reverse proxies) para crear copias y cachés de sitios web.
+One of the most popular CDNs worldwide is Cloudflare. So when Cloudflare goes down or fails, a huge number of websites go down. Cloudflare acts as an intermediary between the client and the server, using systems called reverse proxies to create copies and caches of websites.
 
-## Referencias
-- https://www.xatakamovil.com/conectividad/cdn-que-es-para-que-sirve-y-por-que-no-rompe-con-la-neutralidad-de-la-red
+## References
+- https://www.cloudflare.com/es-es/learning/cdn/what-is-a-cdn/
