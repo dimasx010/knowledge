@@ -56,4 +56,4 @@ También puede ampliar su entorno de shell instalando su propio software y modif
 La función de restauración de sesiones restaura las sesiones que estaba ejecutando en una o varias pestañas del navegador de la CloudShell terminal. Si actualiza o vuelve a abrir las pestañas del navegador cerradas recientemente, esta función reanudará la sesión hasta que se detenga la shell debido a que la sesión está inactiva.
 
 ## Referencias
-- https://docs.aws.amazon.com/es_es/AWSEC2/latest/UserGuide/user-data.html
+- https://aws.amazon.com/es/cloudshell/
