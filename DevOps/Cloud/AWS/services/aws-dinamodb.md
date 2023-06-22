@@ -14,7 +14,7 @@ You can create delayed backups as well as enable point-in-time recovery backups 
 
 DynamoDB allows you to automatically delete expired items from tables, to help you reduce storage consumption and the cost of data that is no longer relevant. For more information, see Using DynamoDB's Time-To-Live (TTL) to expire items.
 
-## Referencias
+## References
 - https://docs.aws.amazon.com/en_en/amazondynamodb/latest/developerguide/Introduction.html
 
 
