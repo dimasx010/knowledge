@@ -1,41 +1,42 @@
 # Terraform information
 
-Terraform es una herramienta de configuración de software diseñada para potenciar la automatización de múltiples procesos a través de conceptos como el de infrastructure as code. A través de su lenguaje permite crear definiciones (llamadas resources) de objetos o recursos de infraestructura.
+Terraform is a software configuration tool designed to enhance the automation of multiple processes through concepts such as infrastructure as code. Through its language, it allows the creation of definitions (called resources) of infrastructure objects or resources.
 
-Su principal objetivo es facilitar la creación de infraestructura de manera declarativa, por ejemplo un centro de datos en servicios como Azure, Amazon Web Services (AWS) o Google Cloud Platform (GCP). Es decir, esta configuración se almacena en la nube y permite automatizar una infraestructura.
+Its main objective is to facilitate the creation of infrastructure in a declarative way, for example a data center in services such as Azure, Amazon Web Services (AWS) or Google Cloud Platform (GCP). In other words, this configuration is stored in the cloud and makes it possible to automate an infrastructure.
 
 <p align="center">
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/e98e7671-9939-4d3c-8bdb-d182d39a3087">
 </p>
 
-## Terraform consta de elementos como:
+## Terraform consists of elements such as:
 
-Núcleo Terraform. Consiste en recibir la información y tomar decisiones con ella.
-Proveedores. Son las herramientas con las que se crea la infraestructura.
+Terraform Core. It consists of receiving the information and making decisions with it.
+Providers. They are the tools with which the infrastructure is created.
 
-## ¿Qué se puede hacer con Terraform?
+## What can you do with Terraform?
 
-La propia web de Terraform propone varios escenarios en los que se podría usar esta tecnología:
+Terraform's own website proposes several scenarios in which this technology could be used:
 
-Automatización de la infraestructura digital: servidores, bases de datos, firewall…
+Automating digital infrastructure: servers, databases, firewall....
 
-Administrar un entorno multinube (AWS, Azure, GCP…) a pesar de sus diferentes interfaces o flujos de trabajo. Esto es ideal cuando el entorno se ha construido antes de implantar Terraform y hay que administrar diferentes entornos cloud. En cualquier caso, también puede administrar una sola aplicación y de un solo proveedor.
+Managing a multi-cloud environment (AWS, Azure, GCP...) despite its different interfaces or workflows. This is ideal when the environment has been built before deploying Terraform and you have to manage different cloud environments. In any case, you can also manage a single application from a single vendor.
 
-Gestionar clústeres de Kubernetes e imágenes de máquinas virtuales. Sobre estas últimas, HCP 
+Manage Kubernetes clusters and virtual machine images. For the latter, HCP 
 
-Packer recopila imágenes de entornos multinube y las puede suministrar para una API.
+Packer collects images from multi-cloud environments and can provision them for an API.
 
-Las configuraciones se pueden compartir y volver a usar cuando se crea necesario.
+Configurations can be shared and reused as needed.
 
-Desde la web de Terraform es posible acceder a su código abierto y contribuir a este proyecto colaborativo.
+From the Terraform website it is possible to access its open source code and contribute to this collaborative project.
 
-## Beneficios de Terraform para empresas
+## Terraform benefits for businesses
 
-Uno de los principales beneficios de Terraform para empresas es que, al tener un lenguaje declarativo que abstrae los recursos de múltiples proveedores cloud (como los muy populares Azure, AWS y GCP) bajo una sintaxis común, facilita la implementación de infraestructura de manera mucho más ágil, con menos coste en tiempo y adaptación por parte del desarrollador. Además, esto permite que la infraestructura se pueda trasladar a otro servicio.
+One of the main benefits of Terraform for enterprises is that, by having a declarative language that abstracts the resources of multiple cloud providers (such as the very popular Azure, AWS and GCP) under a common syntax, it facilitates the implementation of infrastructure in a much more agile way, with less cost in time and adaptation on the part of the developer. In addition, this allows the infrastructure to be moved to another service.
 
-Asimismo, como veíamos antes, Terraform ayuda en la cada vez más atractiva automatización de las empresas. La automatización del flujo de trabajo se puede llevar a muy diferentes departamentos e integrarse a sus dinámicas. Este mismo flujo permite un fuerte control de la seguridad, con controles de acceso a la información.
+Also, as we saw earlier, Terraform helps in the increasingly attractive automation of enterprises. Workflow automation can be brought into many different departments and integrated into their dynamics. This same flow allows a strong security control, with information access controls.
 
-Por otra parte, el lenguaje que usa, llamado HCL (lenguaje de configuración de HashiCorp, por la empresa creadora), es muy sencillo de usar, lo que facilita su uso. Y por si estos fueran pocos beneficios, recordemos que Terraform funciona con un código que es abierto y que, además, se puede descargar para ejecutar localmente
+Moreover, the language it uses, called HCL (HashiCorp Configuration Language, after the company that created it), is very easy to use, which facilitates its use. And as if these were not enough benefits, let's remember that Terraform works with a code that is open and can be downloaded to be executed locally.
 
-## Referencias
+## References
 - https://www.plainconcepts.com/es/terraform/
+- https://www.terraform.io/
