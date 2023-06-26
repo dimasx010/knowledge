@@ -1,45 +1,45 @@
-# Infraestructura como codigo laC
+# Infrastructure as code laC
 
-La infraestructura como código (IaC del inglés Infrastructure as Code) permite gestionar y preparar la infraestructura a través del código, en lugar de hacerlo mediante procesos manuales.
+Infrastructure as Code (IaC) allows the infrastructure to be managed and prepared through code, rather than through manual processes.
 
-Con este tipo de infraestructura, se crean archivos de configuración que contienen las especificaciones que esta necesita, lo cual facilita la edición y la distribución de las configuraciones. Asimismo, garantiza que usted siempre prepare el mismo entorno. La infraestructura como código codifica y documenta sus especificaciones para facilitar la gestión de la configuración, y le ayuda a evitar los cambios ad hoc y no documentados.
+With this type of infrastructure, you create configuration files that contain the specifications you need, making it easy to edit and distribute configurations. It also ensures that you always prepare the same environment. Infrastructure as code codifies and documents your specifications to facilitate configuration management, and helps you avoid ad hoc and undocumented changes.
 
 <p align="center">
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/6b72487b-895b-4c12-9875-6138b51f584b">
 </p>
 
-El control de versiones es un aspecto importante de la infraestructura como código que debería aplicar a sus archivos de configuración, al igual que a cualquier otro archivo de código fuente del software. La implementación de la infraestructura como código también permite dividirla en elementos modulares que se combinarán de distintas maneras mediante la automatización.
+Version control is an important aspect of infrastructure-as-code that you should apply to your configuration files, just as you would to any other software source code file. Implementing infrastructure-as-code also allows you to break it into modular elements that will be combined in different ways through automation.
 
-Si se automatiza la preparación de la infraestructura con la infraestructura como código, los desarrolladores no tendrán que preparar ni gestionar manualmente los servidores, los sistemas operativos, el almacenamiento ni ningún otro elemento cada vez que desarrollen o implementen una aplicación. La codificación de su infraestructura le proporciona una plantilla que puede seguir durante la preparación. Si bien todavía se puede hacer de forma manual, una herramienta de automatización como Red Hat® Ansible® Automation Platform puede hacerlo por usted. 
+By automating infrastructure preparation with infrastructure-as-code, developers will not have to manually prepare and manage servers, operating systems, storage or any other elements each time they develop or deploy an application. Coding your infrastructure provides you with a template that you can follow during preparation. While it can still be done manually, an automation tool like Red Hat® Ansible® Automation Platform can do it for you.
 
-## La diferencia entre los enfoques declarativo e imperativo de la Infrastructure as Code
+## The difference between declarative and imperative approaches to Infrastructure as Code
 
-Hay dos maneras de abordar la Infrastructure as Code: mediante un enfoque declarativo o uno imperativo. 
+There are two ways to approach Infrastructure as Code: through a declarative approach or an imperative approach. 
 
-El enfoque declarativo define el estado deseado de los sistemas, lo cual incluye los recursos que usted necesita y las propiedades que deben tener dichos sistemas, y la herramienta de infraestructura como código se encargará de configurarlo por usted. 
+The declarative approach defines the desired state of the systems, which includes the resources you need and the properties those systems should have, and the Infrastructure as Code tool will take care of setting it up for you. 
 
-Asimismo, detalla en una lista el estado actual de los objetos de su sistema, lo que facilita el desmontaje de la infraestructura.
+It also lists the current state of your system objects, which makes it easier to disassemble the infrastructure.
 
-En cambio, el enfoque imperativo define los comandos específicos para lograr la configuración deseada, los cuales se deben ejecutar en el orden correcto. 
+In contrast, the imperative approach defines specific commands to achieve the desired configuration, which must be executed in the correct order. 
 
-Muchas herramientas de la infraestructura como código utilizan un enfoque declarativo y prepararán la infraestructura deseada de manera automática. Por lo tanto, si realiza modificaciones en el estado deseado, una herramienta de IaC declarativa las implementará por usted; pero si utiliza una herramienta imperativa, deberá resolver la manera de aplicar esos cambios.
+Many infrastructure-as-code tools use a declarative approach and will prepare the desired infrastructure automatically. Therefore, if you make changes to the desired state, a declarative IaC tool will implement them for you; but if you use an imperative tool, you must figure out how to apply those changes.
 
-La mayoría de las herramientas de la infraestructura como código pueden operar con ambos enfoques, pero tienden a dar prioridad a alguno de ellos.
+Most infrastructure-as-code tools can operate with both approaches, but tend to give priority to one of them.
 
-## Ventajas de la Infrastructure as Code
+## Advantages of Infrastructure as Code
 
-La preparación de la infraestructura siempre había sido un proceso manual largo y costoso. En la actualidad, su gestión ha dejado de lado el hardware físico en los centros de datos, aunque todavía puede formar parte de los elementos de su empresa, pero en general se ha optado por la virtualización, los contenedores y el cloud computing. 
+Infrastructure preparation has always been a time-consuming and costly manual process. Today, its management has moved away from physical hardware in data centers, although it can still be part of the elements of your business, but in general there has been a move towards virtualization, containers and cloud computing. 
 
-Con este último, aumentó la cantidad de elementos de la infraestructura y se comenzaron a lanzar más aplicaciones a la producción de forma regular. Además, requiere que la infraestructura se ponga en marcha, se amplíe y se desmonte con frecuencia. Si no se aplica una práctica dela infraestructura como código, resulta cada vez más difícil gestionar la ampliación de la infraestructura actual.
+With the latter, the number of infrastructure elements increased and more applications began to be released to production on a regular basis. In addition, it requires the infrastructure to be commissioned, scaled up and taken down frequently. Without an Infrastructure-as-Code practice, it becomes increasingly difficult to manage the expansion of the current infrastructure.
 
-La infraestructura como código permite que su empresa gestione las necesidades de la infraestructura de TI al mismo tiempo que mejora la uniformidad y reduce los errores y la configuración manual.
+Infrastructure-as-code allows your company to manage IT infrastructure needs while improving consistency and reducing errors and manual configuration.
 
-### Ventajas:
-- Reducción de costos
-- Aumento en la velocidad de implementación
-- Disminución de la cantidad de errores
-- Mayor uniformidad de la infraestructura
-- Eliminación de los desajustes de configuración
+### Advantages:
+- Cost reduction
+- Increased speed of implementation
+- Decrease in the number of errors
+- Increased uniformity of the infrastructure
+- Elimination of configuration mismatches
 
 ## Referencias
 - https://www.redhat.com/es/topics/automation/what-is-infrastructure-as-code-iac
