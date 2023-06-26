@@ -1,23 +1,23 @@
 # HashiCorp Configuration Language
 
-HashiCorp Configuration Language (HCL) es un lenguaje de configuración único. Fue diseñado para usarse con las herramientas de HashiCorp, especialmente Terraform, pero HCL se ha expandido como un lenguaje de configuración más general. Es visualmente similar a JSON con estructuras de datos y capacidades adicionales integradas.
+HashiCorp Configuration Language (HCL) is a unique configuration language. It was designed for use with HashiCorp tools, especially Terraform, but HCL has been expanded as a more general configuration language. It is visually similar to JSON with additional data structures and capabilities built in.
 
 
 <p align="center">
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/2ba1a2a0-1f7a-4094-a00a-8c30909847fb">
 </p>
 
-HCL consta de tres sublenguajes:
+HCL consists of three sublanguages:
 
-- Estructural
-- Expresión
-- Plantillas
+- Structural
+- Expression
+- Templates
 
-Cuando se combinan, los sublenguajes forman un archivo de configuración HCL bien estructurado. Esta estructura ayuda a describir con precisión y facilidad las configuraciones ambientales necesarias para la herramienta Terraform.
+When combined, the sublanguages form a well-structured HCL configuration file. This structure helps to accurately and easily describe the environmental settings needed for the Terraform tool.
 
-Recientemente, HCL ha dejado de usar la versión 1 del lenguaje a favor de la versión 2.HCL2 es una combinación de HCL y HashiCorp Interpolation Language (HIL). HIL agrega interpolación de cadenas y una mayor capacidad para usar funciones en declaraciones de variables.
+Recently, HCL has discontinued version 1 of the language in favor of version 2. HCL2 is a combination of HCL and HashiCorp Interpolation Language (HIL). HIL adds string interpolation and a greater ability to use functions in variable declarations.
 
-HCL también se puede usar con otras herramientas además de Terraform. Con el tiempo, diferentes analizadores han estado disponibles, como Go, Java y Python. En esta publicación, analizo cómo comenzar a usar HCL y qué herramientas aprovechan sus características únicas.
+HCL can also be used with other tools in addition to Terraform. Over time, different parsers have become available, such as Go, Java, and Python. In this post, I discuss how to get started with HCL and which tools take advantage of its unique features.
 
-## Referencias
+## References
 - https://recluit.com/que-es-hcl/
