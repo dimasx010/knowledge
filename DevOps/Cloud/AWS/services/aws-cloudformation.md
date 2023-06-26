@@ -1,28 +1,28 @@
 # AWS Cloudformation
 
-AWS CloudFormation se define como un servicio que contribuye a modelar, aprovisionar y administrar los recursos del sistema de Amazon Web Service y de terceros, a través del tratamiento de la infraestructura como código.
+AWS CloudFormation is defined as a service that helps model, provision and manage Amazon Web Service and third-party system resources by treating infrastructure as code.
 
-Esto implica que el uso de AWS CloudFormation ayuda a reducir el tiempo que el usuario debe dedicarle a la gestión directa de los recursos, por lo que podrá enfocarse en el manejo de las aplicaciones ejecutadas en AWS.
+This means that using AWS CloudFormation helps reduce the time the user has to spend on direct resource management, allowing them to focus on managing applications running on AWS.
 
 <p align="center">
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/fb732b7f-b734-465c-af29-256b1126b22f">
 </p>
 
-## Características 
+## Features 
 
-Dentro de las principales características del sistema de AWS CloudFormation se encuentra que permite el aprovisionamiento rápido y consistente de los recursos durante su ciclo de vida.
+Among the main features of the AWS CloudFormation system is that it enables fast and consistent provisioning of resources throughout their lifecycle.
 
-Esto implica que los ciclos de vida de los recursos pueden administrarse de forma predecible, repetida y segura, permitiendo así las restauraciones automatizadas y el control de estado por parte del mismo sistema de AWS CloudFormation.
+This means that resource lifecycles can be managed in a predictable, repeatable and secure manner, allowing for automated restores and health monitoring by the AWS CloudFormation system itself.
 
-Esta herramienta incluye también el elemento de plantilla donde se describen los recursos y sus dependencias, para poder configurarlos y lanzarlos de manera conjunta como una pila de AWS CloudFormation.
+This tool also includes the template element where resources and their dependencies are described, so that they can be configured and launched together as an AWS CloudFormation stack.
 
-De manera que estas plantillas pueden implementarse para llevar a cabo los procesos de creación, actualización y eliminación de todo un conjunto de recursos como una sola unidad, en vez de realizarlo de manera individual.
+So these templates can be deployed to perform the processes of creating, updating and deleting a whole set of resources as a single unit, instead of doing it individually.
 
-Otra de las características de AWS CloudFormation es que tiene la capacidad de realizar las labores relacionadas con la creación y ajuste de los recursos del sistema.
+Another feature of AWS CloudFormation is that it has the ability to perform the tasks related to the creation and tuning of system resources.
 
-Además, esta herramienta permite escalar la infraestructura mientras se gestionan los recursos en las regiones y cuentas de la plataforma con tan solo una operación.
+In addition, this tool allows you to scale the infrastructure while managing resources in the regions and accounts of the platform with just one operation.
 
-## Referencias
+## References
 - https://keepcoding.io/blog/que-es-aws-cloudformation/
 
 
