@@ -4,25 +4,25 @@
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/ddbc77ad-205d-47c8-a338-992ad6ad2857">
 </p>
 
-Amazon Elastic Kubernetes Service (Amazon EKS) es un servicio administrado que puede utilizar para ejecutar Kubernetes en AWS sin necesidad de instalar, operar y mantener su propio plano de control o nodos de Kubernetes. Kubernetes es un sistema de código abierto para automatizar la implementación, el escalado y la administración de las aplicaciones en contenedores. Amazon EKS:
+Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that you can use to run Kubernetes on AWS without having to install, operate, and maintain your own control plane or Kubernetes nodes. Kubernetes is an open source system for automating the deployment, scaling, and management of containerized applications. Amazon EKS:
 
-Ejecuta y escala el plano de control de Kubernetes en varias zonas de disponibilidad de AWS para garantizar una alta disponibilidad.
+Runs and scales the Kubernetes control plane across multiple AWS Availability Zones to ensure high availability.
 
-Escala automáticamente las instancias del plano de control en función de la carga, detecta y reemplaza instancias del plano de control en mal estado y proporciona actualizaciones automatizadas de versiones y parches para ellas.
+Automatically scales control plane instances based on load, detects and replaces bad control plane instances, and provides automated version and patch updates for them.
 
-Se integra con numerosos servicios de AWS para ofrecer escalabilidad y seguridad a las aplicaciones, incluidas las siguientes funciones:
+Integrates with numerous AWS services to provide scalability and security for applications, including the following features:
 
-- Amazon ECR para imágenes de contenedor
+- Amazon ECR for container images
 
-- Elastic Load Balancing para la distribución de carga
+- Elastic Load Balancing for load distribution
 
-- IAM para la autenticación
+- IAM for authentication
 
-- Amazon VPC para el aislamiento
+- Amazon VPC for isolation
 
-Ejecuta versiones actualizadas del software de código abierto de Kubernetes para que pueda utilizar todos los complementos y herramientas existentes en la comunidad Kubernetes. Las aplicaciones que se ejecutan en Amazon EKS son totalmente compatibles con las que se ejecutan en cualquier entorno de Kubernetes estándar, tanto si se ejecutan en centros de datos en las instalaciones como en nubes públicas. Esto significa que puede migrar fácilmente cualquier aplicación de Kubernetes estándar a Amazon EKS, sin tener que modificar el código de manera alguna.
+Runs up-to-date versions of the Kubernetes open source software so you can use all the existing plugins and tools in the Kubernetes community. Applications running on Amazon EKS are fully compatible with those running in any standard Kubernetes environment, whether they are running in on-premises data centers or public clouds. This means that you can easily migrate any standard Kubernetes application to Amazon EKS, without having to modify the code in any way.
 
 ## Referencias
-- https://docs.aws.amazon.com/es_es/eks/latest/userguide/what-is-eks.html
+- https://docs.aws.amazon.com/en_en/eks/latest/userguide/what-is-eks.html
 
 
