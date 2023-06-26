@@ -1,41 +1,42 @@
 # Terraform Modules
 
-A medida que administre su infraestructura con Terraform, se crearán configuraciones cada vez más complejas. La complejidad de un archivo o directorio de configuración de Terraform no cuenta con un límite intrínseco, por lo que puede escribir y actualizar sus archivos de configuración en un único directorio. Sin embargo, si lo hace, es posible que experimente uno o varios de los siguientes problemas:
+As you manage your infrastructure with Terraform, increasingly complex configurations will be created. There is no intrinsic limit to the complexity of a Terraform configuration file or directory, so you can write and update your configuration files in a single directory. However, if you do so, you may experience one or more of the following problems:
 
-Comprender los archivos de configuración y navegar por ellos será cada vez más difícil.
+Understanding the configuration files and navigating through them will become increasingly difficult.
 
-Actualizar la configuración será cada vez más riesgoso, ya que la actualización de un bloque podría traer consecuencias inesperadas a otros bloques de su configuración.
+Updating the configuration will become increasingly risky, since updating one block could bring unexpected consequences to other blocks of your configuration.
 
-La duplicación de bloques de configuración similares podría aumentar, por ejemplo, cuando configure entornos independientes de desarrollo, etapa de pruebas o producción. Esto aumentará la carga cuando actualice esas partes de su configuración.
+Duplication of similar configuration blocks could increase, for example, when you set up separate development, test or production environments. This will increase the load when you update those parts of your configuration.
 
-Si desea compartir partes de su configuración con otros proyectos y equipos, cortar y pegar los bloques de configuración en distintos proyectos podría provocar errores y sería una operación difícil de mantener.
+If you want to share parts of your configuration with other projects and teams, cutting and pasting configuration blocks in different projects could lead to errors and would be a difficult operation to maintain.
 
-En este lab, descubrirá cómo los módulos pueden encargarse de estos problemas, así como la estructura de un módulo de Terraform y las prácticas recomendadas para crearlos y usarlos.
+In this lab, you will discover how modules can take care of these problems, as well as the structure of a Terraform module and best practices for creating and using them.
 
 
 <p align="center">
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/34cde74b-edb7-4bcc-849d-1d80a6dd6685">
 </p>
 
-## ¿Para qué sirven los módulos?
+## What are the modules for?
 
-Estas son algunas de las maneras en que los módulos le permiten solucionar los problemas enumerados anteriormente:
+These are some of the ways in which the modules allow you to solve the problems listed above:
 
-### Organice la configuración
+### Organize the configuration
 
-Los módulos facilitan la navegación, comprensión y actualización de su configuración, ya que agrupan sus partes relacionadas. Incluso una infraestructura con una complejidad moderada puede requerir cientos o miles de líneas de configuración para implementarse. Sin embargo, si usa módulos, puede organizar su configuración en componentes lógicos.
+Modules make it easy to navigate, understand and update your configuration by grouping related parts together. Even a moderately complex infrastructure may require hundreds or thousands of configuration lines to implement. However, if you use modules, you can organize your configuration into logical components.
 
-### Encapsule la configuración
+### Encapsulate the configuration
 
-Otro beneficio de usar módulos es que puede encapsular la configuración en componentes lógicos separados. La encapsulación permite evitar consecuencias inesperadas (por ejemplo, que un cambio en una parte de su configuración modifique otra infraestructura por accidente) y reduce las probabilidades de que se produzcan errores sencillos, como usar el mismo nombre para dos recursos diferentes.
+Another benefit of using modules is that you can encapsulate the configuration into separate logical components. Encapsulation allows you to avoid unexpected consequences (e.g., a change in one part of your configuration modifying another infrastructure by accident) and reduces the likelihood of simple errors, such as using the same name for two different resources.
 
-### Reutilice la configuración
+### Reuse the configuration
 
-Escribir su configuración completa sin usar el código existente puede tardar mucho y provocar errores. En cambio, si usa módulos puede ahorrar tiempo y reducir los errores costosos, ya que se reutiliza la configuración escrita por usted, otros miembros de su equipo, o bien otros profesionales de Terraform que publicaron módulos para que los utilice. También puede compartir los módulos que escriba con su equipo o el público general para que se beneficien de su arduo trabajo.
+Writing your entire configuration without using existing code can be time-consuming and error-prone. Using modules, on the other hand, can save time and reduce costly errors by reusing the configuration written by you, other members of your team, or other Terraform professionals who have published modules for you to use. You can also share the modules you write with your team or the general public so they can benefit from your hard work.
 
-### Proporcione coherencia y asegúrese de que se apliquen las prácticas recomendadas
+### Provide consistency and ensure that best practices are followed
 
-Los módulos también lo ayudan a proporcionar coherencia a sus configuraciones. La coherencia permite que los parámetros de configuración complejos sean más fáciles de comprender, y esto garantiza que se apliquen las prácticas recomendadas en toda su configuración. Por ejemplo, los proveedores de servicios en la nube ofrecen varias opciones para configurar servicios de almacenamiento de objetos, como Amazon S3 (Simple Storage Service) o los buckets de Google Cloud Storage. Muchos incidentes de seguridad de alto perfil han implicado el almacenamiento de objetos con errores de protección. Debido a la cantidad de opciones complejas de configuración involucradas, es fácil configurar incorrectamente estos servicios de manera accidental.
+Modules also help you provide consistency in your configurations. Consistency makes complex configuration parameters easier to understand, and this ensures that best practices are applied throughout your configuration. For example, cloud service providers offer several options for configuring object storage services, such as Amazon S3 (Simple Storage Service) or Google Cloud Storage buckets. Many high-profile security incidents have involved object storage with protection errors. Due to the number of complex configuration options involved, it is easy to accidentally misconfigure these services.
 
-## Referencias
+## References
 - https://www.plainconcepts.com/es/terraform/
+- https://developer.hashicorp.com/terraform/language/modules
