@@ -4,21 +4,21 @@
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/fa28a398-7f4b-4989-a5bf-b1fa111b415e">
 </p>
 
-Con Elastic Beanstalk, puede implementar y administrar aplicaciones rápidamente en la nube de AWS sin tener que preocuparse por la infraestructura que las ejecuta. Elastic Beanstalk reduce la complejidad de la administración sin restringir la libertad de elección ni el control. Solo tiene que cargar la aplicación y Elastic Beanstalk gestionará de manera automática los detalles de aprovisionamiento de capacidad, balanceo de carga, escalado y monitorización de estado de la aplicación.
+With Elastic Beanstalk, you can quickly deploy and manage applications in the AWS cloud without having to worry about the infrastructure that runs them. Elastic Beanstalk reduces management complexity without restricting choice and control. Simply upload the application and Elastic Beanstalk will automatically manage the details of capacity provisioning, load balancing, scaling and application health monitoring.
 
-Elastic Beanstalk es compatible con aplicaciones desarrolladas en Go, Java, .NET, Node.js, PHP, Python y Ruby. Cuando implementa su aplicación, Elastic Beanstalk crea la versión de la plataforma compatible seleccionada y aprovisiona uno o varios recursos de AWS, como instancias de Amazon EC2, para ejecutar la aplicación.
+Elastic Beanstalk supports applications developed in Go, Java, .NET, Node.js, PHP, Python and Ruby. When you deploy your application, Elastic Beanstalk creates the selected supported platform version and provisions one or more AWS resources, such as Amazon EC2 instances, to run the application.
 
-Puede interactuar con Elastic Beanstalk a través de la consola de Elastic Beanstalk, la AWS Command Line Interface (AWS CLI) o eb, una CLI de nivel superior diseñada específicamente para Elastic Beanstalk.
+You can interact with Elastic Beanstalk through the Elastic Beanstalk console, the AWS Command Line Interface (AWS CLI), or eb, a higher-level CLI designed specifically for Elastic Beanstalk.
 
-Para obtener más información sobre cómo implementar una aplicación web de ejemplo con Elastic Beanstalk, consulte Introducción a AWS: Implementación de una aplicación web.
+For more information on how to deploy a sample web application with Elastic Beanstalk, see Getting Started with AWS: Deploying a Web Application.
 
-También puede realizar la mayoría de las tareas de implementación, como cambiar el tamaño de la flota de instancias de Amazon EC2 o monitorizar la aplicación, directamente desde la interfaz web de Elastic Beanstalk (consola).
+You can also perform most deployment tasks, such as resizing the Amazon EC2 instance fleet or monitoring the application, directly from the Elastic Beanstalk web interface (console).
 
-Para utilizar Elastic Beanstalk, debe crear una aplicación, cargar una versión de la aplicación como un paquete de código fuente (por ejemplo, un archivo Java.war) en Elastic Beanstalk y proporcionar cierta información sobre la aplicación. Elastic Beanstalk lanza automáticamente un entorno y crea y configura los recursos de AWS necesarios para ejecutar el código. Una vez que se lanza el entorno, puede administrarlo e implementar nuevas versiones de la aplicación. En el siguiente diagrama, se ilustra el flujo de trabajo de Elastic Beanstalk.
+To use Elastic Beanstalk, you must create an application, upload a version of the application as a source code package (for example, a Java.war file) to Elastic Beanstalk, and provide certain information about the application. Elastic Beanstalk automatically launches an environment and creates and configures the AWS resources needed to run the code. Once the environment is launched, you can manage it and deploy new versions of the application. The following diagram illustrates the Elastic Beanstalk workflow.
 
-Después de crear e implementar la aplicación, puede consultar información sobre ella (por ejemplo, métricas, eventos y el estado del entorno) en la consola de Elastic Beanstalk, las API o las interfaces de línea de comandos, como la AWS CLI unificada.
+After you build and deploy your application, you can query information about it (for example, metrics, events, and the state of the environment) in the Elastic Beanstalk console, APIs, or command-line interfaces such as the unified AWS CLI.
 
-## Referencias
-- https://docs.aws.amazon.com/es_es/elasticbeanstalk/latest/dg/Welcome.html
+## References
+- https://docs.aws.amazon.com/en_en/elasticbeanstalk/latest/dg/Welcome.html
 
 
