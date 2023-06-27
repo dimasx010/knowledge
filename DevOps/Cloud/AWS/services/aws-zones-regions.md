@@ -16,16 +16,15 @@ AWS regions refer to separate geographic areas or physical locations where Amazo
 
 So each group of these logical data centers is known as an availability zone, and a single AWS infrastructure region includes two or more of these zones to provide its services.
 
-Igualmente debemos tomar en cuenta una serie de aspectos para seleccionar lo que serían las regiones los cuales son: 
+Likewise, we must take into account a series of aspects to select the regions, which are as follows: 
 
-- Conformidad: debemos analizar si existe una delimitación en función a la gestión de los datos según una locación, es decir, si estamos trabajando en Canadá, y exista una legislación que exija que los datos reposen en territorio canadiense. 
+- Compliance: we must analyze whether there is a delimitation in terms of data management according to a location, i.e., if we are working in Canada, and there is legislation that requires data to be stored in Canadian territory. 
 
-- Latencia: básicamente entre menos distancia se tenga entre los usuarios y infra en teoría tuviéramos mejor performance. 
+- Latency: basically the less distance between users and infra in theory we would have better performance. 
 
-- Precios: este puede variar de una región a otra. 
+- Prices: this may vary from one region to another. 
 
-- Disponibilidad de servicios: debemos ver si la región contempla los servicios que deseamos. 
-
+- Availability of services: we must see if the region contemplates the services we want. 
 
 ## AWS Availability Zones
 
