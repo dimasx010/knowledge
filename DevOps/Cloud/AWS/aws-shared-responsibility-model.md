@@ -1,41 +1,56 @@
 # AWS Shared Responsibility Model
 
-Básicamente este nos expone teórica la responsabilidad en cuanto a la infra que implementemos en esa plataforma, en la siguiente imagen podremos analizar el mencionado modelo. 
+Basically, it exposes the theoretical responsibility regarding the infra that we implement in that platform, in the following image we will be able to analyze the mentioned model.
 
 <p align="center">
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/d6198954-788a-4631-b63a-c4e501bd0a43">
 </p>
 
-## Responsabilidad de AWS
+## Responsability of AWS
 
-AWS es responsable de la seguridad de la nube. Esto significa que AWS proporciona seguridad y protección a la infraestructura que ejecuta los servicios ofrecidos en la nube de AWS. AWS es responsable de lo siguiente:
+AWS is responsible for the security of the cloud. This means that AWS provides security and protection to the infrastructure running the services offered in the AWS cloud. AWS is responsible for the following:
 
-- Proporcionar seguridad y protección a las regiones, las zonas de disponibilidad y los centros de datos de AWS, hasta la seguridad física de los edificios
+- Providing security and protection for AWS regions, Availability Zones and data centers, down to the physical security of buildings.
 
-- Administrar el hardware, el software y los componentes de redes que ejecutan los servicios de AWS, como los servidores físicos, los sistemas operativos del host, las capas de virtualización y los componentes de redes de AWS
+- Managing the hardware, software, and networking components that run AWS services, such as physical servers, host operating systems, virtualization layers, and AWS networking components
 
-El nivel de responsabilidad de AWS depende del servicio. AWS clasifica los servicios en tres categorías. En la siguiente tabla, se proporciona información sobre cada uno, incluida la responsabilidad de AWS
+The level of AWS responsibility depends on the service. AWS classifies services into three categories. The following table provides information about each, including the AWS responsibility.
 
 <p align="center">
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/6abdee78-04b4-461a-a77b-a9204f7e694e">
 </p>
 
-Nota: Los servicios de contenedores hacen referencia a los contenedores de aplicaciones abstractos de AWS en segundo plano, no a los servicios de contenedores de Docker. Esto permite a AWS quitar a los clientes la responsabilidad de administrar la plataforma.
+Note: Container services refer to AWS abstract application containers in the background, not Docker container services. This allows AWS to remove the responsibility of managing the platform from customers.
 
-## Responsabilidad del cliente
 
-Los clientes son responsables de la seguridad en la nube. Al utilizar cualquier servicio de AWS, es responsable de configurar correctamente el servicio y las aplicaciones, además de garantizar que sus datos estén seguros.
+## Customer of client
 
-Su nivel de responsabilidad depende del servicio de AWS. Algunos servicios requieren que realice todas las tareas de administración y configuración de seguridad necesarias, mientras que otros servicios más abstractos requieren que solo administre los datos y controle el acceso a los recursos. Con las tres categorías de servicios de AWS, puede definir su nivel de responsabilidad por cada servicio de AWS que utilice.
+Customers are responsible for security in the cloud. When using any AWS service, you are responsible for properly configuring the service and applications and ensuring that your data is secure.
+
+Your level of responsibility depends on the AWS service. Some services require you to perform all necessary administration and security configuration tasks, while other more abstract services require you to only manage data and control access to resources. With the three categories of AWS services, you can define your level of responsibility for each AWS service you use.
 
 <p align="center">
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/dbbb13ce-321b-46aa-8f10-9ac730f73367">
 </p>
 
-Debido a los distintos niveles de esfuerzo, los clientes deben considerar qué servicios de AWS utilizan y revisar el nivel de responsabilidad necesario para proteger cada servicio. También deben revisar cómo el modelo de seguridad compartida se ajusta a los estándares de seguridad de su entorno de TI, además de las leyes y reglamentos aplicables.
+Due to varying levels of effort, customers should consider which AWS services they use and review the level of responsibility required to protect each service. They should also review how the shared security model aligns with the security standards of their IT environment, in addition to applicable laws and regulations.
 
-Un concepto clave es que los clientes mantienen el control total de los datos y son responsables de administrar la seguridad relacionada con su contenido. Por ejemplo, usted es responsable de lo siguiente:
+A key concept is that customers maintain full control of the data and are responsible for managing the security related to their content. For example, you are responsible for the following:
 
-- Elegir una región para los recursos de AWS de acuerdo con las normas de soberanía de datos
-- Implementar mecanismos de protección de datos, como el cifrado y las copias de seguridad programadas
-- Utilizar el control de acceso para limitar quién puede acceder a los datos y recursos de AWS
+- Choosing a region for AWS resources in accordance with data sovereignty rules.
+- Implementing data protection mechanisms, such as encryption and scheduled backups
+- Using access control to limit who can access AWS data and resources
+
+
+## AWS responsability
+AWS is responsible for protecting the infrastructure that runs all of the services offered in the AWS Cloud. This infrastructure is composed of the hardware, software, networking, and facilities that run AWS Cloud services.
+
+
+## Shared responsability
+Security and Compliance is a shared responsibility between AWS and the customer. This shared model can help relieve the customer’s operational burden as AWS operates, manages and controls the components from the host operating system and virtualization layer down to the physical security of the facilities in which the service operates. The customer assumes responsibility and management of the guest operating system (including updates and security patches), other associated application software as well as the configuration of the AWS provided security group firewall. Customers should carefully consider the services they choose as their responsibilities vary depending on the services used, the integration of those services into their IT environment, and applicable laws and regulations. The nature of this shared responsibility also provides the flexibility and customer control that permits the deployment. As shown in the chart below, this differentiation of responsibility is commonly referred to as Security “of” the Cloud versus Security “in” the Cloud.
+
+![image](https://github.com/dimasx010/knowledge/assets/25352560/cff981f8-76b0-49c9-abac-40c0854bebbc)
+
+## References
+- https://aws.amazon.com/compliance/shared-responsibility-model/
+
