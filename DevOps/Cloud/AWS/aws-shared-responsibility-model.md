@@ -39,7 +39,3 @@ Un concepto clave es que los clientes mantienen el control total de los datos y 
 - Elegir una región para los recursos de AWS de acuerdo con las normas de soberanía de datos
 - Implementar mecanismos de protección de datos, como el cifrado y las copias de seguridad programadas
 - Utilizar el control de acceso para limitar quién puede acceder a los datos y recursos de AWS
-
-## References
-- https://keepcoding.io/blog/regiones-y-zonas-de-disponibilidad-de-aws/
-- https://aws.amazon.com/en/about-aws/global-infrastructure/?p=ngi&loc=1
