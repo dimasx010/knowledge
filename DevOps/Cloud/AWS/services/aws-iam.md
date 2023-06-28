@@ -29,6 +29,24 @@ Un usuario de IAM representa a la persona o el servicio que interactúa con AWS.
 
 También puede añadir más usuarios a la cuenta según sea necesario. Por ejemplo, para la aplicación de fotos de gatos, podría crear usuarios individuales en su cuenta de AWS que correspondan a las personas que están trabajando en su aplicación. Cada persona debe tener sus propias credenciales de inicio de sesión. Proporcionar a los usuarios sus propias credenciales de inicio de sesión impide compartir las credenciales.
 
+## Roles de IAM
+
+Mantener roles es más eficiente que mantener a los usuarios. Cuando asume un rol, IAM proporciona dinámicamente credenciales temporales que vencen tras un periodo definido, entre 15 minutos y 36 horas. Los usuarios, por otro lado, tienen credenciales de largo plazo en forma de combinaciones de nombre de usuario y contraseña, o un conjunto de claves de acceso.
+
+Las claves de acceso de usuario solo vencen cuando usted o el administrador de la cuenta rotan las claves. Las credenciales de inicio de sesión de usuario caducan si aplica una política de contraseñas a su cuenta que obliga a los usuarios a rotar las contraseñas.
+
+## Proveedores de identidad (IdP)
+
+Si decide convertir su aplicación de fotos de gatos en un negocio y comienza a tener más de unas personas trabajando en ella, considere administrar la información de identidad de los empleados a través de un proveedor de identidad (IdP). El uso de un IdP, ya sea un servicio de AWS, como AWS Single Sign-On o un proveedor de identidad de terceros, proporciona una fuente única de información para todas las identidades de su organización.
+
+Ya no tiene que crear usuarios de IAM independientes en AWS. En cambio, puede utilizar roles de IAM para proporcionar permisos a las identidades federadas de su IdP. Por ejemplo, hay una empleada, Martha, que tiene acceso a varias cuentas de AWS. En lugar de crear y administrar varios usuarios de IAM llamados “Martha” en cada una de esas cuentas de AWS, podría administrar Martha en el IdP de su empresa. Si Martha cambia a otro puesto en la empresa o la abandona, se puede actualizar en el IdP, en lugar de en todas las cuentas de AWS de la empresa.
+
+Si tiene una organización que abarca muchos empleados y varias cuentas de AWS, es posible que desee que sus empleados inicien sesión con una única credencial.
+
+AWS SSO es un IdP que permite a los usuarios iniciar sesión en un portal de usuarios con un único conjunto de credenciales. A continuación, proporciona a los usuarios acceso a sus cuentas y aplicaciones asignadas en una ubicación central.
+
+Es similar a IAM. AWS SSO ofrece un directorio en el que puede crear usuarios, organizarlos en grupos, establecer permisos en todos los grupos y conceder acceso a los recursos de AWS. Sin embargo, AWS SSO tiene algunas ventajas en comparación con IAM. Por ejemplo, si utiliza un IdP de terceros, puede sincronizar sus usuarios y grupos con AWS SSO. Esto elimina la carga de volver a crear usuarios que ya existen en otro lugar y le permite administrar los usuarios desde su IdP. Lo más importante es que AWS SSO separa las tareas entre su IdP y AWS, lo que garantiza que la administración del acceso a la nube no esté en el IdP ni dependa de él.
+
 ## Credenciales de usuario de IAM
 
 Un usuario de IAM consta de un nombre y un conjunto de credenciales. Al crear un usuario, puede proporcionarle los siguientes tipos de acceso:
