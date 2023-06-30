@@ -1,109 +1,122 @@
 # Amazon Machine Image AMI - Amazon EC2
-Amazon Elastic Compute Cloud (Amazon EC2) proporciona capacidad de computación escalable en la nube de Amazon Web Services (AWS). El uso de Amazon EC2 elimina la necesidad de invertir inicialmente en hardware, de manera que puede desarrollar e implementar aplicaciones en menos tiempo. Puede usar Amazon EC2 para lanzar tantos servidores virtuales como necesite, configurar la seguridad y las redes, y administrar el almacenamiento. Amazon EC2 le permite escalar hacia arriba o hacia abajo para controlar los cambios en los requisitos o los picos de popularidad, con lo que se reduce la necesidad de prever el tráfico.
+Amazon Elastic Compute Cloud (Amazon EC2) provides scalable compute capacity in the Amazon Web Services (AWS) cloud. Using Amazon EC2 eliminates the need to initially invest in hardware, so you can develop and deploy applications in less time. You can use Amazon EC2 to launch as many virtual servers as you need, configure security and networking, and manage storage. Amazon EC2 allows you to scale up or down to handle changes in requirements or spikes in popularity, reducing the need to forecast traffic.
 
-Amazon EC2 ofrece las siguientes características:
+Amazon EC2 offers the following features:
 
-- Entornos informáticos virtuales, conocidos como instancias
+- Virtual computing environments, known as instances.
 
-- Plantillas preconfiguradas para las instancias, conocidas como imágenes de máquina de Amazon (AMI), que empaquetan las partes que necesita para el servidor (incluido el sistema operativo y el software adicional)
+- Preconfigured templates for instances, known as Amazon Machine Images (AMIs), which package the parts you need for the server (including the operating system and additional software)
 
-- Varias configuraciones de CPU, memoria, almacenamiento y capacidad de red de las instancias, conocidos como tipos de instancias
+- Various CPU, memory, storage, and network capacity configurations for instances, known as instance types
 
-- Información de inicio de sesión segura para las instancias con pares de claves (AWS almacena la clave pública y usted guarda la clave privada en un lugar seguro)
+- Secure login information for instances with key pairs (AWS stores the public key and you store the private key in a secure location)
 
-- Volúmenes de almacenamiento para datos temporales que se eliminan cuando una instancia se detiene, se termina o se pone en hibernación, lo que se conoce como volúmenes del almacén de instancias
+- Storage volumes for temporary data that is deleted when an instance is stopped, terminated or put into hibernation, known as instance store volumes
 
-- Volúmenes de almacenamiento persistente para los datos usando Amazon Elastic Block Store (Amazon EBS), conocidos como volúmenes de Amazon EBS
+Amazon EC2 offers the following features:
 
-- Varias ubicaciones físicas para los recursos, como las instancias y los volúmenes de Amazon EBS, conocidas como regiones y zonas de disponibilidad
+- Virtual computing environments, known as instances.
 
-- Un firewall que permite especificar los protocolos, los puertos y los rangos de direcciones IP que pueden alcanzar las instancias mediante el uso de grupos de seguridad
+- Preconfigured templates for instances, known as Amazon Machine Images (AMIs), which package the parts you need for the server (including the operating system and additional software).
 
-- Direcciones IPv4 estáticas para informática en la nube dinámica, conocidas como direcciones IP elásticas
+- Various CPU, memory, storage, and network capacity configurations for instances, known as instance types
 
-- Metadatos, conocidos como etiquetas, que se pueden crear y asignar a los recursos de Amazon EC2
+- Secure login information for instances with key pairs (AWS stores the public key and you store the private key in a secure location)
 
-- Redes virtuales que puede crear que están aisladas lógicamente del resto de la nube de AWS y que, opcionalmente, puede conectar a su propia red, conocidas como nubes virtuales privadas (VPC).
+- Storage volumes for temporary data that is deleted when an instance is stopped, terminated or put into hibernation, known as instance store volumes
+
+- Persistent storage volumes for data using Amazon Elastic Block Store (Amazon EBS), known as Amazon EBS volumes
+
+- Multiple physical locations for resources, such as Amazon EBS instances and volumes, known as availability regions and zones
+
+- A firewall that allows you to specify the protocols, ports, and IP address ranges that instances can reach through the use of security groups
+
+- Static IPv4 addresses for dynamic cloud computing, known as elastic IP addresses
+
+- Metadata, known as tags, that you can create and assign to Amazon EC2 resources.
+
+- Virtual networks that you can create that are logically isolated from the rest of the AWS cloud and that you can optionally connect to your own network, known as virtual private clouds (VPCs).
 
 <p align="center">
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/405e227c-fa26-4ac0-a01f-bc0eabf4625e">
 </p>
 
-## Tipos de instancias de Amazon EC2
+## Amazon EC2 Instance Types
 
-Las instancias de Amazon EC2 son una combinación de procesadores virtuales (vCPU), memoria, red y, en algunos casos, unidades de procesamiento de gráficos (GPU) y almacenamiento de instancias. Cuando crea una instancia EC2, tiene que elegir cuánto necesita de cada uno de estos componentes.
+Amazon EC2 instances are a combination of virtual processors (vCPUs), memory, networking, and in some cases, graphics processing units (GPUs) and instance storage. When you create an EC2 instance, you have to choose how much of each of these components you need.
 
 <p align="center">
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/90f014e1-0041-4d70-a711-c88d409aca1d">
 </p>
 
-AWS ofrece una variedad de instancias que difieren según el rendimiento. Algunas instancias proporcionan más capacidad que otras. Para obtener información general sobre los detalles de capacidad de una instancia concreta, debe consultar el tipo de instancias. Los tipos de instancias consisten en un prefijo que identifica el tipo de cargas de trabajo para las que están optimizadas, seguido de un tamaño. Por ejemplo, el tipo de instancias c5.large se puede desglosar de la siguiente manera:
+AWS offers a variety of instances that differ in performance. Some instances provide more capacity than others. For general information about the capacity details of a particular instance, you should refer to the instance type. Instance types consist of a prefix that identifies the type of workloads they are optimized for, followed by a size. For example, the instance type c5.large can be broken down as follows:
 
-- c5 define la familia de instancias y el número de generación. En este caso, la instancia pertenece a la quinta generación de instancias de una familia de instancias optimizada para el cálculo genérico.
+- c5 defines the instance family and generation number. In this case, the instance belongs to the fifth generation of instances of an instance family optimized for generic computation.
 
-- large establece la cantidad de capacidad de la instancia.
+- large sets the amount of capacity of the instance.
 
-## Ubicaciones de instancias EC2
+## EC2 instance locations
 
-De forma predeterminada, las instancias EC2 se colocan en una red denominada “Amazon Virtual Private Cloud (Amazon VPC) predeterminada”. Esta red se creó para que pueda comenzar fácilmente a utilizar Amazon EC2 sin aprender a crear y configurar una VPC.
+By default, EC2 instances are placed in a network called "Amazon Virtual Private Cloud (Amazon VPC) default". This network was created so that you can easily get started using Amazon EC2 without learning how to create and configure a VPC.
 
-Cualquier recurso que coloque en la VPC predeterminada será público y accesible a través de Internet, por lo que no debe colocar datos de clientes ni información privada en ella.
+Any resources you place in the default VPC will be public and accessible over the Internet, so you should not place customer data or private information in it.
 
-Una vez que esté más familiarizado con las redes en AWS, debe cambiar esta configuración predeterminada para elegir sus propias VPC personalizadas y restringir el acceso con mecanismos de enrutamiento y conectividad adicionales.
+Once you are more familiar with networking in AWS, you should change this default configuration to choose your own custom VPCs and restrict access with additional routing and connectivity mechanisms.
 
-## Diseño para la alta disponibilidad
+## Design for high availability
 
-En la red, la instancia se encuentra en una zona de disponibilidad de su elección. Como ha aprendido anteriormente, los servicios de AWS que se encuentran en el ámbito del nivel de la zona de disponibilidad deben diseñarse teniendo en cuenta la alta disponibilidad.
+In the network, the instance is in an Availability Zone of your choice. As you learned earlier, AWS services that are in the scope of the Availability Zone level must be designed with high availability in mind.
 
-Si bien las instancias EC2 suelen ser fiables, dos son mejores que una, y tres son mejores que dos. Especificar el tamaño de la instancia proporciona una ventaja a la hora de diseñar la arquitectura porque puede utilizar una mayor cantidad de instancias más pequeñas en lugar de unas más grandes.
+While EC2 instances are typically reliable, two is better than one, and three is better than two. Specifying instance size provides an advantage when designing the architecture because you can use a larger number of smaller instances instead of larger ones.
 
-Si su frontend solo tiene una única instancia y ocurre un error en la instancia, la aplicación se desactiva. Por otro lado, si la carga de trabajo se distribuye en 10 instancias y ocurre un error en una, solo pierde el 10 por ciento de su flota, y la disponibilidad de las aplicaciones apenas se ve afectada.
+If your frontend only has a single instance and an instance error occurs, the application is disabled. On the other hand, if the workload is distributed across 10 instances and a failure occurs on one, you only lose 10 percent of your fleet, and application availability is barely affected.
 
-Al diseñar la arquitectura de cualquier aplicación para obtener alta disponibilidad, considere utilizar al menos dos instancias EC2 en dos zonas de disponibilidad independientes.
+When architecting any application for high availability, consider using at least two EC2 instances in two separate availability zones.
 
-## Ciclo de vida de la instancia EC2
+## EC2 instance lifecycle
 
-Una instancia EC2 cambia entre distintos estados desde el momento en que la crea hasta que se termina.
+An EC2 instance switches between different states from the time it is created until it is terminated.
+
 
 <p align="center">
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/4cba3a38-f3b5-4e38-93be-d288d776c614">
 </p>
 
-## Precio
+## Price
 
-Una de las formas de reducir los costos con Amazon EC2 es elegir la opción de precio adecuada para la ejecución de sus aplicaciones. AWS ofrece tres opciones de compra principales para las instancias EC2: instancias bajo demanda, reservadas y de spot.
+One of the ways to reduce costs with Amazon EC2 is to choose the right pricing option for running your applications. AWS offers three main purchasing options for EC2 instances: on-demand, reserved, and spot instances.
 
 <p align="center">
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/f6afe37c-abd4-4ce1-9047-e761dada3616">
 </p>
 
-### Pago por uso con las instancias bajo demanda
+### Pay-per-use with on-demand instances
 
-Con las instancias bajo demanda, paga por la capacidad de cómputo sin compromisos a largo plazo. La facturación comienza cuando la instancia se está ejecutando y se detiene cuando la instancia se encuentra en estado detenido o terminado. El precio por segundo de una instancia bajo demanda en ejecución es fijo.
+With on-demand instances, you pay for compute capacity with no long-term commitments. Billing starts when the instance is running and stops when the instance is in a stopped or terminated state. The price per second for a running on-demand instance is fixed.
 
-Para las aplicaciones que requieren que los servidores se ejecuten todo el tiempo, es menos probable que se beneficie del modelo de precio bajo demanda, simplemente porque no hay ninguna situación en la que tenga que apagar los servidores. Por ejemplo, es posible que desee que el servidor web que aloja el frontend de su aplicación de directorio corporativo se ejecute las 24 horas, todos los días para que los usuarios puedan acceder al sitio web en cualquier momento. Incluso si no hay usuarios conectados a su sitio web, no querrá apagar los servidores que respaldan el sitio ante la posible actividad del usuario.
+For applications that require servers to run all the time, you are less likely to benefit from the on-demand pricing model, simply because there is no situation where you have to shut down the servers. For example, you may want the web server hosting the frontend of your corporate directory application to run 24 hours a day, every day so that users can access the website at any time. Even if there are no users logged on to your web site, you don't want to shut down the servers that support the site in the face of possible user activity.
 
-Si no pueden detenerse los servidores, considere utilizar una instancia reservada para ahorrar costos.
+If the servers cannot be stopped, consider using a reserved instance to save costs.
 
-### Capacidad de reserva con las instancias reservadas (RI)
+### Reserve capacity with reserved instances (RI)
 
-Las RI le proporcionan un descuento importante en comparación con el precio de las instancias bajo demanda. Las RI ofrecen una tarifa horaria con descuento y una reserva de capacidad opcional para las instancias EC2. Puede elegir entre tres opciones de pago: el pago total anticipado, el pago inicial parcial o sin pago inicial. Puede seleccionar un periodo de 1 año o 3 años para cada una de estas opciones.
+RIs provide you with a significant discount compared to the price of On-Demand instances. RIs offer a discounted hourly rate and an optional capacity reservation for EC2 instances. You can choose from three payment options: full upfront payment, partial upfront payment or no upfront payment. You can select a 1-year or 3-year term for each of these options.
 
-Según la opción que elija, recibe un descuento diferente.
+Depending on the option you choose, you receive a different discount.
 
-Pago total anticipado ofrece un descuento superior al de las instancias de pago inicial parcial.
-Las instancias de pago inicial parcial ofrecen un descuento mayor que sin pago inicial.
-Sin pago inicial  ofrece un descuento superior al de las instancias bajo demanda.
-Las instancias bajo demanda y sin pago inicial son similares, ya que en ninguno de los dos casos se requiere un pago inicial. Sin embargo, hay una diferencia importante. Cuando elige una instancia bajo demanda, deja de pagar por la instancia cuando la detiene o la termina. Cuando detiene una RI, sigue pagando por ella porque se comprometió a cumplir un término de 1 o 3 años.
+Full prepayment offers a higher discount than partial down payment instances.
+Partial down payment instances offer a greater discount than no down payment.
+No down payment offers a higher discount than on-demand instances.
+On-demand and no down payment instances are similar in that no down payment is required in either case. However, there is an important difference. When you choose an on-demand instance, you stop paying for the instance when you stop or terminate it. When you stop an IR, you continue to pay for it because you committed to a 1-year or 3-year term.
 
-Las instancias reservadas se asocian a un tipo de instancias y a una zona de disponibilidad en función de cómo las reserve. El descuento aplicado por una compra de instancia reservada no se asocia directamente a un ID de instancia específico, sino a un tipo de instancias.
+Reserved Instances are associated with an instance type and availability zone based on how you reserve them. The discount applied for a Reserved Instance purchase is not directly associated to a specific instance ID, but to an instance type.
 
-### Ahorro de costos con las instancias de spot
+### Cost savings with spot instances
 
-Otra forma de pagar las instancias EC2 es mediante instancias de spot. Las instancias de spot de Amazon EC2 le permiten aprovechar la capacidad de EC2 sin utilizar en la nube de AWS. Están disponibles hasta con un 90 % de descuento en comparación con los precios bajo demanda.
+Another way to pay for EC2 instances is through spot instances. Amazon EC2 spot instances allow you to leverage unused EC2 capacity in the AWS cloud. They are available at up to 90% discount compared to on-demand pricing.
 
-Con las instancias de spot, establece un límite al pago por la hora de la instancia. Esto se compara con el precio de spot actual que define AWS. Si el monto que paga es superior al precio de spot actual y hay capacidad, recibirá una instancia. Aunque son muy prometedoras desde el punto de vista de la facturación, debe tener en cuenta algunas consideraciones de arquitectura para utilizarlas de manera efectiva.
+With spot instances, you set a limit to the instance hourly payout. This is compared to the current spot price that AWS defines. If the amount you pay is higher than the current spot price and there is capacity, you will receive an instance. While these are very promising from a billing standpoint, you must take into account some architectural considerations to use them effectively.
 
-Una consideración es que la instancia de spot podría interrumpirse. Por ejemplo, si AWS determina que la capacidad ya no está disponible para una instancia de spot concreta o si el precio de spot supera la cantidad que está dispuesto a pagar, AWS le dará una advertencia de 2 minutos antes de interrumpir la instancia. Esto significa que cualquier aplicación o carga de trabajo que se ejecute en una instancia de spot debe poder interrumpirse.
+One consideration is that the spot instance could be interrupted. For example, if AWS determines that capacity is no longer available for a particular spot instance or if the spot price exceeds the amount you are willing to pay, AWS will give you a 2-minute warning before interrupting the instance. This means that any application or workload running on a spot instance must be able to be interrupted.
 
-Debido a esta consideración única, las cargas de trabajo inherentemente tolerantes a errores suelen ser buenos candidatos para utilizar con las instancias de spot. Se incluyen big data, las cargas de trabajo en contenedores, la integración y entrega continuas (CI/CD), los servidores web, la informática de alto rendimiento (HPC), el renderizado de imágenes y medios, y otras cargas de trabajo de prueba y desarrollo.
+Because of this unique consideration, inherently fault-tolerant workloads are often good candidates for use with spot instances. These include big data, containerized workloads, continuous integration and delivery (CI/CD), web servers, high-performance computing (HPC), image and media rendering, and other test and development workloads.
