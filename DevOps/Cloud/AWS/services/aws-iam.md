@@ -8,84 +8,84 @@ AWS Identity and Access Management (IAM) is a web service that helps you securel
 
 When you create an AWS Account, you start with a login identity that has full access to all AWS resources and Services in the account. This identity is given the AWS Account root user name and is accessed by logging in with the email and password you used to create the account. We recommend that you do not use the root user for everyday tasks. Protect the root user credentials and use them only for tasks that the root user can perform. For a complete list of tasks that require you to log in as the root user, see Tasks that require root user credentials in the AWS Account Management Reference Guide.
 
-Se recomienda básicamente generar las configuraciones sobre los usuarios por medio de los grupos, configuramos los mismos, y asociamos los usuarios a los mencionados grupos, esto facilita la gestión cuando se le da de baja a un usuario o este es movido de un puesto a otro. 
+It is basically recommended to generate the configurations on the users by means of the groups, we configure them, and associate the users to the mentioned groups, this facilitates the management when a user is removed or is moved from one position to another. 
 
-Adicional a ello, se recomienda configurar la autenticación multifactor para la cuenta root, e incluso al iniciar se recomienda no utilizar la cuenta root sino configurar un usuario tipo administrador para realizar las gestiones pertinentes, esto es fundamental ya que el mismo puede ser parametrizable, a excepción del usuario root. 
+In addition to this, it is recommended to configure the multifactor authentication for the root account, and even when starting it is recommended not to use the root account but to configure an administrator type user to carry out the pertinent managements, this is fundamental since it can be parameterized, with the exception of the root user. 
 
-## Características de IAM
+## Characteristics of IAM
 
-Para ayudar a controlar el acceso y administrar las identidades de su cuenta de AWS, IAM ofrece muchas características para garantizar la seguridad.
+To help control access and manage identities for your AWS account, IAM offers many features to ensure security.
 
-- IAM es global y no es específica de ninguna región. Puede ver y utilizar las configuraciones de IAM desde cualquier región en la consola de administración de AWS.
-- IAM se integra en muchos servicios de AWS de forma predeterminada.
-Puede establecer políticas de contraseñas en IAM a fin de especificar los requisitos de complejidad y los periodos de rotación obligatorios para los usuarios.
-- IAM admite MFA.
-- IAM admite la identidad federada, que permite a los usuarios que ya tienen contraseñas en otro lugar (p. ej.: en su red corporativa o con un proveedor de identidad de Internet) obtener acceso temporal a su cuenta de AWS.
-Cualquier cliente de AWS puede utilizar IAM; el servicio se ofrece sin cargo adicional.
+- IAM is global and is not region-specific. You can view and use IAM settings from any region in the AWS Management Console.
+- IAM is integrated into many AWS services by default.
+You can set password policies in IAM to specify complexity requirements and mandatory rotation periods for users.
+- IAM supports MFA.
+- IAM supports federated identity, which allows users who already have passwords elsewhere (e.g., on your corporate network or with an Internet Identity Provider) to gain temporary access to your AWS account.
+Any AWS customer can use IAM; the service is offered at no additional charge.
 
-## Usuario de IAM
+## Users of IAM
 
-Un usuario de IAM representa a la persona o el servicio que interactúa con AWS. Puede definir el usuario de su cuenta de AWS. Se factura a su cuenta cualquier actividad realizada por ese usuario. Una vez creado un usuario, ese usuario puede iniciar sesión para acceder a los recursos de AWS de su cuenta.
+An IAM user represents the person or service that interacts with AWS. You can define the user for your AWS account. Your account is billed for any activity performed by that user. Once a user is created, that user can log in to access AWS resources in your account.
 
-También puede añadir más usuarios a la cuenta según sea necesario. Por ejemplo, para la aplicación de fotos de gatos, podría crear usuarios individuales en su cuenta de AWS que correspondan a las personas que están trabajando en su aplicación. Cada persona debe tener sus propias credenciales de inicio de sesión. Proporcionar a los usuarios sus propias credenciales de inicio de sesión impide compartir las credenciales.
+You can also add more users to the account as needed. For example, for your cat photo application, you could create individual users in your AWS account that correspond to the people who are working on your application. Each person should have their own login credentials. Providing users with their own login credentials prevents credentials from being shared.
 
-## Roles de IAM
+## Roles of IAM
 
-Mantener roles es más eficiente que mantener a los usuarios. Cuando asume un rol, IAM proporciona dinámicamente credenciales temporales que vencen tras un periodo definido, entre 15 minutos y 36 horas. Los usuarios, por otro lado, tienen credenciales de largo plazo en forma de combinaciones de nombre de usuario y contraseña, o un conjunto de claves de acceso.
+Maintaining roles is more efficient than maintaining users. When you assume a role, IAM dynamically provides temporary credentials that expire after a defined period, between 15 minutes and 36 hours. Users, on the other hand, have long-term credentials in the form of username and password combinations, or a set of access keys.
 
-Las claves de acceso de usuario solo vencen cuando usted o el administrador de la cuenta rotan las claves. Las credenciales de inicio de sesión de usuario caducan si aplica una política de contraseñas a su cuenta que obliga a los usuarios a rotar las contraseñas.
+User access keys expire only when you or the account administrator rotates the keys. User login credentials expire if you apply a password policy to your account that forces users to rotate passwords.
 
-## Proveedores de identidad (IdP)
+## Identity providers (IdP)
 
-Si decide convertir su aplicación de fotos de gatos en un negocio y comienza a tener más de unas personas trabajando en ella, considere administrar la información de identidad de los empleados a través de un proveedor de identidad (IdP). El uso de un IdP, ya sea un servicio de AWS, como AWS Single Sign-On o un proveedor de identidad de terceros, proporciona una fuente única de información para todas las identidades de su organización.
+If you decide to turn your cat photo application into a business and start having more than a few people working on it, consider managing employee identity information through an identity provider (IdP). Using an IdP, whether it's an AWS service such as AWS Single Sign-On or a third-party identity provider, provides a single source of information for all identities in your organization.
 
-Ya no tiene que crear usuarios de IAM independientes en AWS. En cambio, puede utilizar roles de IAM para proporcionar permisos a las identidades federadas de su IdP. Por ejemplo, hay una empleada, Martha, que tiene acceso a varias cuentas de AWS. En lugar de crear y administrar varios usuarios de IAM llamados “Martha” en cada una de esas cuentas de AWS, podría administrar Martha en el IdP de su empresa. Si Martha cambia a otro puesto en la empresa o la abandona, se puede actualizar en el IdP, en lugar de en todas las cuentas de AWS de la empresa.
+You no longer have to create separate IAM users in AWS. Instead, you can use IAM roles to provide permissions to your IdP's federated identities. For example, there is an employee, Martha, who has access to multiple AWS accounts. Instead of creating and managing multiple IAM users named "Martha" in each of those AWS accounts, you could manage Martha in your company IdP. If Martha moves to another position in the company or leaves the company, she can be updated in the IdP, rather than in all of the company's AWS accounts.
 
-Si tiene una organización que abarca muchos empleados y varias cuentas de AWS, es posible que desee que sus empleados inicien sesión con una única credencial.
+If you have an organization that spans many employees and multiple AWS accounts, you may want your employees to sign in with a single credential.
 
-AWS SSO es un IdP que permite a los usuarios iniciar sesión en un portal de usuarios con un único conjunto de credenciales. A continuación, proporciona a los usuarios acceso a sus cuentas y aplicaciones asignadas en una ubicación central.
+AWS SSO is an IdP that allows users to sign in to a user portal with a single set of credentials. It then provides users with access to their assigned accounts and applications in a central location.
 
-Es similar a IAM. AWS SSO ofrece un directorio en el que puede crear usuarios, organizarlos en grupos, establecer permisos en todos los grupos y conceder acceso a los recursos de AWS. Sin embargo, AWS SSO tiene algunas ventajas en comparación con IAM. Por ejemplo, si utiliza un IdP de terceros, puede sincronizar sus usuarios y grupos con AWS SSO. Esto elimina la carga de volver a crear usuarios que ya existen en otro lugar y le permite administrar los usuarios desde su IdP. Lo más importante es que AWS SSO separa las tareas entre su IdP y AWS, lo que garantiza que la administración del acceso a la nube no esté en el IdP ni dependa de él.
+It is similar to IAM. AWS SSO provides a directory where you can create users, organize them into groups, set permissions on all groups, and grant access to AWS resources. However, AWS SSO has some advantages compared to IAM. For example, if you use a third-party IdP, you can synchronize your users and groups with AWS SSO. This eliminates the burden of recreating users that already exist elsewhere and allows you to manage users from your IdP. Most importantly, AWS SSO separates tasks between your IdP and AWS, ensuring that cloud access management is not in or dependent on the IdP.
 
-## Credenciales de usuario de IAM
+## User credentials of IAM
 
-Un usuario de IAM consta de un nombre y un conjunto de credenciales. Al crear un usuario, puede proporcionarle los siguientes tipos de acceso:
+An IAM user consists of a name and a set of credentials. When you create a user, you can provide it with the following types of access:
 
-- Acceso a la consola de administración de AWS
-- Acceso programático a AWS Command Line Interface (AWS CLI) y a la interfaz de programación de la aplicación de AWS (API de AWS)
+- Access to the AWS Management Console.
+- Programmatic access to the AWS Command Line Interface (AWS CLI) and the AWS Application Programming Interface (AWS API).
 
-Para acceder a la consola de administración de AWS, proporcione al usuario un nombre de usuario y una contraseña. Para el acceso mediante programación, AWS genera un conjunto de claves de acceso que se puede utilizar con AWS CLI y la API de AWS. Las credenciales de usuario de IAM se consideran permanentes, lo que significa que se mantienen con el usuario hasta que los administradores hagan una rotación forzada.
+To access the AWS Management Console, provide the user with a user name and password. For programmatic access, AWS generates a set of access keys that can be used with the AWS CLI and the AWS API. IAM user credentials are considered permanent, meaning they stay with the user until administrators do a forced rotation.
 
-Cuando crea un usuario de IAM, puede conceder permisos directamente a nivel de usuario. Esto puede parecer una buena idea si solo tiene un usuario o unos usuarios. Sin embargo, a medida que aumenta el número de usuarios, mantenerse al día con los permisos puede ser más complicado. Por ejemplo, si tiene 3000 usuarios en su cuenta de AWS, puede ser un desafío administrar el acceso y obtener una visión general de quién puede realizar qué acciones en cuáles recursos.
+When you create an IAM user, you can grant permissions directly at the user level. This may seem like a good idea if you only have one or a few users. However, as the number of users increases, keeping up with permissions can become more complicated. For example, if you have 3000 users in your AWS account, it can be a challenge to manage access and get an overview of who can perform what actions on which resources.
 
-Si tan solo existiera una forma de agrupar los usuarios de IAM y en cambio adjuntar los permisos a nivel de grupo. Adivine qué. Existe.
+If only there was a way to group IAM users and instead attach permissions at the group level. Guess what? There is.
 
-## Grupos de IAM
+## Groups of IAM
 
-Un grupo de IAM es una colección de usuarios. Todos los usuarios del grupo heredan los permisos asignados al grupo. Esto permite conceder permisos a varios usuarios a la vez. Es una forma más conveniente y escalable de administrar los permisos de los usuarios de su cuenta de AWS. Por eso, es una práctica recomendada utilizar grupos de IAM.
+An IAM group is a collection of users. All users in the group inherit the permissions assigned to the group. This allows you to grant permissions to multiple users at once. It is a more convenient and scalable way to manage permissions for users in your AWS account. This is why it is a best practice to use IAM groups.
 
-Si está tratando de crear una aplicación y hay varios usuarios en una cuenta que trabajan en la aplicación, puede organizarlos por función de trabajo. Por ejemplo, puede organizar los grupos de IAM por desarrolladores, seguridad y administradores. A continuación, puede colocar a todos los usuarios de IAM en sus respectivos grupos.
+If you are trying to build an application and there are multiple users in an account working on the application, you can organize them by job role. For example, you can organize IAM groups by developers, security, and administrators. You can then place all IAM users into their respective groups.
 
-Esto proporciona una forma de ver quién tiene qué permisos en su organización. También lo ayuda a escalar cuando las nuevas personas se unen o se van, y cuando cambian de roles en su organización.
+This provides a way to see who has what permissions in your organization. It also helps you to escalate when new people join or leave, and when they change roles in your organization.
 
-Tenga en cuenta los siguientes ejemplos:
+Consider the following examples:
 
-- Un nuevo desarrollador se une a su cuenta de AWS para ayudarlo con su aplicación. Crea un nuevo usuario y lo añade al grupo de desarrolladores, sin pensar qué permisos necesitan.
-- Un desarrollador cambia de trabajo y se convierte en ingeniero de seguridad. En lugar de editar los permisos del usuario directamente, lo elimina del grupo anterior y lo añade al nuevo grupo que ya tiene el nivel de acceso correcto.
+- A new developer joins your AWS account to help you with your application. You create a new user and add them to the developer group, without thinking about what permissions they need.
+- A developer changes jobs and becomes a security engineer. Instead of editing the user's permissions directly, you remove them from the old group and add them to the new group that already has the correct level of access.
 
-Tenga en cuenta las siguientes características de los grupos:
+Please note the following characteristics of groups:
 
-- Los grupos pueden tener muchos usuarios.
-- Los usuarios pueden pertenecer a muchos grupos.
-- Los grupos no pueden pertenecer a grupos.
+- Groups can have many users.
+- Users can belong to many groups.
+- Groups cannot belong to groups.
 
-El usuario raíz puede realizar todas las acciones en todos los recursos de una cuenta de AWS de forma predeterminada. Esto contrasta con la creación de nuevos usuarios de IAM, nuevos grupos o roles. Las nuevas identidades de IAM no pueden realizar acciones en su cuenta de AWS de forma predeterminada hasta que les conceda permiso explícitamente.
+The root user can perform all actions on all resources in an AWS account by default. This is in contrast to creating new IAM users, new groups, or roles. New IAM identities cannot perform actions on your AWS account by default until you explicitly grant them permission.
 
-La forma en que concede permisos en IAM es mediante las políticas de IAM.
+The way you grant permissions in IAM is through IAM policies.
 
-## Políticas de IAM
+## Policies of IAM
 
-Para administrar el acceso y proporcionar permisos a los servicios y recursos de AWS, crea políticas de IAM y las adjunta a los usuarios, grupos y roles de IAM. Cada vez que un usuario o rol hace una solicitud, AWS evalúa las políticas asociadas a ellos. Por ejemplo, si hay un desarrollador en el grupo de desarrolladores que solicita un servicio de AWS, AWS evalúa las políticas adjuntas al grupo de desarrolladores y las políticas adjuntas al usuario de desarrollador para definir si la solicitud debe permitirse o denegarse.
+To manage access and provide permissions to AWS services and resources, you create IAM policies and attach them to IAM users, groups, and roles. Each time a user or role makes a request, AWS evaluates the policies associated with them. For example, if there is a developer in the developer group requesting an AWS service, AWS evaluates the policies attached to the developer group and the policies attached to the developer user to define whether the request should be allowed or denied.
 
 ## References
 - https://docs.aws.amazon.com/en_en/IAM/latest/UserGuide/introduction.html
