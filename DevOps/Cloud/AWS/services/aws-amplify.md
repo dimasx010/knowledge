@@ -9,16 +9,18 @@ También merece la pena destacar que AWS Amplify o Amazon Amplify permite admini
 Paralelamente, conviene mencionar que AWS Amplify o Amazon Amplify te permite crear un mismo back-end de la aplicación móvil para los diferentes sistemas operativos: Android, IOS, React Native, Ionic y Flutter. En cuanto a plataformas web, es compatible con JavaScript, React, Angular, Vue y Next.js.
 
 <p align="center">
-  <img src="https://github.com/dimasx010/knowledge/assets/105082657/f220f2b4-102c-4637-af00-cc6e2358ebac">
+  <img src="https://github.com/dimasx010/knowledge/assets/105082657/7f54ecdc-ae31-42e6-85ce-e9288342e0e0">
 </p>
 
-API Gateway is an AWS service that supports the following:
+## Beneficios de AWS Amplify
 
-- Create, deploy, and manage a RESTful application programming interface (API) to expose backend HTTP endpoints, AWS Lambda functions, or other AWS services.
+AWS Amplify ofrece tanto servicios de hosting, mediante la conexión de un repositorio ya creado, como la posibilidad de construir una aplicación desde cero. En este último caso, se puede hacer en tres pasos, como nos demuestra nuestro invitado en el webinar.
 
-- Create, deploy, and manage a WebSocket API to expose AWS Lambda functions or other AWS services.
+Asimismo, para cualquiera de sus aplicaciones, AWS Amplify destaca por la flexibilidad y sencillez de la configuración del dominio y los accesos, la interacción y distribución de archivos en tiempo real, el uso de la Inteligencia Artificial y el Machine Learning y la personalización de campañas, por mencionar los destacados.
 
-- Invoke API methods exposed through frontend HTTP and WebSocket endpoints.
+En definitiva, la gran ventaja de AWS Amplify es la posibilidad de crear y configurar aplicaciones web y mobile, bastante sofisticadas y de forma fácil y rápida, sin tener que generar código. De igual manera, resalta su performance, adaptabilidad y seguridad.
+
+Si quieres ver, paso a paso, cómo crear una aplicación con AWS Amplify, dale a play y échale un vistazo al webinar. Y si tienes una base en programación y lo que quieres es convertirte en un experto en la administración de sistemas en la nube, nuestro DevOps & Cloud Computing Bootcamp encaja con tu perfil.
 
 ## Referencias
-- https://docs.aws.amazon.com/en_en/apigateway/latest/developerguide/api-gateway-basic-concept.html
+- https://keepcoding.io/blog/aplicaciones-cloud-aws-amplify/
