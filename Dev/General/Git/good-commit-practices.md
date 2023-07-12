@@ -4,7 +4,9 @@
 
 La siguiente documentación tiene como objetivo destacar ciertas buenas recomendaciones para tener una mejor organización en los commit que enviemos. 
 
-![git]((https://github.com/dimasx010/knowledge/assets/105082657/47d2adf5-6e36-48f2-8027-641eee590d3e)
+<p align="center">
+  <img src="https://github.com/dimasx010/knowledge/assets/105082657/47d2adf5-6e36-48f2-8027-641eee590d3e">
+</p>
 
 ## Recomendaciones
 
