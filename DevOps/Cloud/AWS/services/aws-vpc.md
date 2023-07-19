@@ -86,5 +86,6 @@ En una unidad anterior, aprendió que las subredes se pueden utilizar para segre
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/218f8c36-ab86-49cd-a640-c3393f9b8ffd">
 </p>
 
+
 ## References
 - https://docs.aws.amazon.com/en_en/vpc/latest/userguide/what-is-amazon-vpc.html
