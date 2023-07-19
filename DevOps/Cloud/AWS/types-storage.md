@@ -45,6 +45,3 @@ Con el almacenamiento de objetos, puede almacenar casi cualquier tipo de datos, 
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/2b3c9aa4-d401-4259-aabe-1a9a52357767">
 </p>
 
-## References
-- https://aws.amazon.com/compliance/shared-responsibility-model/
-
