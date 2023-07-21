@@ -12,9 +12,9 @@ Para obtener más información, consulte Uso de las clases de almacenamiento de 
 
 Amazon S3 cuenta con funciones de gestión del almacenamiento que puede utilizar para gestionar los costes, cumplir los requisitos normativos, reducir la latencia y guardar varias copias distintas de sus datos para cumplir los requisitos de cumplimiento.
 
-Ciclo de vida de S3: defina la configuración de ciclo de vida para administrar los objetos y almacenarlos de manera económica durante todo su ciclo de vida. Puede realizar la transición de objetos a otras clases de almacenamiento de S3 o caducar objetos que alcancen el final de su vida útil.
+- Ciclo de vida de S3: defina la configuración de ciclo de vida para administrar los objetos y almacenarlos de manera económica durante todo su ciclo de vida. Puede realizar la transición de objetos a otras clases de almacenamiento de S3 o caducar objetos que alcancen el final de su vida útil.
 
-S3 Object Lock: evite que se eliminen o se sobreescriban objetos de Amazon S3 durante un período de tiempo determinado o de manera indefinida. Object Lock se puede utilizar para cumplir con los requisitos normativos que requieren almacenamiento de escritura única y lectura múltiple (WORM) o simplemente para agregar otra capa de protección para evitar cambios y eliminaciones de objetos.
+- S3 Object Lock: evite que se eliminen o se sobreescriban objetos de Amazon S3 durante un período de tiempo determinado o de manera indefinida. Object Lock se puede utilizar para cumplir con los requisitos normativos que requieren almacenamiento de escritura única y lectura múltiple (WORM) o simplemente para agregar otra capa de protección para evitar cambios y eliminaciones de objetos.
 
 Replicación de S3— Replique objetos y sus respectivos metadatos y etiquetas de objeto en uno o más buckets de destino en el mismo o en diferentesRegiones de AWSpara reducir la latencia, el cumplimiento normativo, la seguridad y otros casos de uso.
 
@@ -34,13 +34,13 @@ Los buckets y los objetos que contienen son privados y solo se puede acceder a e
 
 Amazon S3 es un servicio de almacenamiento ampliamente utilizado, con muchos más casos de uso de los que caben en una pantalla. En la siguiente lista, se resumen algunas de las formas más comunes de utilizar Amazon S3:
 
-Copia de seguridad y almacenamiento: Amazon S3 es un lugar natural para realizar copia de seguridad de los archivos porque es altamente redundante. Como se mencionó en la última unidad, AWS almacena las instantáneas de EBS en S3 para aprovechar la alta disponibilidad.
+- Copia de seguridad y almacenamiento: Amazon S3 es un lugar natural para realizar copia de seguridad de los archivos porque es altamente redundante. Como se mencionó en la última unidad, AWS almacena las instantáneas de EBS en S3 para aprovechar la alta disponibilidad.
 
-Alojamiento multimedia: Debido a que puede almacenar objetos ilimitados y a que cada objeto individual puede tener hasta 5 TB, Amazon S3 es un lugar ideal para alojar cargas de video, fotos y música.
+- Alojamiento multimedia: Debido a que puede almacenar objetos ilimitados y a que cada objeto individual puede tener hasta 5 TB, Amazon S3 es un lugar ideal para alojar cargas de video, fotos y música.
 
-Entrega de software: Puede utilizar Amazon S3 para alojar las aplicaciones de software que los clientes pueden descargar.
+- Entrega de software: Puede utilizar Amazon S3 para alojar las aplicaciones de software que los clientes pueden descargar.
 
-Lagos de datos: AmazonS3 es la base óptima para un lago de datos por su escalabilidad prácticamente ilimitada. Puede aumentar el almacenamiento de gigabytes a petabytes de contenido y pagar solo por lo que utiliza.
+- Lagos de datos: AmazonS3 es la base óptima para un lago de datos por su escalabilidad prácticamente ilimitada. Puede aumentar el almacenamiento de gigabytes a petabytes de contenido y pagar solo por lo que utiliza.
 Sitios web estáticos: Puede configurar su bucket de S3 para alojar un sitio web estático de scripts HTML, CSS y del lado del cliente.
 
 Contenido estático: Debido al escalado ilimitado, a la compatibilidad con archivos grandes y al hecho de que puede acceder a cualquier objeto a través de la Web en cualquier momento, Amazon S3 es el lugar perfecto para almacenar contenido estático.
@@ -59,18 +59,19 @@ Si decide que quiere que todos los usuarios en Internet vean sus fotos, puede el
 
 Amazon S3 refuerza el cifrado en tránsito (a medida que viaja hacia Amazon S3 y desde allí) y en reposo. Para proteger los datos en reposo, puede utilizar el cifrado de la siguiente manera:
 
-Cifrado del lado del servidor: Permite a Amazon S3 cifrar el objeto antes de guardarlo en los discos de sus centros de datos y, a continuación, descifrarlo al descargar los objetos.
+- Cifrado del lado del servidor: Permite a Amazon S3 cifrar el objeto antes de guardarlo en los discos de sus centros de datos y, a continuación, descifrarlo al descargar los objetos.
 
-Cifrado del lado del cliente: Puede cifrar los datos del lado del cliente y, a continuación, subir los datos cifrados a Amazon S3. En este caso, administra el proceso de cifrado, las claves de cifrado y todas las herramientas relacionadas.
+- Cifrado del lado del cliente: Puede cifrar los datos del lado del cliente y, a continuación, subir los datos cifrados a Amazon S3. En este caso, administra el proceso de cifrado, las claves de cifrado y todas las herramientas relacionadas.
 
 Para el cifrado en tránsito, puede utilizar el cifrado del lado del cliente o la Capa de conexión segura (SSL).
 
 ## Control de versiones de Amazon S3
 
 Como se describió anteriormente, Amazon S3 identifica los objetos en parte mediante el nombre del objeto. Por ejemplo, cuando sube una foto de un empleado a Amazon S3, podría nombrar el objeto “employee.jpg” y almacenarlo en una carpeta denominada “employees”. Si no utiliza el control de versiones de Amazon S3, cada vez que sube un objeto llamado “employee.jpg” a la carpeta employees, sobrescribirá el archivo original.
+
 Esto puede ser un problema por varios motivos, como los siguientes:
 
-El nombre del archivo employee.jpg es un nombre común para un objeto de fotos de empleados. Es posible que usted u otra persona que tenga acceso al bucket no haya tenido la intención de sobrescribirlo, pero una vez sobrescrito, no se puede acceder al archivo original.
+- El nombre del archivo employee.jpg es un nombre común para un objeto de fotos de empleados. Es posible que usted u otra persona que tenga acceso al bucket no haya tenido la intención de sobrescribirlo, pero una vez sobrescrito, no se puede acceder al archivo original.
 
 Es posible que desee conservar diferentes versiones de employee.jpg. Sin el control de versiones, si quisiera crear una nueva versión de employee.jpg, tendría que subir el objeto y elegir otro nombre para él. Tener varios objetos con ligeras diferencias en las variaciones de nomenclatura puede causar confusión y desorden en los buckets de S3.
 
@@ -92,11 +93,11 @@ Si sobrescribe un objeto, da como resultado una nueva versión del objeto en el 
 
 Los buckets pueden presentar uno de los tres estados siguientes:
 
-Sin versión (predeterminado): Ningún objeto nuevo ni actual en el bucket tiene una versión.
+- Sin versión (predeterminado): Ningún objeto nuevo ni actual en el bucket tiene una versión.
 
-Control de versiones habilitado: El control de versiones está habilitado para todos los objetos del bucket.
+- Control de versiones habilitado: El control de versiones está habilitado para todos los objetos del bucket.
 
-Control de versiones suspendido: Se suspende el control de versiones para los objetos nuevos. Ninguno de los objetos nuevos del bucket tendrá una versión. Sin embargo, todos los objetos actuales conservan las versiones de objetos.
+- Control de versiones suspendido: Se suspende el control de versiones para los objetos nuevos. Ninguno de los objetos nuevos del bucket tendrá una versión. Sin embargo, todos los objetos actuales conservan las versiones de objetos.
 
 El estado de control de versiones se aplica a todos los objetos del bucket. Los costos de almacenamiento se generan en todos los objetos del bucket, incluidas todas las versiones. Para reducir el monto de la factura de Amazon S3, es posible que quiera eliminar las versiones anteriores de los objetos cuando ya no sean necesarios.
 
