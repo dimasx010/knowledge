@@ -24,7 +24,7 @@ Los volúmenes de Amazon EBS se organizan en dos categorías principales: discos
 El siguiente gráfico puede ayudarlo a decidir qué volumen de EBS es la opción correcta para su carga de trabajo.
 
 <p align="center">
-  <img src="https://github.com/dimasx010/knowledge/assets/105082657/b9bad3e9-834a-4ed6-ab2b-d6997b3dbb98">
+  <img src="https://github.com/dimasx010/knowledge/assets/105082657/9ce19cc2-ee98-45e7-9425-be6a99ac9d47">
 </p>
 
 ## Ventajas de Amazon EBS
