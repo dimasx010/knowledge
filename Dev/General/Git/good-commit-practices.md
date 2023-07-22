@@ -2,31 +2,32 @@
 
 ## General
 
-La siguiente documentación tiene como objetivo destacar ciertas buenas recomendaciones para tener una mejor organización en los commit que enviemos. 
+The following documentation aims to highlight some good recommendations to have a better organization in the commits we send.
 
 <p align="center">
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/47d2adf5-6e36-48f2-8027-641eee590d3e">
 </p>
 
-## Recomendaciones
+## Recommendations
 
--  Usa el verbo imperativo (Add, Change, Fix, Remove, …) 
+-  Uses the imperative verb (Add, Change, Fix, Remove, ...) 
 
--  No uses punto final ni suspensivos en tus mensajes
+-  Do not use periods or suspension periods in your messages.
 ```git
 git commit -m "Change the default system color" 
 ```
--  Usa como máximo 50 carácteres para tu mensaje de commit 
+-  Use a maximum of 50 characters for your commit message.
 
--  Usa el cuerpo del commit 
+-  Use the commit body
 ```git
 git commit -m "Add summary of commit" -m "This is a message to add more context."
 ```
--  Usa commits semánticos
+-  Uses semantic commits
+- - https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716
 
--  Aprovecha los mensajes 
+-  Take advantage of the messages
 
--  Considera usar utilidades para hacer commit
+-  Consider using utilities to commit
 
 ## References
 - linkedin.com/posts/midudev_cada-día-haces-git-commit-de-tu-código-activity-7084532566266892288-mooD/?utm_source=share&utm_medium=member_android
