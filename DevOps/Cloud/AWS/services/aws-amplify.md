@@ -1,26 +1,26 @@
 # AWS Amplify
 
-Según su propio creador, AWS Amplify es “la manera más rápida y sencilla de crear aplicaciones web y móviles escalables”. Esto significa que, con el kit de herramientas y servicios que ofrece, se puede desarrollar, desde cero, tanto el back-end como el front-end de una app en muy pocos pasos.
+According to its creator, AWS Amplify is "the fastest and easiest way to create scalable web and mobile applications". This means that, with the toolkit and services it offers, you can develop, from scratch, both the back-end and front-end of an app in very few steps.
 
-Además, también es posible conectar cualquier repositorio y alojarlo en la consola de AWS Amplify de manera sencilla. A partir de ahí, se puede configurar la aplicación, añadiendo elementos de back-end y front-end, para posteriormente desplegarla en la red.
+In addition, it is also possible to connect any repository and host it in the AWS Amplify console in a simple way. From there, the application can be configured, adding back-end and front-end elements, and then deployed on the network.
 
-También merece la pena destacar que AWS Amplify o Amazon Amplify permite administrar el contenido de la aplicación incluso para los que no son desarrolladores. Para ello, cualquiera que tenga acceso administrativo puede hacerlo a través de la interfaz de usuario de administración de AWS Amplify.
+It is also worth noting that AWS Amplify or Amazon Amplify allows you to manage application content even for non-developers. To do this, anyone with administrative access can do so through the AWS Amplify administration user interface.
 
-Paralelamente, conviene mencionar que AWS Amplify o Amazon Amplify te permite crear un mismo back-end de la aplicación móvil para los diferentes sistemas operativos: Android, IOS, React Native, Ionic y Flutter. En cuanto a plataformas web, es compatible con JavaScript, React, Angular, Vue y Next.js.
+In parallel, it is worth mentioning that AWS Amplify or Amazon Amplify allows you to create the same mobile app back-end for different operating systems: Android, IOS, React Native, Ionic and Flutter. As for web platforms, it supports JavaScript, React, Angular, Vue and Next.js.
 
 <p align="center">
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/7f54ecdc-ae31-42e6-85ce-e9288342e0e0">
 </p>
 
-## Beneficios de AWS Amplify
+## Benefits of AWS Amplify
 
-AWS Amplify ofrece tanto servicios de hosting, mediante la conexión de un repositorio ya creado, como la posibilidad de construir una aplicación desde cero. En este último caso, se puede hacer en tres pasos, como nos demuestra nuestro invitado en el webinar.
+AWS Amplify offers both hosting services, by connecting an already created repository, and the possibility of building an application from scratch. In the latter case, it can be done in three steps, as our guest demonstrates in the webinar.
 
-Asimismo, para cualquiera de sus aplicaciones, AWS Amplify destaca por la flexibilidad y sencillez de la configuración del dominio y los accesos, la interacción y distribución de archivos en tiempo real, el uso de la Inteligencia Artificial y el Machine Learning y la personalización de campañas, por mencionar los destacados.
+Likewise, for any of its applications, AWS Amplify stands out for the flexibility and simplicity of domain configuration and accesses, real-time interaction and file distribution, the use of Artificial Intelligence and Machine Learning, and campaign personalization, to mention the highlights.
 
-En definitiva, la gran ventaja de AWS Amplify es la posibilidad de crear y configurar aplicaciones web y mobile, bastante sofisticadas y de forma fácil y rápida, sin tener que generar código. De igual manera, resalta su performance, adaptabilidad y seguridad.
+In short, the great advantage of AWS Amplify is the possibility of creating and configuring web and mobile applications, quite sophisticated and in an easy and fast way, without having to generate code. Likewise, it highlights its performance, adaptability and security.
 
-Si quieres ver, paso a paso, cómo crear una aplicación con AWS Amplify, dale a play y échale un vistazo al webinar. Y si tienes una base en programación y lo que quieres es convertirte en un experto en la administración de sistemas en la nube, nuestro DevOps & Cloud Computing Bootcamp encaja con tu perfil.
+If you want to see, step by step, how to create an application with AWS Amplify, press play and take a look at the webinar. And if you have a background in programming and want to become an expert in cloud systems administration, our DevOps & Cloud Computing Bootcamp fits your profile.
 
-## Referencias
+## References
 - https://keepcoding.io/blog/aplicaciones-cloud-aws-amplify/
