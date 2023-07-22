@@ -1,72 +1,75 @@
-#  Editor de texto VI
+#  Text editor VI
 
-​Vi es un editor de texto que se encuentra disponible en todas las distribuciones GNU/Linux y en gran parte de Unix. El editor Vi maneja el texto entero de un archivo en memoria, y proporciona muchas otras funcionalidades que lo hacen convertirse en uno de los editores de texto más usados por los administradores. Además, en ciertas situaciones de emergencia, este es el único editor que tendremos disponible.
+Vi is a text editor that is available in all GNU/Linux and most Unix distributions. The Vi editor handles the entire text of a file in memory, and provides many other features that make it one of the most used text editors by administrators. Moreover, in certain emergency situations, this is the only editor available to us.
 
 <p align="center">
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/a9f49b2f-7890-404f-b3f6-1e4d2a8bf3da">
 </p>
 
-## Modos de operación en editor Vi
+## Operating modes in Vi editor
 
-- Comando: es el modo en el que encontrarás al editor cada vez que se inicia. Este modo acepta comandos en forma de letras, mueve el cursor, ejecuta comandos de salidas de texto, permite guardar cambios o salir de el editor, entre otros.
+- Command: this is the mode in which you will find the editor every time it starts. This mode accepts commands in the form of letters, moves the cursor, executes text output commands, saves changes or exits the editor, among others.
 
-- Edición o insert de texto: permite añadir texto al fichero, es decir, cualquier carácter que introduzcamos será insertado en el documento (con la tecla esc como excepción)
+- Edit or insert text: allows you to add text to the file, i.e. any character you enter will be inserted into the document (with the esc key as an exception).
 
-- Ex o última línea: usado para escribir comandos en la última línea al final de la pantalla. Es precedido por : y permite la manipulación de ficheros.
+- Ex or last line: used to write commands in the last line at the end of the screen. It is preceded by : and allows file manipulation.
 
-## Comandos del editor de texto Vi
+## Vi text editor commands
 
-Algunos de los comandos del editor Vi se listarán a continuación:
+Some of the Vi editor commands will be listed below:
 
-### Para iniciar en el editor Vi:
+### To start in the Vi editor:
 
-- vi: abre el programa sin ningún archivo.
-- vi fichero: edita el fichero si existe, y si no, lo crea.
-- vi fichero1 fichero2: edita varios archivos.
-    :next o :n para pasar al siguiente archivo.
-    :prev o :N para ir al archivo previo.
-- vi + [número fichero] : edita el fichero iniciando en la línea indicada.
-- vi+/patrón fichero: edita el fichero iniciando en la primera vez que encuentre el patrón.
+- vi: opens the program without any file.
+- vi file: edits the file if it exists, and if not, creates it.
+- vi file1 file2: edits several files.
+    :next or :n to go to the next file.
+    prev or :N to go to the previous file.
+- vi + [file number] : edit the file starting at the specified line.
+- vi+/pattern file: edit the file starting at the first time the pattern is found.
 
-### Demás comandos del editor Vi:
+### Other Vi editor commands:
 
-- i para insertar texto a la izquierda del cursor.
-- a para insertar texto a la derecha del cursor.
-- I se encarga de insertar texto al inicio de la línea.
-- A es el encargado de insertar texto al final de la línea.
-- ESC vuelve al modo comando.
-- X es el comando que borra el carácter bajo el cursor.
-- dd para borrar la línea actual.
-- dw borra la palabra actual.
-- h o flecha izquierda moverá el cursor hacia la izquierda.
-- j o flecha abajo moverá el cursor a la línea de abajo.
-- k o flecha arriba mueve el cursor a la línea de arriba.
-- l o flecha derecha mueve el cursor a la derecha.
-- :w guarda los cambios.
-- :q para salir del editor.
+- i to insert text to the left of the cursor.
+- a to insert text to the right of the cursor.
+- I is for inserting text at the beginning of the line.
+- A is for inserting text at the end of the line.
+- ESC returns to command mode.
+- X is the command that deletes the character under the cursor.
+- dd to delete the current line.
+- dw deletes the current word.
+- h or left arrow will move the cursor to the left.
+- j or down arrow will move the cursor to the bottom line.
+- k or up arrow will move the cursor to the line above.
+- l or right arrow will move the cursor to the right.
+- :w saves changes.
+- q to exit the editor.
 
-Además, el modo comando contiene ciertos multiplicadores que permite ejecutar un comando tantas veces como se le indique en el editor de texto Vi, así por ejemplo:
+In addition, the command mode contains certain multipliers that allow you to execute a command as many times as indicated in the Vi text editor, for example:
 
-- 5Y copia cinco líneas.
-- 10dd borra diez líneas.
-- 3dw borra 3 palabras.
-- 8j mueve el cursor 8 líneas abajo.
+- 5And copies five lines.
+- 10dd deletes ten lines.
+- 3dw deletes 3 words.
+- 8j moves the cursor 8 lines down.
 
-Respecto al movimiento del cursor en el modo comando del editor de texto Vi, tenemos:
+Regarding the cursor movement in the command mode of the Vi text editor, we have:
 
-- Flechas: mover en distintas direcciones.
-- $ : mueve al inicio o al final de la línea.
-- G : última línea.
-- xG : mueve el cursor a la línea x.
-- xl : mueve el cursor al carácter x de la línea.
+- Arrows: move in different directions.
+- $ : move to the beginning or end of the line.
+- G : last line.
+- xG : moves the cursor to line x.
+- xl : moves the cursor to the x character of 
 
-En cuanto a los movimientos de pantalla, tenemos en el editor de texto Vi:
+As for the screen movements, we have in the Vi text editor:
 
-- Ctrl+ f : una pantalla adelante.
-- Ctrl+ b : una pantalla atrás.
-- Ctrl+ d : media pantalla adelante.
-- Ctrl+ u : media pantalla atrás.
+- Ctrl+ f : one screen forward.
+- Ctrl+ b : one screen back.
+- Ctrl+ d : half screen forward.
+- Ctrl+ u : half screen back.
 
 ## Referencias
-
 - https://keepcoding.io/blog/como-funciona-el-editor-de-texto-vi/
+
+## Courses
+- https://youtu.be/XgQFzi3VkC8
+- https://www.udemy.com/course/vim-aumenta-tu-velocidad-de-desarrollo/
