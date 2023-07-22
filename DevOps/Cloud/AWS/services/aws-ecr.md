@@ -1,45 +1,50 @@
 # Amazon Elastic Container Registry ECR
 
-Amazon Elastic Container Registry (Amazon ECR) es un servicio de registro de imágenes de contenedor administrado por AWS que es seguro, escalable y fiable. Amazon ECR admite repositorios privados con permisos basados en recursos mediante AWS IAM. De este modo, los usuarios especificados o las instancias de Amazon EC2 pueden acceder a sus repositorios e imágenes de contenedor. Puede utilizar la CLI preferida para insertar, extraer y administrar imágenes de Docker, imágenes de Open Container Initiative (OCI) y artefactos compatibles con OCI.
+Amazon Elastic Container Registry (Amazon ECR) is an AWS-managed container image registry service that is secure, scalable, and reliable. Amazon ECR supports private repositories with resource-based permissions using AWS IAM. This allows specified users or Amazon EC2 instances to access your repositories and container images. You can use the preferred CLI to insert, extract, and manage Docker images, Open Container Initiative (OCI) images, and OCI-compliant artifacts.
 
-El equipo de servicios de contenedores de AWS mantiene una hoja de ruta pública en GitHub. Contiene información acerca del trabajo actual de los equipos y permite a todos los clientes de AWS dar retroalimentación de forma directa. Para obtener más información.
+The AWS Container Services team maintains a public roadmap on GitHub. It contains information about the teams' current work and allows all AWS customers to give feedback directly. For more information.
 
 <p align="center">
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/4a1c7e68-1b06-4bb8-8309-23da15c05317">
 </p>
 
-## Componentes de Amazon ECR
+## Amazon ECR components
 
-Amazon ECR contiene los siguientes componentes:
+Amazon ECR contains the following components:
 
 ### Registry (Registro)
-Cada cuenta de AWS recibe un registro privado de Amazon ECR; puede crear un repositorio o más en su registro y almacenar imágenes allí. Para obtener más información
 
-### Token de autorización
-Debe autenticar el cliente en los registros de Amazon ECR como usuario de AWS para que dicho cliente pueda insertar y extraer imágenes. 
+Each AWS account receives a private Amazon ECR registry; you can create one or more repositories in your registry and store images there. For more information
 
-### Repositorio
-Un repositorio de Amazon ECR contiene las imágenes de Docker, las imágenes de Open Container Initiative (OCI) y artefactos compatibles con OCI. 
+### Token of autorization
 
-### Política sobre repositorios
-Puede controlar el acceso a los repositorios y a las imágenes que contienen mediante políticas.
+You must authenticate the client in the Amazon ECR logs as an AWS user in order for that client to be able to insert and extract images.
+
+### Repository
+
+An Amazon ECR repository contains Docker images, Open Container Initiative (OCI) images and OCI-compatible artifacts.
+
+### Repository Policy
+
+You can control access to repositories and the images they contain by policies.
 
 ### Imagen
-Puede insertar y extraer imágenes de contenedor en los repositorios y utilizarlas localmente en su sistema de desarrollo o en definiciones de tareas de Amazon ECS y especificaciones del pod de Amazon EKS
+
+You can insert and extract container images in the repositories and use them locally in your development system or in Amazon ECS task definitions and Amazon EKS pod specifications.
 
 ## Características de Amazon ECR
 
-Amazon ECR ofrece las siguientes características:
+Amazon ECR offers the following features:
 
-Las políticas de ciclo de vida ayudan a administrar el ciclo de vida de las imágenes en sus repositorios. Debe definir reglas que den como resultado la limpieza de imágenes no utilizadas. Puede probar reglas antes de aplicarlas al repositorio
+Lifecycle policies help manage the lifecycle of images in your repositories. You must define rules that result in the cleanup of unused images. You can test rules before applying them to the repository.
 
-El escaneo de imágenes permite identificar vulnerabilidades de software en las imágenes de contenedor. Los repositorios se pueden configurar para escanear al insertar. Esto garantiza que cada nueva imagen insertada al repositorio se escanee. A continuación, puede recuperar los resultados del escaneo de la imagen.
+Image scanning allows identifying software vulnerabilities in container images. Repositories can be configured to scan on insertion. This ensures that each new image inserted into the repository is scanned. You can then retrieve the results of the image scan.
 
-La replicación entre regiones y entre cuentas hace que sea más fácil tener las imágenes donde las necesite. Se configura como un parámetro del Registro y se aplica por región.
+Replication between regions and between accounts makes it easier to have the images where you need them. It is configured as a Registry parameter and is applied on a per-region basis.
 
-Las reglas de almacenamiento en caché proporcionan una forma de almacenar repositorios de almacenamiento en caché en registros públicos remotos de su registro privado de Amazon ECR. Mediante una regla de caché de extracción, Amazon ECR se pondrá en contacto periódicamente con el registro remoto para asegurarse de que la imagen almacenada en caché de su registro privado de Amazon ECR esté actualizada
+Caching rules provide a way to store caching repositories in remote public logs in your private Amazon ECR registry. Using a pull cache rule, Amazon ECR will periodically contact the remote registry to ensure that the cached image of your private Amazon ECR registry is up to date.
 
-## Referencias
+## References
 - https://docs.aws.amazon.com/es_es/AmazonECR/latest/userguide/what-is-ecr.html
 
 
