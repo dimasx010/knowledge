@@ -1,18 +1,18 @@
 # AWS Elastic Load Balancing
 
-Elastic Load Balancing distribuye automáticamente el tráfico entrante entre varios destinos, por ejemplo, instancias EC2, contenedores y direcciones IP en una o varias zonas de disponibilidad. Monitorea el estado de los destinos registrados y enruta el tráfico solamente a destinos en buen estado. Elastic Load Balancing escala la capacidad del balanceador de carga de forma automática en respuesta a cambios en el tráfico entrante.
+Elastic Load Balancing automatically distributes inbound traffic among multiple destinations, e.g. EC2 instances, containers and IP addresses in one or more Availability Zones. It monitors the health of registered destinations and routes traffic only to healthy destinations. Elastic Load Balancing automatically scales load balancer capacity in response to changes in incoming traffic.
 
 <p align="center">
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/26fa183a-2316-43b4-8d33-88284343f02b">
 </p>
 
-## Beneficios de AWS Amplify
+## Benefits de AWS Elastic Load Balancing
 
-Un balanceador de carga distribuye cargas de trabajo a través de varios recursos informáticos, como, servidores virtuales. Usar un balanceador de carga aumenta la disponibilidad y la tolerancia a errores de las aplicaciones.
+A load balancer distributes workloads across multiple computing resources, such as virtual servers. Using a load balancer increases application availability and fault tolerance.
 
-Puede agregar y eliminar recursos informáticos de su balanceador de carga en función de sus necesidades sin interrumpir el flujo general de solicitudes a las aplicaciones.
+You can add and remove computing resources from your load balancer as needed without disrupting the overall flow of requests to applications.
 
-Puede configurar las comprobaciones de estado, que monitorizan el estado de los recursos informáticos, de tal forma que el balanceador de carga solo envíe solicitudes a los que están en buen estado. También puede trasladar las tareas de cifrado y descifrado al balanceador de carga, de forma que los recursos informáticos se pueden dedicar a su trabajo principal.
+You can configure health checks, which monitor the status of computing resources, so that the load balancer only sends requests to those that are healthy. You can also move encryption and decryption tasks to the load balancer, so that computing resources can focus on their core work.
 
-## Referencias
+## References
 - https://docs.aws.amazon.com/es_es/elasticloadbalancing/latest/userguide/what-is-load-balancing.html
