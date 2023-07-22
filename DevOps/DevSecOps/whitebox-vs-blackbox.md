@@ -2,9 +2,9 @@
 
 ## Testing White Box
 
-​El método de pruebas White box (también conocido como clear box testing, glass box testing, transparent box testing, and structural testing) es el cual mira el código y la estructura del producto que se va a probar y usa ese conocimiento para la realización de las pruebas.
+White box testing (also known as clear box testing, glass box testing, transparent box testing, and structural testing) is a method which looks at the code and structure of the product to be tested and uses that knowledge for testing.
 
-Este método se usa en la fase  de Unit testing, aunque también puede ocurrir en otras fases como en las pruebas de sistema o de integración.  Para la ejecución de este método es necesario que el tester o la persona que vaya a usar el método tengan amplios conocimientos de la tecnología y arquitectura usada para desarrollar el programa.
+This method is used in the unit testing phase, although it can also occur in other phases such as system or integration testing.  For the execution of this method it is necessary that the tester or the person who is going to use the method has extensive knowledge of the technology and architecture used to develop the program.
 
 <p align="center">
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/5dd6f303-9644-4c51-a23e-52f38b57f8e2">
@@ -12,11 +12,11 @@ Este método se usa en la fase  de Unit testing, aunque también puede ocurrir e
 
 ## Testing Black Box​
 
-Es el método en el cual el elemento es estudiado desde el punto de vista de las entradas que recibe y las salidas o respuestas que produce, sin tener en cuenta su funcionamiento interno. Estas pruebas son realizadas desde la interfaz gráfica.
+It is the method in which the element is studied from the point of view of the inputs it receives and the outputs or responses it produces, without taking into account its internal functioning. These tests are performed from the graphical interface.
 
 <p align="center">
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/14e1e9d8-4261-41de-8c0b-4c75ecdf0b6d">
 </p>
 
-## Referencias
+## References
 - https://www.testermoderno.com/caja-blanca-vs-caja-negra/
