@@ -1,58 +1,62 @@
-# Gestión de Secretos
+# Management of Secrets
 
-Las empresas digitales de hoy en día dependen de aplicaciones comerciales, desarrolladas internamente y de código abierto para llevar a cabo sus negocios y se sirven cada vez más de la infraestructura de TI automatizada y de las metodologías de DevOps para acelerar el desarrollo y la innovación. Aunque los entornos de aplicaciones y de TI varían considerablemente de una organización a otra, una cosa se mantiene constante: cada aplicación, script, herramienta de automatización y otra identidad no humana depende de alguna forma de credencial con privilegios para acceder a otras herramientas, aplicaciones y datos.
+Today's digital enterprises rely on commercial, in-house developed and open source applications to conduct business and are increasingly leveraging automated IT infrastructure and DevOps methodologies to accelerate development and innovation. While application and IT environments vary considerably from organization to organization, one thing remains constant: every application, script, automation tool and other non-human identity depends on some form of privileged credential to access other tools, applications and data.
 
 <p align="center">
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/c916cffb-9812-4cc9-8366-4cc8eab3a0ca">
 </p>
 
-## ¿Qué es un secreto?
+## What is a secret?
 
-Estas credenciales no humanas con privilegios suelen denominarse «secretos» y hacen referencia a una información privada que actúa como llave para desbloquear recursos protegidos o información sensible en herramientas, aplicaciones, contenedores, entornos de DevOps y entornos nativos en la nube.
+These non-human privileged credentials are often referred to as "secrets" and refer to private information that acts as a key to unlock protected resources or sensitive information in tools, applications, containers, DevOps and cloud-native environments.
 
-Entre los tipos más comunes de secretos se incluyen:
+Common types of secrets include:
 
-Credenciales de cuentas con privilegios
-- Contraseñas
-- Certificados
-- Claves SSH
-- Claves de API
-- Claves de cifrado
+Privileged account credentials
+- Passwords
+- Certificates
+- SSH keys
+- API keys
+- Encryption keys
 
-## Principales desafíos a la hora de gestionar secretos
+## Principal challenges in managing secrets
 
-Un usuario no humano con acceso a un secreto obtiene automáticamente acceso y permisos en tiempo real a cualquier recurso que pertenezca al propietario del secreto. Los ciberdelincuentes son conscientes de esto y dirigen sus ataques a secretos para obtener acceso no autorizado a otros secretos y hosts a fin de completar su misión. Un ciberataque dirigido a secretos a menudo se extiende mucho más allá del alcance de la brecha inicial.
+A non-human user with access to a secret automatically gains real-time access and permissions to any resource belonging to the owner of the secret. Cybercriminals are aware of this and target their attacks on secrets to gain unauthorized access to other secrets and hosts in order to complete their mission. A cyberattack targeting secrets often extends far beyond the scope of the initial breach.
 
-Los secretos son generalizados. Entre ellos figuran credenciales incrustadas en el código fuente de aplicaciones de contenedor (por ejemplo, Red Hat OpenShift, Kubernetes o Pivotal); procesos de automatización (por ejemplo, Ansible Playbooks, Puppet o Chef); aplicaciones vitales para la empresa, tanto las desarrolladas a nivel interno como las disponibles en el mercado (COTS); software de seguridad, como escáneres de vulnerabilidad; servidores de aplicaciones y software de gestión de TI; plataformas de automatización robótica de procesos (RPA) y la cadena de herramientas de integración continua/implementación continua (CI/CD).
+Secrets are pervasive. They include credentials embedded in the source code of container applications (e.g., Red Hat OpenShift, Kubernetes or Pivotal); automation processes (e.g., Ansible Playbooks, Puppet or Chef); business-critical applications, both internally developed and commercial off-the-shelf (COTS); security software, such as vulnerability scanners; application servers and IT management software; robotic process automation (RPA) platforms; and the continuous integration/continuous deployment (CI/CD) tool chain.
 
-Los procesos automatizados son increíblemente potentes. Pueden acceder a datos protegidos, ampliarse a una velocidad sin precedentes, aprovechar los recursos en la nube y ejecutar procesos empresariales de forma instantánea. Pero, tal como demuestran las filtraciones de ciberseguridad que han acaparado titulares, los procesos automatizados son susceptibles de sufrir ciberataques sofisticados, que pueden ocurrir de repente y propagarse rápidamente. Las organizaciones deben proteger los secretos asignados a las identidades no humanas para defenderse de los ataques y mitigar los riesgos.
+Automated processes are incredibly powerful. They can access protected data, scale at unprecedented speed, leverage cloud resources and execute business processes instantaneously. But as headline-grabbing cybersecurity leaks have shown, automated processes are susceptible to sophisticated cyberattacks, which can occur suddenly and spread rapidly. Organizations must protect the secrets assigned to non-human identities to defend against attacks and mitigate risks.
 
-## ¿Qué es la gestión de secretos?
+## What is secrets management?
 
-La gestión de secretos, una de las prácticas recomendadas de ciberseguridad para las empresas digitales, permite a las organizaciones aplicar sistemáticamente políticas de seguridad para las identidades no humanas. La gestión de secretos garantiza que solo las entidades autenticadas y autorizadas puedan acceder a los recursos de las pilas de herramientas, plataformas y entornos en la nube.
+Secrecy management, one of the cybersecurity best practices for digital enterprises, enables organizations to systematically enforce security policies for non-human identities. Secrecy management ensures that only authenticated and authorized entities can access resources in tool stacks, platforms and cloud environments.
 
-Los siguientes pasos se suelen incluir en una iniciativa de gestión de secretos. Muchos de estos enfoques y técnicas se utilizan también para proteger el acceso con privilegios por parte de usuarios humanos.
+The following steps are typically included in a secrets management initiative. Many of these approaches and techniques are also used to protect privileged access by human users.
 
-- Autenticar todas las solicitudes de acceso que utilicen credenciales no humanas.
-- Implementar el principio del mínimo privilegio.
-- Aplicar el control de acceso basado en roles (RBAC) y rotar regularmente los secretos y credenciales.
-- Automatizar la gestión de los secretos y aplicar políticas de acceso coherentes.
-- Realizar un seguimiento de todos los accesos y mantener una auditoría completa.
-- Eliminar los secretos del código, los archivos de configuración y otras áreas desprotegidas.
+- Authenticate all access requests using non-human credentials.
+- Implement the principle of least privilege.
+- Enforce role-based access control (RBAC) and regularly rotate secrets and credentials.
+- Automate the management of secrets and enforce consistent access policies.
+- Track all access and maintain a complete audit trail.
+- Eliminate secrets from code, configuration files and other unprotected areas.
 
-## Casos de uso comunes en la gestión de secretos
+## Common use cases in the management of secrets
 
-### Gestión de secretos para proteger los procesos de CI/CD. 
-Las herramientas populares de procesos de CI/CD como Jenkins, Ansible, Puppet y Chef están diseñadas para lograr eficiencia y velocidad, pero pueden presentar nuevos retos de seguridad. Estas herramientas automatizadas de gestión de la configuración requieren secretos para acceder a recursos protegidos como bases de datos, servidores SSH y servicios HTTP. Estos secretos suelen estar incrustados en el código fuente de forma no segura o estar almacenados en archivos de configuración o código para estas herramientas (por ej., JenkinsFiles, playbooks, scripts o código fuente). Una gestión de secretos eficaz permite a las organizaciones eliminar estos secretos codificados de las herramientas de DevOps de los procesos de CI/CD, a la vez que ofrece registros de auditoría completos, RBAC basado en políticas y rotación de secretos.
+### Secrecy management to protect CI/CD processes.
 
-### Gestión de secretos para proteger contenedores. 
-Los equipos de DevOps e ingeniería dependen cada vez más de los contenedores para acelerar el desarrollo y mejorar la portabilidad y la productividad. Los contenedores requieren secretos para acceder a información crítica y sensible. Sin embargo, como los contenedores son efímeros (o de corta duración), pueden ser difíciles de monitorizar y el acceso a recursos específicos puede resultar difícil de gestionar y proteger. Las medidas de seguridad de la gestión de secretos permiten a los equipos autenticar solicitudes de contenedor para secretos con atributos de plataformas nativas de contenedor y gestionar secretos con políticas RBAC para obtener un control granular.
+Popular CI/CD process tools such as Jenkins, Ansible, Puppet and Chef are designed for efficiency and speed, but can present new security challenges. These automated configuration management tools require secrets to access protected resources such as databases, SSH servers and HTTP services. These secrets are often embedded in source code in an unsecured manner or stored in configuration files or code for these tools (e.g., JenkinsFiles, playbooks, scripts or source code). Effective secrets management enables organizations to remove these hard-coded DevOps tool secrets from CI/CD processes, while providing comprehensive audit trails, policy-based RBAC and secrets rotation.
 
-### Gestión de secretos para administrar entornos elásticos y de escalado automático.
-Los proveedores de la nube ofrecen funciones de escalado automático que permiten la elasticidad (efímera) y el modelo de pago a medida que crece la empresa. Si bien esto mejora la eficiencia, también crea nuevos desafíos de gestión de la seguridad, en particular en lo que respecta a la escalabilidad. Implementando prácticas recomendadas de gestión de secretos, las organizaciones pueden eliminar la necesidad de que los operadores humanos apliquen manualmente políticas a cada host nuevo al asignar una identidad al host en tiempo real y autenticar de forma segura la aplicación de llamada en función de la política de seguridad predefinida.
+### Management of secrets to protect containers.
 
-### Gestión de secretos para proteger las aplicaciones desarrolladas internamente y las aplicaciones COTS.
-Las aplicaciones y scripts desarrollados internamente, junto con herramientas y soluciones de terceros como herramientas de seguridad, RPA, herramientas de automatización y de gestión de TI, a menudo requieren altos niveles de acceso con privilegios en toda la infraestructura de la empresa para completar sus tareas definidas. Las prácticas eficaces de gestión de secretos requieren que se eliminen las credenciales incrustadas en el código fuente de las aplicaciones y scripts desarrollados a nivel interno y que todos los secretos se almacenan, gestionan y roten de forma centralizada para reducir al mínimo los riesgos.
+DevOps and engineering teams are increasingly relying on containers to accelerate development and improve portability and productivity. Containers require secrets to access critical and sensitive information. However, because containers are ephemeral (or short-lived), they can be difficult to monitor and access to specific resources can be difficult to manage and protect. Secrets management security measures allow teams to authenticate container requests for secrets with native container platform attributes and manage secrets with RBAC policies for granular control.
 
-## Referencias
+### Management of secrets to manage elastic and auto-scaling environments.
+
+Cloud providers offer automatic scaling features that enable elasticity (ephemerality) and the pay-as-you-grow model. While this improves efficiency, it also creates new security management challenges, particularly with regard to scalability. By implementing best practices for managing secrets, organizations can eliminate the need for human operators to manually apply policies to each new host by assigning an identity to the host in real time and securely authenticating the calling application based on the predefined security policy.
+
+### Secrecy management to protect internally developed applications and COTS applications.
+
+Internally developed applications and scripts, along with third-party tools and solutions such as security tools, RPA, automation and IT management tools, often require high levels of privileged access across the enterprise infrastructure to complete their defined tasks. Effective secrets management practices require that credentials embedded in the source code of internally developed applications and scripts are removed and that all secrets are centrally stored, managed and rotated to minimize risk.
+
+## References
 - https://www.cyberark.com/es/what-is/secrets-management/#:~:text=%C2%BFQu%C3%A9%20es%20un%20secreto%3F,entornos%20nativos%20en%20la%20nube.
