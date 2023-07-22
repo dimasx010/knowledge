@@ -4,15 +4,15 @@
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/e2920ff1-ee1b-47ed-ae58-def7f5e16024">
 </p>
 
-Las Rolling Updates permiten las siguientes acciones:
+Rolling Updates allow the following actions:
 
-- Promocionar una aplicación de un entorno a otro (a través de actualizaciones de imágenes de contenedores)
+- Promote an application from one environment to another (through container image updates).
 
-- Retroceder a versiones anteriores
+- Rolling back to previous versions
 
-- Integración continua y entrega continua de aplicaciones sin tiempo de inactividad
+- Continuous integration and continuous delivery of applications with no downtime.
 
-## Referencias
+## References
 - ​https://kubernetes.io/docs/tutorials/kubernetes-basics/update/update-intro/
 
 
