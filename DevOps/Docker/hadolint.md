@@ -4,12 +4,12 @@
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/faa25d16-f230-4ec7-aca6-75cebe3e7f9b">
 </p>
 
-Hadolint es un filtro de Dockerfile que puede detectar problemas comunes por usted. Utiliza un árbol de sintaxis abstracta (AST) para analizar su Dockerfile contra conjuntos de reglas predefinidos. Hadolint también incorpora ShellCheck para que pueda filtrar los scripts de shell en su Dockerfile. RUN instrucciones también.
-Hadolint tiene docenas de reglas integradas que verifican problemas comunes de configuración y seguridad. El linter tiene como objetivo hacer que sus Dockerfiles cumplan con las mejores prácticas de creación de imágenes sugeridas por Docker.
+Hadolint is a Dockerfile filter that can detect common problems for you. It uses an Abstract Syntax Tree (AST) to parse your Dockerfile against predefined rule sets. Hadolint also incorporates ShellCheck so you can filter shell scripts in your Dockerfile. RUN instructions as well.
+Hadolint has dozens of built-in rules that check for common configuration and security issues. The linter aims to make your Dockerfiles comply with Docker's suggested image creation best practices.
 
-Las comprobaciones incluidas cubren el uso de usuarios finales no root, haciendo referencia a una ruta relativa en un WORKDIR declaración, agregando múltiples HEALTHCHECK instrucciones, y no usar etiquetas y versiones fijadas explícitamente. Como Hadolint también hereda el conjunto de reglas de ShellCheck, surgirán problemas comunes de secuencias de comandos de Bash que esa herramienta también identifica.
+The checks included cover using non-root end users, referencing a relative path in a WORKDIR statement, adding multiple HEALTHCHECK statements, and not using explicitly set labels and versions. Since Hadolint also inherits the ShellCheck rule set, common Bash scripting problems will arise that that tool also identifies.
 
-Las reglas se identifican como números con el prefijo HL o SC. HL las reglas son parte de Hadolint mientras que SC las entradas provienen de ShellCheck. A cada verificación se le asigna una gravedad desde Error hasta Información. Si obtiene errores en los resultados de su análisis, esos deberían ser los primeros problemas que resuelva.
+Rules are identified as numbers with the prefix HL or SC. HL rules are part of Hadolint while SC entries come from ShellCheck. Each check is assigned a severity from Error to Information. If you get errors in your analysis results, those should be the first problems you solve.
 
 ## References
 - https://alexandre-vazquez.com/hadolint-best-practices-for-your-dockerfiles/
