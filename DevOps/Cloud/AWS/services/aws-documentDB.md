@@ -18,4 +18,4 @@ Genere recomendaciones de clientes y habilite transacciones en línea. Administr
 Cree aplicaciones con capacidad de escalado para procesar millones de solicitudes de usuarios por segundo con lecturas globales de baja latencia.
 
 ## References
-- https://kinsta.com/es/blog/dynamodb-vs-mongodb/
+- https://aws.amazon.com/es/documentdb/
