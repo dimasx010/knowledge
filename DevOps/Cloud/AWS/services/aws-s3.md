@@ -1,118 +1,118 @@
 # Amazon S3 - Amazon Simple Storage Service
 
-Amazon Simple Storage Service (Amazon S3) es un servicio de almacenamiento de objetos que ofrece escalabilidad, disponibilidad de datos, seguridad y rendimiento líderes del sector. Los clientes de todos los tamaños y sectores pueden utilizar Amazon S3 para almacenar y proteger cualquier cantidad de datos para diversos casos de uso, tales como lagos de datos, sitios web, aplicaciones móviles, copia de seguridad y restauración, archivado, aplicaciones empresariales, dispositivos IoT y análisis de big data. Amazon S3 proporciona funciones de gestión para que pueda optimizar, organizar y configurar el acceso a sus datos para satisfacer sus requisitos empresariales, organizativos y de conformidad específicos.
+Amazon Simple Storage Service (Amazon S3) is an object storage service that offers industry-leading scalability, data availability, security, and performance. Customers of all sizes and industries can use Amazon S3 to store and protect any amount of data for a variety of use cases, such as data lakes, websites, mobile applications, backup and restore, archiving, enterprise applications, IoT devices, and big data analytics. Amazon S3 provides management capabilities so you can optimize, orchestrate, and configure access to your data to meet your specific business, organizational, and compliance requirements.
 
-Amazon S3 ofrece varios tipos de almacenamiento diseñados para distintos casos de uso. Por ejemplo, puede almacenar datos de producción críticos en S3 Standard para obtener acceso frecuente, ahorrar costos al almacenar datos a los que se accede con poca frecuencia en S3 Standard-IA o S3 One Zone-IA, y archivar datos con los costos más bajos en S3 Glacier Instant Retrieval, S3 Glacier Flexible Retrieval y S3 Glacier Deep Archive.
+Amazon S3 offers several types of storage designed for different use cases. For example, you can store critical production data in S3 Standard for frequent access, save costs by storing infrequently accessed data in S3 Standard-IA or S3 One Zone-IA, and archive data at the lowest costs in S3 Glacier Instant Retrieval, S3 Glacier Flexible Retrieval, and S3 Glacier Deep Archive.
 
-Puede almacenar datos con patrones de acceso cambiantes o desconocidos en S3 Intelligent-Tiering, que optimiza los costos de almacenamiento moviendo automáticamente los datos entre cuatro niveles de acceso cuando cambian los patrones de acceso. Funciona con el almacenamiento de objetos en cuatro capas de acceso: dos de acceso de baja latencia optimizadas para el acceso frecuente y poco frecuente y dos de acceso a archivos opcionales diseñados para el acceso asíncrono, las cuales están optimizadas para accesos inusuales.
+You can store data with changing or unknown access patterns in S3 Intelligent-Tiering, which optimizes storage costs by automatically moving data between four access tiers when access patterns change. It works with object storage in four access tiers: two low-latency access tiers optimized for frequent and infrequent access and two optional file access tiers designed for asynchronous access, which are optimized for unusual access.
 
-Para obtener más información, consulte Uso de las clases de almacenamiento de Amazon S3. Para obtener más información sobre S3 Glacier Flexible Retrieval, consulte la Guía para desarrolladores de Amazon S3 Glacier.
+For more information, see Using Amazon S3 Storage Classes. For more information about S3 Glacier Flexible Retrieval, see the Amazon S3 Glacier Developer Guide.
 
-## Administrar el almacenamiento
+## Manage storage
 
-Amazon S3 cuenta con funciones de gestión del almacenamiento que puede utilizar para gestionar los costes, cumplir los requisitos normativos, reducir la latencia y guardar varias copias distintas de sus datos para cumplir los requisitos de cumplimiento.
+Amazon S3 has storage management capabilities that you can use to manage costs, meet regulatory requirements, reduce latency, and store multiple different copies of your data to meet compliance requirements.
 
-- Ciclo de vida de S3: defina la configuración de ciclo de vida para administrar los objetos y almacenarlos de manera económica durante todo su ciclo de vida. Puede realizar la transición de objetos a otras clases de almacenamiento de S3 o caducar objetos que alcancen el final de su vida útil.
+- S3 Lifecycle: Define lifecycle settings to manage objects and store them economically throughout their lifecycle. You can transition objects to other S3 storage classes or expire end-of-life objects.
 
-- S3 Object Lock: evite que se eliminen o se sobreescriban objetos de Amazon S3 durante un período de tiempo determinado o de manera indefinida. Object Lock se puede utilizar para cumplir con los requisitos normativos que requieren almacenamiento de escritura única y lectura múltiple (WORM) o simplemente para agregar otra capa de protección para evitar cambios y eliminaciones de objetos.
+- S3 Object Lock: Prevent Amazon S3 objects from being deleted or overwritten for a specified period of time or indefinitely. Object Lock can be used to meet regulatory requirements that require write-once read-multiple (WORM) storage or simply to add another layer of protection to prevent object changes and deletions.
 
-Replicación de S3— Replique objetos y sus respectivos metadatos y etiquetas de objeto en uno o más buckets de destino en el mismo o en diferentesRegiones de AWSpara reducir la latencia, el cumplimiento normativo, la seguridad y otros casos de uso.
+S3 Replication - Replicate objects and their respective metadata and object tags to one or more target buckets in the same or different AWS Regions to reduce latency, compliance, security and other use cases.
 
-Operaciones por lotes de S3: gestione miles de millones de objetos a escala con una sola solicitud de API de S3 o con unos pocos clics en la consola de Amazon S3. Puede utilizar Operaciones Batch para realizar operaciones comoCopy (Copiar),InvocaciónAWSFunción de Lambda, yRestauraren millones o miles de millones de objetos.
+S3 Batch Operations: Manage billions of objects at scale with a single S3 API request or with a few clicks in the Amazon S3 console. You can use Batch Operations to perform operations such asCopy, Lambda InvokeAWSFunction, andRestore on millions or billions of objects.
 
-## El modelo de funcionamiento sería el siguiente: 
+## The operating model would be as follows:
 
-Amazon S3 es un servicio de almacenamiento de objetos que almacena datos como objetos dentro de buckets. Un objeto es un archivo y cualquier metadato que describa ese archivo. Un bucket es un contenedor de objetos.
+Amazon S3 is an object storage service that stores data as objects within buckets. An object is a file and any metadata that describes that file. A bucket is a container for objects.
 
-Para almacenar datos en Amazon S3, primero debe crear un bucket y especificar un nombre de bucket yRegión de AWS. A continuación, cargue datos a ese bucket como objetos en Amazon S3. Cada objeto tiene unclave(oNombre de clave), que es el identificador único del objeto dentro del bucket.
+To store data in Amazon S3, you must first create a bucket and specify a bucket name and AWS Region. Then you upload data to that bucket as objects in Amazon S3. Each object has a key(orKeyName), which is the unique identifier of the object within the bucket.
 
-S3 proporciona funciones que puede configurar para admitir su caso de uso específico. Puede utilizar S3 Versioning para mantener varias versiones de un objeto en un bucket y restaurar objetos que se eliminan o sobrescribir accidentalmente.
+S3 provides features that you can configure to support your specific use case. You can use S3 Versioning to maintain multiple versions of an object in a bucket and restore objects that are accidentally deleted or overwritten.
 
-Los buckets y los objetos que contienen son privados y solo se puede acceder a ellos si se conceden explícitamente permisos de acceso. Puede utilizar políticas de bucket,AWS Identity and Access Management(IAM), listas de control de acceso (ACL) y puntos de acceso S3 para administrar el acceso.
+Buckets and the objects they contain are private and can only be accessed if access permissions are explicitly granted. You can use bucket policies, AWS Identity and Access Management (IAM), access control lists (ACLs) and S3 access points to manage access.
 
-## Casos de uso de Amazon S3
+## Amazon S3 Use Cases
 
-Amazon S3 es un servicio de almacenamiento ampliamente utilizado, con muchos más casos de uso de los que caben en una pantalla. En la siguiente lista, se resumen algunas de las formas más comunes de utilizar Amazon S3:
+Amazon S3 is a widely used storage service, with many more use cases than can fit on one screen. The following list summarizes some of the most common ways to use Amazon S3:
 
-- Copia de seguridad y almacenamiento: Amazon S3 es un lugar natural para realizar copia de seguridad de los archivos porque es altamente redundante. Como se mencionó en la última unidad, AWS almacena las instantáneas de EBS en S3 para aprovechar la alta disponibilidad.
+- Backup and storage - Amazon S3 is a natural place to back up files because it is highly redundant. As mentioned in the last unit, AWS stores EBS snapshots in S3 to take advantage of high availability.
 
-- Alojamiento multimedia: Debido a que puede almacenar objetos ilimitados y a que cada objeto individual puede tener hasta 5 TB, Amazon S3 es un lugar ideal para alojar cargas de video, fotos y música.
+- Media hosting: Because you can store unlimited objects and each individual object can be up to 5TB, Amazon S3 is an ideal place to host video, photo, and music uploads.
 
-- Entrega de software: Puede utilizar Amazon S3 para alojar las aplicaciones de software que los clientes pueden descargar.
+- Software delivery: You can use Amazon S3 to host software applications that customers can download.
 
-- Lagos de datos: AmazonS3 es la base óptima para un lago de datos por su escalabilidad prácticamente ilimitada. Puede aumentar el almacenamiento de gigabytes a petabytes de contenido y pagar solo por lo que utiliza.
-Sitios web estáticos: Puede configurar su bucket de S3 para alojar un sitio web estático de scripts HTML, CSS y del lado del cliente.
+- Data lakes: AmazonS3 is the optimal foundation for a data lake because of its virtually unlimited scalability. You can increase storage from gigabytes to petabytes of content and pay only for what you use.
+Static websites: You can configure your S3 bucket to host a static website of HTML, CSS and client-side scripts.
 
-Contenido estático: Debido al escalado ilimitado, a la compatibilidad con archivos grandes y al hecho de que puede acceder a cualquier objeto a través de la Web en cualquier momento, Amazon S3 es el lugar perfecto para almacenar contenido estático.
+Static content: Because of the unlimited scaling, support for large files, and the fact that you can access any object over the Web at any time, Amazon S3 is the perfect place to store static content.
 
-## Elección de la opción de conectividad adecuada para los recursos
+## Choosing the right connectivity option for resources
 
-Todo lo que se encuentra en Amazon S3 es privado de forma predeterminada. Significa que a solo el usuario o la cuenta de AWS que creó el recurso puede ver todos los recursos de S3, como los buckets, las carpetas y los objetos. Los recursos de Amazon S3 son privados y están protegidos para empezar.
+Everything in Amazon S3 is private by default. It means that only the user or AWS account that created the resource can see all S3 resources, such as buckets, folders, and objects. Amazon S3 resources are private and protected to begin with.
 
-Si decide que quiere que todos los usuarios en Internet vean sus fotos, puede elegir hacer públicos los buckets, las carpetas y los objetos. Un recurso público significa que todos los usuarios en Internet pueden verlo. La mayoría de las veces, no quiere que los permisos sean todo o nada. Normalmente, desea adoptar un enfoque más pormenorizado de la forma en que proporciona acceso a los recursos.
+If you decide that you want everyone on the Internet to see your photos, you can choose to make buckets, folders, and objects public. A public resource means that everyone on the Internet can see it. Most of the time, you don't want permissions to be all or nothing. Typically, you want to take a more granular approach to how you provide access to resources.
 
 <p align="center">
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/d38dd44c-3020-4f0b-9bc3-657a006ac0e5">
 </p>
 
-## Cifrado de Amazon S3
+## Amazon S3 encryption
 
-Amazon S3 refuerza el cifrado en tránsito (a medida que viaja hacia Amazon S3 y desde allí) y en reposo. Para proteger los datos en reposo, puede utilizar el cifrado de la siguiente manera:
+Amazon S3 enforces encryption in transit (as it travels to and from Amazon S3) and at rest. To protect data at rest, you can use encryption in the following ways:
 
-- Cifrado del lado del servidor: Permite a Amazon S3 cifrar el objeto antes de guardarlo en los discos de sus centros de datos y, a continuación, descifrarlo al descargar los objetos.
+- Server-side encryption: Allows Amazon S3 to encrypt the object before storing it on disks in your data centers, and then decrypt it as it downloads the objects.
 
-- Cifrado del lado del cliente: Puede cifrar los datos del lado del cliente y, a continuación, subir los datos cifrados a Amazon S3. En este caso, administra el proceso de cifrado, las claves de cifrado y todas las herramientas relacionadas.
+- Client-side encryption: You can encrypt the client-side data and then upload the encrypted data to Amazon S3. In this case, you manage the encryption process, the encryption keys, and all related tools.
 
-Para el cifrado en tránsito, puede utilizar el cifrado del lado del cliente o la Capa de conexión segura (SSL).
+For encryption in transit, you can use client-side encryption or Secure Sockets Layer (SSL).
 
-## Control de versiones de Amazon S3
+## Amazon S3 version control
 
-Como se describió anteriormente, Amazon S3 identifica los objetos en parte mediante el nombre del objeto. Por ejemplo, cuando sube una foto de un empleado a Amazon S3, podría nombrar el objeto “employee.jpg” y almacenarlo en una carpeta denominada “employees”. Si no utiliza el control de versiones de Amazon S3, cada vez que sube un objeto llamado “employee.jpg” a la carpeta employees, sobrescribirá el archivo original.
+As described above, Amazon S3 identifies objects in part by object name. For example, when you upload a photo of an employee to Amazon S3, you might name the object "employee.jpg" and store it in a folder named "employees". If you do not use Amazon S3 version control, every time you upload an object named "employee.jpg" to the employees folder, it will overwrite the original file.
 
-Esto puede ser un problema por varios motivos, como los siguientes:
+This can be a problem for several reasons, including the following:
 
-- El nombre del archivo employee.jpg es un nombre común para un objeto de fotos de empleados. Es posible que usted u otra persona que tenga acceso al bucket no haya tenido la intención de sobrescribirlo, pero una vez sobrescrito, no se puede acceder al archivo original.
+- The file name employee.jpg is a common name for an employee photo object. You or someone else who has access to the bucket may not have intended to overwrite it, but once overwritten, the original file cannot be accessed.
 
-Es posible que desee conservar diferentes versiones de employee.jpg. Sin el control de versiones, si quisiera crear una nueva versión de employee.jpg, tendría que subir el objeto y elegir otro nombre para él. Tener varios objetos con ligeras diferencias en las variaciones de nomenclatura puede causar confusión y desorden en los buckets de S3.
+You may want to keep different versions of employee.jpg. Without version control, if you wanted to create a new version of employee.jpg, you would have to upload the object and choose another name for it. Having multiple objects with slight differences in naming variations can cause confusion and clutter in S3 buckets.
 
-Para contrarrestar estos problemas, puede utilizar el control de versiones de S3. El control de versiones conserva varias versiones de un único objeto en el mismo bucket. De este modo, se conservan las versiones anteriores de un objeto sin utilizar nombres diferentes, lo que ayuda a recuperar los archivos de eliminaciones accidentales, sobrescrituras accidentales o errores de aplicaciones.
+To counteract these problems, you can use S3 version control. Version control retains multiple versions of a single object in the same bucket. This preserves previous versions of an object without using different names, which helps to recover files from accidental deletions, accidental overwrites or application errors.
 
 <p align="center">
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/48bf65b3-3935-47f6-bae4-ec4a388899a2">
 </p>
 
-Si habilita el control de versiones para un bucket, Amazon S3 genera automáticamente un ID de versión único para el objeto. En un bucket, por ejemplo, puede tener dos objetos con la misma clave, pero ID de versión diferentes, como employeephoto.gif (versión 111111) y employeephoto.gif (versión 121212).
+If you enable version control for a bucket, Amazon S3 automatically generates a unique version ID for the object. In a bucket, for example, you can have two objects with the same key, but different version IDs, such as employeephoto.gif (version 111111) and employeephoto.gif (version 121212).
 
-Los buckets habilitados para el control de versiones le permiten recuperar los objetos de la eliminación o la sobrescritura accidentales.
+Version control-enabled buckets allow you to recover objects from accidental deletion or overwriting.
 
-La eliminación de un objeto no elimina el objeto de forma permanente. En cambio, Amazon S3 coloca un marcador en el objeto que muestra que trató de eliminarlo. Si quiere restaurar el objeto, puede quitar el marcador, y se restablece el objeto.
+Deleting an object does not permanently remove the object. Instead, Amazon S3 places a marker on the object showing that you tried to delete it. If you want to restore the object, you can remove the marker, and the object is restored.
 
-Si sobrescribe un objeto, da como resultado una nueva versión del objeto en el bucket. Sigue teniendo acceso a las versiones anteriores del objeto.
+If you overwrite an object, it results in a new version of the object in the bucket. You still have access to previous versions of the object.
 
-## Estados del control de versiones
+## Version control states
 
-Los buckets pueden presentar uno de los tres estados siguientes:
+Buckets can have one of the following three states:
 
-- Sin versión (predeterminado): Ningún objeto nuevo ni actual en el bucket tiene una versión.
+- No version (default): No new or current object in the bucket has a version.
 
-- Control de versiones habilitado: El control de versiones está habilitado para todos los objetos del bucket.
+- Version control enabled: Version control is enabled for all objects in the bucket.
 
-- Control de versiones suspendido: Se suspende el control de versiones para los objetos nuevos. Ninguno de los objetos nuevos del bucket tendrá una versión. Sin embargo, todos los objetos actuales conservan las versiones de objetos.
+- Version control suspended: Version control is suspended for new objects. None of the new objects in the bucket will have a version. However, all current objects retain object versions.
 
-El estado de control de versiones se aplica a todos los objetos del bucket. Los costos de almacenamiento se generan en todos los objetos del bucket, incluidas todas las versiones. Para reducir el monto de la factura de Amazon S3, es posible que quiera eliminar las versiones anteriores de los objetos cuando ya no sean necesarios.
+The version control status is applied to all objects in the bucket. Storage costs are incurred on all objects in the bucket, including all versions. To reduce the amount of your Amazon S3 bill, you may want to delete older versions of objects when they are no longer needed.
 
-## Automatización de las transiciones de niveles con la administración del ciclo de vida de los objetos
+## Automating level transitions with object lifecycle management
 
-Si sigue cambiando manualmente los objetos, como las fotos de los empleados, de una capa de almacenamiento a otro, quizá busque automatizar el proceso con una política de ciclo de vida. Al definir una configuración de política de ciclo de vida para un objeto o un grupo de objetos, puede elegir automatizar dos acciones: acciones de transición y de vencimiento.
+If you keep manually moving objects, such as employee photos, from one storage layer to another, you may want to automate the process with a lifecycle policy. By defining a lifecycle policy setting for an object or a group of objects, you can choose to automate two actions: transition and expiration actions.
 
-Las acciones de transición definen cuándo los objetos deben pasar a otra clase de almacenamiento.
+Transition actions define when objects should be moved to another storage class.
 
-Las acciones de vencimiento definen cuándo vencen los objetos y cuándo deben eliminarse de forma permanente.
+Expiration actions define when objects expire and when they should be permanently deleted.
 
-Por ejemplo, puede hacer una transición de los objetos a la clase de almacenamiento Estándar - Acceso poco frecuente de S3 30 días después de crearlos o archivar los objetos en la clase de almacenamiento de S3 Glacier 1 año después de crearlos.
+For example, you can transition the objects to the S3 Standard - Infrequent Access storage class 30 days after creating them or archive the objects in the S3 Glacier storage class 1 year after creating them.
 
-Los siguientes casos de uso son buenas opciones para la administración del ciclo de vida:
+The following use cases are good options for lifecycle management:
 
-- Registros periódicos: Si sube los registros periódicos a un bucket, es posible que la aplicación los necesite durante 1 semana o 1 mes. Después de ese periodo, quizá quiera eliminarlos.
+- Periodic records: if you upload periodic records to a bucket, the application may need them for 1 week or 1 month. After that period, you may want to delete them.
 
-- Datos con cambios en la frecuencia de acceso: A algunos documentos se accede con frecuencia durante un periodo limitado. Posteriormente, se obtendrá acceso a ellos con poca frecuencia. En algún momento, es posible que no necesite acceso en tiempo real a estos datos, pero la organización o las normativas pueden requerir el archivado durante un periodo específico. Transcurrido dicho periodo, podrá eliminarlos.
+- Data with changes in access frequency: Some documents are accessed frequently for a limited period of time. Subsequently, they will be accessed infrequently. At some point, you may not need real-time access to this data, but organization or regulatory requirements may require archiving for a specific period. After that period, you can delete it.
