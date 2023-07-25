@@ -83,5 +83,10 @@ git checkout
 git remote remove origin
 ```
 
+-  Removes all branch of local repository least main. 
+```git
+$ git branch | grep -v "main" | xargs git branch -D
+```
+
 ## References
 - https://www.atlassian.com/es/git/tutorials/what-is-git
