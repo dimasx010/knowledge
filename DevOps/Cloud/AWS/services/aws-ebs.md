@@ -1,58 +1,58 @@
 # Amazon Elastic Block Store - Amazon EBS
 
-Amazon Elastic Block Store (Amazon EBS) es un servicio de almacenamiento en bloque fácil de usar, escalable y de alto rendimiento diseñado para Amazon Elastic Compute Cloud (Amazon EC2).
+Amazon Elastic Block Store (Amazon EBS) is an easy-to-use, scalable, high-performance block storage service designed for Amazon Elastic Compute Cloud (Amazon EC2).
 
-En la siguiente imagen podremos analizar el esquema del servicio mencionado
+In the following image we can analyze the schema of the mentioned service
 
 <p align="center">
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/b9bad3e9-834a-4ed6-ab2b-d6997b3dbb98">
 </p>
 
-Amazon EBS también se encarga de la creación de volúmenes de almacenamiento para que puedan adjuntarse a las instancias de Amazon EC2. Después de este proceso, se pueden desarrollar sistemas de archivos sobre los volúmenes, ejecutar alguna base de datos o bien asignarle alguno de los usos disponibles para el almacenamiento en bloque, como, por ejemplo, en un disco duro.
+Amazon EBS also handles the creation of storage volumes so that they can be attached to Amazon EC2 instances. After this process, you can build file systems on top of the volumes, run a database, or assign them to one of the uses available for block storage, such as a hard disk.
 
-El sistema de Amazon EBS incluye una serie de propiedades y características que permiten su funcionamiento, dentro de los que se pueden incluir su utilidad para trabajar en situaciones donde los datos deben mantenerse accesibles de manera rápida y donde se requiera persistencia a largo plazo.
+The Amazon EBS system includes a series of properties and features that enable its operation, including its usefulness for working in situations where data must be kept accessible quickly and where long-term persistence is required.
 
-Cabe resaltar también que esta herramienta ofrece diferentes tipos de volúmenes, que se ubican en una determinada zona de disponibilidad, donde se replican de manera automática con el objetivo de garantizar su protección frente a errores de componentes individuales. Estos volúmenes también se encuentran diseñados para ofrecer una alta disponibilidad.
+It should also be noted that this tool offers different types of volumes, which are located in a certain availability zone, where they are automatically replicated in order to guarantee their protection against individual component errors. These volumes are also designed to offer high availability.
 
-La facturación de Amazon EBS se lleva a cabo teniendo en cuenta únicamente lo que se aprovisiona con la herramienta. En lo que respecta al almacenamiento de volumen, vale aclarar que estos se facturan de acuerdo con la cantidad de GN que se aprovisionan al mes hasta liberar la capacidad almacenada. Estos costes pueden aumentar para los volúmenes con funciones especiales, como un rendimiento mayor al de referencia o que admitan IOPS.
+Amazon EBS billing is carried out taking into account only what is provisioned with the tool. Regarding volume storage, it is worth clarifying that these are billed according to the amount of GNs provisioned per month until the stored capacity is released. These costs may increase for volumes with special features, such as higher-than-reference throughput or supporting IOPS.
 
 
-## Tipos de volúmenes de Amazon EBS
+## Amazon EBS volume types
 
-Los volúmenes de Amazon EBS se organizan en dos categorías principales: discos de estado sólido (SSD) y discos duros (HDD). Las SSD proporcionan un alto rendimiento para la entrada y salida (E/S) aleatorias, mientras que las HDD proporcionan un alto rendimiento para la E/S secuenciales. AWS ofrece dos tipos de cada una.
+Amazon EBS volumes are organized into two main categories: solid state disks (SSDs) and hard disk drives (HDDs). SSDs provide high performance for random input and output (I/O), while HDDs provide high performance for sequential I/O. AWS offers two types of each.
 
-El siguiente gráfico puede ayudarlo a decidir qué volumen de EBS es la opción correcta para su carga de trabajo.
+The following chart can help you decide which EBS volume is the right choice for your workload.
 
 <p align="center">
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/9ce19cc2-ee98-45e7-9425-be6a99ac9d47">
 </p>
 
-## Ventajas de Amazon EBS
+## Advantages of Amazon EBS
 
-Estas son las ventajas de utilizar Amazon EBS.
+Here are the benefits of using Amazon EBS.
 
-- Alta disponibilidad: cuando crea un volumen de EBS, se replica automáticamente en su zona de disponibilidad para evitar la pérdida de datos por puntos únicos de error.
+- High availability: When you create an EBS volume, it is automatically replicated to your Availability Zone to prevent data loss due to single points of failure.
 
-- Persistencia de datos: el almacenamiento persiste incluso cuando la instancia no lo hace.
+- Data persistence: Storage persists even when the instance does not.
 
-- Cifrado de datos: Todos los volúmenes de EBS admiten el cifrado.
+- Data encryption: All EBS volumes support encryption.
 
-- Flexibilidad: los volúmenes de EBS admiten cambios sobre la marcha. Puede modificar el tipo de volumen, el tamaño del volumen y la capacidad de las operaciones de entrada/salida por segundo (IOPS) sin detener la instancia.
+- Flexibility: EBS volumes support on-the-fly changes. You can change the volume type, volume size, and IOPS capacity without stopping the instance.
 
-- Copias de seguridad: Amazon EBS proporciona la capacidad de crear copias de seguridad de cualquier volumen de EBS.
+- Backups: Amazon EBS provides the ability to create backups of any EBS volume.
 
-## Instantáneas de Amazon EBS
+## Amazon EBS Snapshots
 
-Los errores ocurren. Un error es no hacer copias de seguridad de los datos y luego perderlos inevitablemente. Para evitar que esto le ocurra, realice siempre copia de seguridad de los datos, incluso en AWS.
+Mistakes happen. One mistake is not backing up data and then inevitably losing it. To prevent this from happening to you, always back up your data, even in AWS.
 
-Dado que los volúmenes de EBS se componen de los datos de su instancia de Amazon EC2, debe realizar copias de seguridad de estos volúmenes, denominadas “instantáneas”.
+Because EBS volumes are made up of the data on your Amazon EC2 instance, you must back up these volumes, called "snapshots".
 
-Las instantáneas de EBS son copias de seguridad progresivas que solo guardan los bloques del volumen que han cambiado después de la instantánea más reciente. Por ejemplo, si tiene 10 GB de datos en un volumen y solo se han modificado 2 GB de datos desde la última instantánea, solo los 2 GB que se han modificado se escriben en Amazon Simple Storage Service (Amazon S3).
+EBS snapshots are incremental backups that only keep the blocks of the volume that have changed after the most recent snapshot. For example, if you have 10 GB of data on a volume and only 2 GB of data has changed since the last snapshot, only the 2 GB that has changed is written to Amazon Simple Storage Service (Amazon S3).
 
-Cuando realiza una instantánea de cualquiera de los volúmenes de EBS, las copias de seguridad se almacenan de forma redundante en varias zonas de disponibilidad mediante Amazon S3. AWS gestiona este aspecto del almacenamiento de la copia de seguridad en Amazon S3, por lo que no tendrá que interactuar con Amazon S3 para trabajar con sus instantáneas de EBS. Las administra en la consola de Amazon EBS, que forma parte de la consola Amazon EC2.
+When you take a snapshot of any of your EBS volumes, the backups are redundantly stored in multiple Availability Zones using Amazon S3. AWS manages this aspect of the backup storage in Amazon S3, so you do not have to interact with Amazon S3 to work with your EBS snapshots. You manage them in the Amazon EBS console, which is part of the Amazon EC2 console.
 
-Las instantáneas de EBS se pueden utilizar para crear varios volúmenes nuevos, tanto si se encuentran en la misma zona de disponibilidad como en otra. Cuando crea un nuevo volumen a partir de una instantánea, es una copia exacta del volumen original en el momento en que se tomó la instantánea.
+EBS snapshots can be used to create multiple new volumes, whether they are in the same Availability Zone or in a different Availability Zone. When you create a new volume from a snapshot, it is an exact copy of the original volume at the time the snapshot was taken.
 
-## Referencias
+## References
 - https://aws.amazon.com/es/ebs/
 - https://keepcoding.io/blog/que-es-amazon-ebs/
