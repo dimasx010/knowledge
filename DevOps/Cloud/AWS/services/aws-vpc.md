@@ -85,9 +85,9 @@ Think of a network access control list (network ACL) as a firewall at the subnet
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/dc0cbed3-ad70-467c-9e27-72e32bd2d4c6">
 </p>
 
-La ACL de red predeterminada, que se muestra en la tabla anterior, permite que todo el tráfico entre a la subred y salga de ella. Para permitir que los datos fluyan libremente hacia la subred, este es un buen punto de partida.
+The default network ACL, shown in the table above, allows all traffic to flow into and out of the subnet. To allow data to flow freely into the subnet, this is a good starting point.
 
-Sin embargo, es posible que quiera restringir los datos a nivel de subred. Por ejemplo, si tiene una aplicación web, podría restringir la red para permitir tráfico HTTPS y tráfico de protocolo de escritorio remoto (RDP) a los servidores web.
+However, you may want to restrict data at the subnet level. For example, if you have a web application, you could restrict the network to allow HTTPS traffic and remote desktop protocol (RDP) traffic to web servers.
 
 <p align="center">
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/42907113-4d4e-4e00-a4f3-e6d8e4c87d43">
