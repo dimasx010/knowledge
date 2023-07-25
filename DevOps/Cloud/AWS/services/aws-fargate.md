@@ -1,36 +1,36 @@
-# OpenShift - Service Mesh
+# AWS Fargate
 
-La tecnología AWS Fargate se puede utilizar en Amazon ECS para ejecutar contenedores sin tener que administrar servidores, ni clústeres de instancias de Amazon EC2. Con Fargate, ya no tendrá que aprovisionar, configurar ni escalar clústeres de máquinas virtuales para ejecutar los contenedores. De esta manera, se elimina la necesidad de elegir tipos de servidores, decidir cuándo escalar los clústeres u optimizar conjuntos de clústeres.
+AWS Fargate technology can be used on Amazon ECS to run containers without having to manage servers or clusters of Amazon EC2 instances. With Fargate, you no longer have to provision, configure, or scale VM clusters to run your containers. This eliminates the need to choose server types, decide when to scale clusters, or optimize cluster sets.
 
-Al ejecutar las tareas y los servicios de Amazon ECS con el tipo de lanzamiento de Fargate o un proveedor de capacidad de Fargate, la aplicación se empaqueta en contenedores, se especifican los requisitos de sistema operativo, CPU y de memoria, se definen las políticas de IAM y las redes, y se lanza la aplicación. Cada tarea de Fargate tiene su propio límite de aislamiento y no comparte el kernel subyacente, los recursos de CPU, los recursos de memoria ni la interfaz de red elástica con otra tarea.
+By running Amazon ECS tasks and services with the Fargate launch type or a Fargate capacity provider, the application is packaged into containers, operating system, CPU and memory requirements are specified, IAM and networking policies are defined, and the application is launched. Each Fargate task has its own isolation boundary and does not share the underlying kernel, CPU resources, memory resources or elastic network interface with another task.
 
-Para obtener información acerca de la arquitectura de Fargate, consulte Uso del tipo de lanzamiento de Fargate en la Guía para desarrolladores de Amazon Elastic Container Service
+For information about the Fargate architecture, see Using the Fargate Launch Type in the Amazon Elastic Container Service Developer Guide.
 
-En este tema, se describen los diferentes componentes de las tareas y los servicios de Fargate, y se mencionan consideraciones especiales para el uso de Fargate con Amazon ECS.
+This topic describes the different components of Fargate tasks and services, and mentions special considerations for using Fargate with Amazon ECS.
 
 <p align="center">
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/b245c481-a508-45ee-88b6-77673cf87412">
 </p>
 
-## Componentes
+## Components
 
 ### Clusteres
 
-Un clúster de Amazon ECS es una agrupación lógica de tareas o servicios. Puede utilizar clústeres para aislar las aplicaciones. Cuando las tareas se ejecutan en Fargate, Fargate también administra los recursos del clúster.
+An Amazon ECS cluster is a logical grouping of tasks or services. You can use clusters to isolate applications. When tasks run in Fargate, Fargate also manages the cluster resources.
 
-### Definiciones de tareas
+### Task definitions
 
-Una definición de tarea es un archivo de texto que describe uno o varios contenedores que forman la aplicación. Está en formato JSON. Puede utilizarse para describir hasta un máximo de diez contenedores. La definición de tareas funciona como un esquema para su aplicación. Especifica diversos parámetros para la aplicación. Por ejemplo, puede usarla para especificar parámetros para el sistema operativo, qué contenedores utilizar, qué puertos abrir para la aplicación, así como qué volúmenes de datos se van a utilizar con los contenedores en la tarea. Los parámetros específicos disponibles para la definición de tareas dependen de las necesidades de la aplicación específica.
+A task definition is a text file that describes one or more containers that make up the application. It is in JSON format. It can be used to describe up to ten containers. The task definition functions as a schema for your application. It specifies various parameters for the application. For example, you can use it to specify parameters for the operating system, which containers to use, which ports to open for the application, as well as which data volumes are to be used with the containers in the task. The specific parameters available for task definition depend on the needs of the specific application.
 
-No es necesario que toda la pila de la aplicación esté en una única definición de tareas. De hecho, le recomendamos que extienda su aplicación a varias definiciones de tareas. Para eso, puede combinar contenedores relacionados en sus propias definiciones de tareas, cada una de ellas representando un único componente.
+It is not necessary for the entire application stack to be in a single task definition. In fact, we recommend that you extend your application to several task definitions. For that, you can combine related containers into their own task definitions, each representing a single component.
 
-### Tareas
+### Tasks
 
-Una tarea es la instancia creada de una definición de tarea dentro de un clúster. Después de crear una definición de tareas para la aplicación dentro de Amazon ECS, puede especificar el número de tareas que se ejecutarán en el clúster. Puede ejecutar una tarea independiente o ejecutar una tarea como parte de un servicio.
+A task is the instance created from a task definition within a cluster. After you create a task definition for your application within Amazon ECS, you can specify the number of tasks to run in the cluster. You can run a standalone task or run a task as part of a service.
 
-### Servicios
+### Servicies
 
-Puede utilizar un servicio de Amazon ECS para ejecutar y mantener simultáneamente el número deseado de tareas en un clúster de Amazon ECS. El funcionamiento es que, en caso de que alguna de las tareas falle o se pare por algún motivo, el programador de servicio de Amazon ECS lanza otra instancia en función de la definición de tarea. Lo hace para reemplazarlo y así mantener el número deseado de tareas en el servicio.
+You can use an Amazon ECS service to simultaneously run and maintain the desired number of tasks in an Amazon ECS cluster. The way it works is that, should any of the tasks fail or stop for any reason, the Amazon ECS service scheduler launches another instance based on the task definition. It does this to replace it to maintain the desired number of tasks in the service.
 
-## Referencias
+## References
 - https://aws.amazon.com/es/fargate/
