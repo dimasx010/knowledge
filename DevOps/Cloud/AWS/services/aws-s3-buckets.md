@@ -1,30 +1,30 @@
 # Buckets - Amazon S3
 
-En Amazon S3, almacena los objetos en contenedores denominados “buckets”. No puede subir ningún objeto, ni siquiera una sola foto, a Amazon S3 sin crear primero un bucket. Al crear un bucket, especifica, como mínimo, dos detalles: la región de AWS en la que desea que se ubique el bucket y el nombre del bucket.
+In Amazon S3, you store objects in containers called "buckets". You cannot upload any object, not even a single snapshot, to Amazon S3 without first creating a bucket. When you create a bucket, you specify at least two details: the AWS region in which you want the bucket to be located and the bucket name.
 
-Para elegir una región, por lo general seleccionará una región que haya utilizado para otros recursos, como el cómputo. Cuando elige una región para el bucket, todos los objetos que coloque en el bucket se almacenarán de forma redundante en varios dispositivos, en varias zonas de disponibilidad. Este nivel de redundancia está diseñado para proporcionar a los clientes de Amazon S3 una durabilidad del 99,999999999 % y una disponibilidad del 99,99 % para los objetos durante un año determinado.
+To choose a region, you will typically select a region that you have used for other resources, such as compute. When you choose a region for the bucket, all objects you place in the bucket will be stored redundantly on multiple devices, in multiple availability zones. This level of redundancy is designed to provide Amazon S3 customers with 99.99999999999% durability and 99.99% availability for objects for a given year.
 
-Cuando elige un nombre de bucket, debe ser único en todas las cuentas de AWS. AWS le impide elegir un nombre de bucket ya elegido por otra persona en otra cuenta de AWS. Una vez que elija un nombre, ese nombre es suyo, y ninguna otra persona puede reclamarlo a menos que elimine el bucket, con lo que luego se libera el nombre para que lo utilicen otras personas.
+When you choose a bucket name, it must be unique across all AWS accounts. AWS prevents you from choosing a bucket name already chosen by someone else in another AWS account. Once you choose a name, that name is yours, and no one else can claim it unless you delete the bucket, which then frees the name for others to use.
 
 <p align="center">
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/d045922e-5251-4f9b-8074-4687c734695c">
 </p>
 
-AWS utiliza el nombre de bucket como parte del identificador de objeto. En S3, cada objeto se identifica mediante una URL como se muestra.
+AWS uses the bucket name as part of the object identifier. In S3, each object is identified by a URL as shown.
 
-Después de http://, puede ver el nombre de bucket. En este ejemplo, el bucket se denomina doc. A continuación, el identificador utiliza el proveedor de servicios y el nombre del servicio s3, amazonaws. Después de eso, habrá una carpeta implícita dentro del bucket llamada 2006-03-01 y el objeto dentro de la carpeta que se denomina AmazonS3.html. El nombre del objeto se conoce a menudo como “nombre de clave”.
+After http://, you can see the bucket name. In this example, the bucket is named doc. Next, the identifier uses the service provider and the s3 service name, amazonaws. After that, there will be an implicit folder inside the bucket named 2006-03-01 and the object inside the folder named AmazonS3.html. The object name is often referred to as the "key name".
 
-Puede haber carpetas dentro de los buckets para ayudarlo a organizar los objetos. Sin embargo, recuerde que ninguna jerarquía de archivos real lo admite en el backend. En cambio, es una estructura plana en la que todos los archivos y las carpetas se encuentran en el mismo nivel. El uso de buckets y carpetas implica una jerarquía, que crea una organización comprensible para los usuarios.
+There can be folders inside the buckets to help you organize the objects. However, remember that no real file hierarchy supports this on the backend. Instead, it is a flat structure where all files and folders are on the same level. The use of buckets and folders implies a hierarchy, which creates an understandable organization for users.
 
-## Políticas de bucket de S3
+## S3 bucket policies
 
-Al igual que las políticas de IAM, las políticas de bucket S3 de Amazon se definen en formato JSON. La diferencia es que las políticas de IAM se adjuntan a los usuarios, los grupos y los roles, mientras que las políticas de bucket de S3 solo se adjuntan a los buckets de S3. Las políticas de bucket de S3 especifican qué acciones se permiten o deniegan en el bucket.
+Like IAM policies, Amazon S3 bucket policies are defined in JSON format. The difference is that IAM policies are attached to users, groups and roles, while S3 bucket policies are only attached to S3 buckets. S3 bucket policies specify which actions are allowed or denied in the bucket.
 
-Por ejemplo, si tiene un bucket llamado “employeebucket”, puede adjuntarle una política de bucket de S3 que permita a otra cuenta de AWS colocar objetos en ese bucket.
+For example, if you have a bucket named "employeebucket", you can attach an S3 bucket policy to it that allows another AWS account to place objects in that bucket.
 
-Alternativamente, si quiere permitir que los lectores anónimos lean los objetos de employeebucket, puede aplicar una política a ese bucket que permita a cualquier persona leer los objetos del bucket por medio de "Effect":Allow on the "Action:["s3:GetObject"]".
+Alternatively, if you want to allow anonymous readers to read employeebucket objects, you can apply a policy to that bucket that allows anyone to read the objects in the bucket via "Effect":Allow on the "Action:["s3:GetObject"]".
 
-Este es un ejemplo de cómo se vería la política de bucket de S3.
+This is an example of what the S3 bucket policy would look like.
 
 ```json
 {
@@ -38,11 +38,11 @@ Este es un ejemplo de cómo se vería la política de bucket de S3.
 }]
 }
 ```
-Las políticas de bucket de S3 solo se pueden colocar en buckets y no se pueden utilizar para carpetas u objetos. Sin embargo, la política que se coloca en el bucket se aplica a todos los objetos de ese bucket.
+S3 bucket policies can only be placed in buckets and cannot be used for folders or objects. However, the policy that is placed in the bucket applies to all objects in that bucket.
 
-Debe utilizar las políticas de bucket de S3 en las siguientes situaciones:
+You should use S3 bucket policies in the following situations:
 
-Necesita una forma sencilla de acceder a S3 entre cuentas, sin utilizar roles de IAM.
+You need an easy way to access S3 between accounts, without using IAM roles.
 
-Sus políticas de IAM se topan con el límite de tamaño definido. Las políticas de bucket de S3 tienen un límite de tamaño mayor.
+Your IAM policies run up against the defined size limit. S3 bucket policies have a higher size limit.
 
