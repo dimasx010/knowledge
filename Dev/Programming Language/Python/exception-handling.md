@@ -1,57 +1,49 @@
-# Python - Manejo de excepciones
+# Python - Exception handling
 
-Los errores de ejecución son llamados comúnmente excepciones y por eso de ahora en más utilizaremos ese nombre. Durante la ejecución de un programa, si dentro de una función surge una excepción y la función no la maneja, la excepción se propaga hacia la función que la invocó, si esta otra tampoco la maneja, la excepción continua propagándose hasta llegar a la función inicial del programa y si esta tampoco la maneja se interrumpe la ejecución del programa. Veamos entonces como manejar excepciones.
+Execution errors are commonly called exceptions and that is why from now on we will use that name. During the execution of a program, if an exception arises within a function and the function does not handle it, the exception propagates to the function that invoked it, if this other one does not handle it either, the exception continues to propagate until it reaches the initial function of the program and if this one does not handle it either, the execution of the program is interrupted. Let's see then how to handle exceptions.
 
 <p align="center">
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/4fc53d3e-6e14-48d0-8bf8-b4ee6c7b929c">
 </p>
 
-Para el manejo de excepciones los lenguajes proveen ciertas palabras reservadas, que nos permiten manejar las excepciones que puedan surgir y tomar acciones de recuperación para evitar la interrupción del programa o, al menos, para realizar algunas acciones adicionales antes de interrumpir el programa.
+For exception handling, languages provide certain reserved words, which allow us to handle exceptions that may arise and take recovery actions to avoid interrupting the program or, at least, to perform some additional actions before interrupting the program.
 
-En el caso de Python, el manejo de excepciones se hace mediante los bloques que utilizan las sentencias try, except y finally.
+In the case of Python, exception handling is done through the blocks that use the try, except and finally statements.
 
-Dentro del bloque try se ubica todo el código que pueda llegar a levantar una excepción, se utiliza el término levantar para referirse a la acción de generar una excepción.
+The try block contains all the code that can raise an exception, the term raise is used to refer to the action of generating an exception.
 
-A continuación se ubica el bloque except, que se encarga de capturar la excepción y nos da la oportunidad de procesarla 
+Next is the except block, which is responsible for catching the exception and gives us the opportunity to process it.
 
 ```python
 >>> try:
-...     cociente = dividendo / divisor
+...     quotient = dividend / divisor
 ... except:
-...     print "No se permite la división por cero"
+...     print "Error Here!"
 ...
 ```
 
-Dado que dentro de un mismo bloque try pueden producirse excepciones de distinto tipo, es posible utilizar varios bloques except, cada uno para capturar un tipo distinto de excepción.
+Since exceptions of different types can occur within the same try block, it is possible to use several except blocks, each one catching a different type of exception.
 
-Esto se hace especificando a continuación de la sentencia except el nombre de la excepción que se pretende capturar. Un mismo bloque except puede atrapar varios tipos de excepciones, lo cual se hace especificando los nombres de la excepciones separados por comas a continuación de la palabra except. Es importante destacar que si bien luego de un bloque try puede haber varios bloques except, se ejecutará, a lo sumo, uno de ellos.
+This is done by specifying after the except statement the name of the exception to be caught. The same except block can catch several types of exceptions, which is done by specifying the exception names separated by commas after the except word. It is important to note that although there may be several except blocks after a try block, at most one of them will be executed.
 
 ```python
 try:
-    # aquí ponemos el código que puede lanzar excepciones
+
 except IOError:
-    # entrará aquí en caso que se haya producido
-    # una excepción IOError
 except ZeroDivisionError:
-    # entrará aquí en caso que se haya producido
-    # una excepción ZeroDivisionError
 except:
-    # entrará aquí en caso que se haya producido
-    # una excepción que no corresponda a ninguno
-    # de los tipos especificados en los except previos
 ```
 
-Ahora si deseamos saber que excepción se esta produciendo lo ideal sería utilizar la siguiente rutina: 
+Now if we want to know which exception is occurring, the ideal would be to use the following routine:
 
 ```python
 try:
-    # aquí ponemos el código que puede lanzar excepciones
 except Exception as err:
     print(f"Unexpected {err=}, {type(err)=}")
     raise
 ```
 
-## Referencias: 
+## References: 
 
 - https://docs.python.org/es/3/tutorial/errors.html
 - https://uniwebsidad.com/libros/algoritmos-python/capitulo-12/excepciones
