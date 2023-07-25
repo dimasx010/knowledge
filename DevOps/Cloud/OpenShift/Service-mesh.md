@@ -1,30 +1,29 @@
 # OpenShift - Service Mesh
 
-Una malla de servicios o service mesh, como el proyecto open source Istio, se utiliza para controlar el intercambio de datos entre las distintas partes de una aplicación. A diferencia de otros sistemas que también administran esta comunicación, la malla de servicios es una capa visible y específica de la infraestructura integrada a la aplicación, la cual puede registrar si las distintas partes interactúan bien o no, a fin de facilitar la optimización de las comunicaciones y evitar el tiempo de inactividad a medida que crece una aplicación.
+A service mesh, such as the open source Istio project, is used to control the exchange of data between the different parts of an application. Unlike other systems that also manage this communication, the service mesh is a visible and specific layer of the infrastructure integrated to the application, which can record whether the different parts interact well or not, in order to facilitate the optimization of communications and avoid downtime as an application grows.
 
-Las partes de la aplicación se denominan "servicio" y dependen unas de otras para brindar a los usuarios lo que desean. Si alguien utiliza la aplicación de una tienda en línea para comprar un producto, debe saber si el artículo está disponible. Por lo tanto, el servicio que se conecta con la base de datos del inventario de la empresa se debe comunicar con la página web del producto, que a su vez debe comunicarse con el carrito de compras en línea del usuario. Si la tienda quiere ofrecer más beneficios, podría diseñar un servicio que recomiende productos a los usuarios dentro de la aplicación. Este nuevo servicio se comunicará con una base de datos de etiquetas de los productos para ofrecer recomendaciones y, además, debe comunicarse con la misma base de datos del inventario que necesitaba la página del producto; es decir, se trata de una gran cantidad de partes independientes y reutilizables.
+The parts of the application are called a "service" and depend on each other to provide users with what they want. If someone uses an online store's application to buy a product, they need to know if the item is available. Therefore, the service that connects to the company's inventory database must communicate with the product's web page, which in turn must communicate with the user's online shopping cart. If the store wants to offer more benefits, it could design a service that recommends products to users within the application. This new service will communicate with a database of product tags to provide recommendations and, in addition, it should communicate with the same inventory database that the product page needed; in other words, it is a large number of independent and reusable parts.
 
-Las aplicaciones modernas suelen dividirse de este modo: como una red de servicios en la cual cada uno de ellos desempeña una función comercial específica. Para ello, estos servicios deberían intercambiar datos permanentemente. ¿Pero qué sucede si algunos servicios, como la base de datos del inventario de la tienda minorista, sufren una sobrecarga de solicitudes? Entonces entra en juego la malla de servicios, que dirige las solicitudes de un servicio a otro para optimizar el funcionamiento en conjunto de las partes.
+Modern applications are often divided up in this way: as a network of services in which each service performs a specific business function. But what happens if some services, such as the retail store's inventory database, are overloaded with requests? Then the service mesh comes into play, which directs requests from one service to another to optimize the joint operation of the parts.
 
 <p align="center">
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/686934c2-c697-4bae-aca7-22c9e3d24848">
 </p>
 
-## Funcionamiento de las mallas de servicios
+## Operation of service grids
 
-La malla de servicios no agrega funciones nuevas al entorno de tiempo de ejecución de la aplicación; las aplicaciones siempre necesitan normas que especifiquen cómo se transfieren las solicitudes del punto A al B, independientemente de su arquitectura. Lo que distingue a la malla de servicios es que las normas que rigen la comunicación entre los servicios no se encuentran dentro de cada uno de ellos, sino que se extraen y se colocan en una capa de infraestructura.
+The service mesh does not add new functionality to the application runtime environment; applications always need rules that specify how requests are transferred from point A to B, regardless of their architecture. What distinguishes the service mesh is that the rules governing communication between services are not found within each service, but are extracted and placed in an infrastructure layer.
 
-Para ello, la malla de servicios se integra a la aplicación como un conjunto de proxies de red. Los proxies son un concepto común en el ámbito de la TI empresarial: si accede a esta página web desde una computadora de trabajo, es muy probable que haya utilizado un proxy.
+To this end, the service mesh is integrated into the application as a set of network proxies. Proxies are a common concept in enterprise IT: if you access this web page from a work computer, it is very likely that you have used a proxy.
 
-Cuando se envía la solicitud para esta página, primero la recibe el proxy web de su empresa.
+When the request for this page is sent, it is first received by your company's web proxy.
 
-Una vez que la solicitud pasa la medida de seguridad del proxy, se envía al servidor que aloja esta página.
+Once the request passes the proxy's security measure, it is sent to the server hosting this page.
 
-Luego, la página regresa al proxy y se vuelve a verificar en función de las medidas de seguridad.
+The page is then returned to the proxy and rechecked for security measures.
 
-Finalmente, se envía del proxy a usted.
+Finally, it is sent from the proxy to you.
 
-En una malla de servicios, las solicitudes se envían entre los microservicios por medio de proxies en su propia capa de infraestructura. Por eso, los proxies individuales que forman una malla de servicios a veces se denominan "sidecars", ya que se ejecutan junto a cada uno de los servicios, y no dentro de ellos. En conjunto, estos proxies sidecar, que están separados de cada servicio, forman una red.
+In a service mesh, requests are sent between microservices by proxies in their own infrastructure layer. For this reason, the individual proxies that form a service mesh are sometimes referred to as "sidecars," since they run alongside, rather than within, each of the services. Together, these sidecar proxies, which are separate from each service, form a network.
 
-Sin una malla de servicios, se debe codificar cada microservicio para que incluya las normas que regirán la comunicación entre los servicios, lo cual distrae a los desarrolladores de los objetivos empresariales. También significa que los errores de comunicación son más difíciles de diagnosticar porque las normas de comunicación entre los servicios están ocultas dentro de cada uno de ellos.
-
+Without a mesh of services, each microservice must be coded to include the rules that will govern communication between services, which distracts developers from business goals. It also means that communication errors are more difficult to diagnose because the rules for communication between services are hidden within each service.
