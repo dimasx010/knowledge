@@ -4,25 +4,24 @@
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/2d17c79f-7cdd-4945-b92f-9e648049726a">
 </p>
 
-Básicamente esta es una plataforma de desarrollo con características de Cloud Computing (PaaS) desarrollada por Red Hat, básicamente es una distribución certificado de kubernetes. 
+Basically this is a development platform with Cloud Computing (PaaS) features developed by Red Hat, basically it is a certified Kubernetes distribution.
 
-Esta posee una serie de características: 
+It has a number of features: 
 
-- Se centra en el desarrollo de aplicaciones
-- Openshift utiliza internamente Docker y Kubernetes
-- Nos permite desplegar aplicaciones en diferentes entornos (Desarrollo, producción)
-- Facilita la integración continua.
-- Tenemos varias formas de interactuar con OpenShift: aplicación web, CLI o API REST. 
+- It focuses on application development.
+- Openshift uses Docker and Kubernetes internally.
+- It allows us to deploy applications in different environments (Development, production).
+- It facilitates continuous integration.
+- We have several ways to interact with OpenShift: web application, CLI or REST API.
 
-Igualmente este ofrece una serie de ventajas: 
+It also offers a number of advantages: 
 
-- Se pueden crear automáticamente las imágenes o contenedores, tomando los repos de github por ejemplo. 
-- No necesitas una gestión profesional de la infra al menos en el inicio de tu aplicativo. 
+- You can automatically create images or containers, taking repos from github for example. 
+- You do not need a professional management of the infra at least at the beginning of your application. 
 
-Actualmente tenemos varias soluciones disponibles entre las cuales podemos mencionar: 
+Currently we have several solutions available among which we can mention: 
 
-- OKD(Origin): La distribución de la comunidad que puedes instalar en tu infraestructura. 
-- OpenShift Online: Versión que se ejecuta en el cloud público de Red Hat. Dos planes: Free y Pro. 
-- OpenShift Dedicated: te permite disponer de un cluster de OpenShift gestionado por Red Hat para que despliegues tus aplicaciones.
-- OpenShift Container Platform: te permite disponer de un cluster de OpenShift en tu propia infraestructura gestionado por Red Hat. 
-
+- OKD(Origin): The community distribution that you can install on your infrastructure. 
+- OpenShift Online: Version running on Red Hat's public cloud. Two plans: Free and Pro. 
+- OpenShift Dedicated: Allows you to have an OpenShift cluster managed by Red Hat to deploy your applications.
+- OpenShift Container Platform: allows you to have an OpenShift cluster on your own infrastructure managed by Red Hat.
