@@ -1,40 +1,40 @@
 # MariaDB
 
-MariaDB es un fork de MySQL. Los desarrolladores construyeron el RDBMS para conservar la estructura y las características de MySQL. Temían que la adquisición del sistema por parte de Oracle, la corporación detrás de la base de datos Oracle, que era el mayor competidor de MySQL en ese momento, pusiera en peligro la base de datos.
+MariaDB is a fork of MySQL. The developers built the RDBMS to retain the structure and features of MySQL. They feared that the acquisition of the system by Oracle, the corporation behind Oracle Database, which was MySQL's biggest competitor at the time, would jeopardize the database.
 
-Los desarrolladores de MariaDB se aseguran de que cada versión sea compatible con la versión correspondiente de MySQL. MariaDB no sólo adopta los archivos de definición de datos y tablas de MySQL, sino que también utiliza protocolos de cliente, API de cliente, puertos y sockets idénticos. El objetivo es que los usuarios de MySQL puedan cambiar a MariaDB sin problemas.
+MariaDB developers make sure that each version is compatible with the corresponding version of MySQL. MariaDB not only adopts MySQL's data definition files and tables, but also uses identical client protocols, client APIs, ports and sockets. The goal is to allow MySQL users to switch to MariaDB seamlessly.
 
-Al igual que MySQL, MariaDB es modificable mediante instrucciones SQL.
+Like MySQL, MariaDB is modifiable via SQL statements.
 
 <p align="center">
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/26c3ec5a-e1b0-4964-9cec-c6ca3f7e386f">
 </p>
 
-Estas son las ventajas y desventajas de MySQL frente a MariaDB.
+These are the advantages and disadvantages of MySQL versus MariaDB.
 
-## Pros y contras de MariaDB
+## Pros and cons of MariaDB
 
-Ahora que sabes en qué se diferencia MariaDB de MySQL, vamos a examinar las ventajas y desventajas de los dos sistemas de bases de datos.
+Now that you know how MariaDB differs from MySQL, let's examine the advantages and disadvantages of the two database systems.
 
 ### Pros:
 
-En primer lugar, MariaDB es compatible con versiones anteriores. Esta es una característica importante, teniendo en cuenta que es un software de código abierto constantemente actualizado por la comunidad.
+First of all, MariaDB is backward compatible. This is an important feature, considering that it is an open source software constantly updated by the community.
 
-MariaDB cuenta con un thread pool dinámico, que permite al servidor optimizar sus recursos retirando los hilos inactivos. Combinado con un gran pool de conexiones, esta característica da como resultado una velocidad considerablemente mejorada, una replicación mejorada y actualizaciones más rápidas.
+MariaDB has a dynamic thread pool, which allows the server to optimize its resources by removing inactive threads. Combined with a large connection pool, this feature results in significantly improved speed, improved replication and faster updates.
 
-La tecnología avanzada de cluster Galera incorporada elimina el retraso de los slaves y las transacciones perdidas, reduce las latencias de los clientes y mejora la escalabilidad de lectura de los nodos.
+The built-in advanced Galera clustering technology eliminates slaves lag and lost transactions, reduces client latencies, and improves node read scalability.
 
-Además, MariaDB soporta más motores de almacenamiento que MySQL, algunos de los cuales son compatibles con otros RDBMS. Cada motor de almacenamiento tiene un propósito específico. Por ejemplo, MariaDB ColumnStore está diseñado para el escalado de big data y la escalabilidad lineal.
+In addition, MariaDB supports more storage engines than MySQL, some of which are compatible with other RDBMSs. Each storage engine has a specific purpose. For example, MariaDB ColumnStore is designed for big data scaling and linear scalability.
 
-Dado que MariaDB se distribuye bajo la licencia GPL, se obtiene acceso completo a todas sus características tras la instalación. Además, el software está disponible de forma gratuita.
+Since MariaDB is distributed under the GPL license, you get full access to all its features after installation. In addition, the software is available free of charge.
 
-### Contras:
+### Cons:
 
-MariaDB sólo soporta tipos de datos JSON a partir de la versión 10.2. Incluso entonces, es sólo un alias para LONGTEXT, presentado por razones de compatibilidad. Para replicar los datos JSON al pasar de MySQL a MariaDB, es necesario cambiar primero el tipo de columna JSON.
+MariaDB only supports JSON data types as of version 10.2. Even then, it is only an alias for LONGTEXT, introduced for compatibility reasons. To replicate JSON data when moving from MySQL to MariaDB, it is necessary to change the JSON column type first.
 
-Algunas características que sólo están disponibles en la Enterprise Edition de MySQL están ausentes en MariaDB. Sin embargo, como parte de su solución de base de datos para empresas, MariaDB ofrece plugins alternativos de código abierto, como MaxScale para el enmascaramiento de datos.
+Some features that are only available in MySQL Enterprise Edition are absent in MariaDB. However, as part of its enterprise database solution, MariaDB offers alternative open source plugins, such as MaxScale for data masking.
 
-Eso sí, se puede acceder a un soporte experto y a funciones de nivel empresarial si se adquiere una suscripción a MariaDB Platform. Los usuarios de MariaDB Community, la versión desarrollada por la comunidad, deben recurrir a la base de conocimientos y a los foros para obtener asistencia técnica.
+That said, expert support and enterprise-level features are available by purchasing a MariaDB Platform subscription. Users of MariaDB Community, the community-developed version, must rely on the knowledge base and forums for technical assistance.
 
 ## References
 - https://www.hostinger.co/tutoriales/mariadb-vs-mysql
