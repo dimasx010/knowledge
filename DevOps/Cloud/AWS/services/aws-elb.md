@@ -1,73 +1,75 @@
 # AWS Elastic Load Balancing
 
-Elastic Load Balancing distribuye automáticamente el tráfico entrante entre varios destinos, por ejemplo, instancias EC2, contenedores y direcciones IP en una o varias zonas de disponibilidad. Monitorea el estado de los destinos registrados y enruta el tráfico solamente a destinos en buen estado. Elastic Load Balancing escala la capacidad del balanceador de carga de forma automática en respuesta a cambios en el tráfico entrante.
+Elastic Load Balancing automatically distributes inbound traffic among multiple destinations, e.g. EC2 instances, containers and IP addresses in one or more Availability Zones. It monitors the health of registered destinations and routes traffic only to healthy destinations. Elastic Load Balancing automatically scales load balancer capacity in response to changes in incoming traffic.
 
 <p align="center">
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/aff38836-897f-4c8e-83ef-638564c95fc3">
 </p>
 
-## Características de ELB
+## ELB Features
 
-El servicio ELB proporciona una gran ventaja sobre el uso de su propia solución para equilibrar la carga; principalmente, no tiene que administrarlo ni operarlo. Puede distribuir el tráfico de las aplicaciones entrantes en las instancias EC2, los contenedores, las direcciones IP y las funciones de AWS Lambda. Otras características clave incluyen las siguientes:
+The ELB service provides a big advantage over using your own load balancing solution; primarily, you don't have to manage or operate it. You can distribute traffic from incoming applications across EC2 instances, containers, IP addresses, and AWS Lambda functions. Other key features include the following:
 
-Dado que ELB puede equilibrar la carga en direcciones IP, puede funcionar en modo híbrido, lo que significa que también equilibra la carga de los servidores en las instalaciones.
-ELB ofrece alta disponibilidad. La única opción que debe garantizar es que el equilibrador de carga se implemente en varias zonas de disponibilidad.
-En términos de escalabilidad, ELB se escala automáticamente para satisfacer la demanda del tráfico entrante. Gestiona el tráfico entrante y lo envía a su aplicación de backend
+Since ELB can load balance on IP addresses, it can operate in hybrid mode, which means that it also load balances the servers on the premises.
 
-## Tipos de ELB
+ELB offers high availability. The only option you need to ensure is that the load balancer is deployed in multiple availability zones.
 
-### Equilibrador de carga de aplicaciones (ALB)
+In terms of scalability, ELB automatically scales to meet the demand of incoming traffic. It manages incoming traffic and sends it to your backend application.
 
-Estas son algunas de las características principales del Equilibrador de carga de aplicaciones.
+## Types of ELB
 
-ALB dirige el tráfico en función de los datos de las solicitudes. ALB toma decisiones de enrutamiento basadas en el protocolo HTTP, como la ruta URL (/upload) y el host, los encabezados y el método HTTP, y la dirección IP de origen del cliente. De este modo, se habilita el enrutamiento pormenorizado a los grupos de destino.
+### Application load balancer (ALB)
 
-ALB envía respuestas directamente al cliente. ALB tiene la capacidad de responder directamente al cliente con una respuesta fija, como una página HTML personalizada. También puede enviar un redireccionamiento al cliente, lo que resulta útil cuando debe redirigir a un sitio web específico o redirigir una solicitud de HTTP a HTTPS, de modo que se elimina ese trabajo de los servidores de backend.
+These are some of the main features of the Application Load Balancer.
 
-ALB utiliza la descarga TLS. Al hablar de HTTPS y evitar el trabajo de los servidores de backend, ALB entiende el tráfico HTTPS. Para que pase el tráfico HTTPS a través de ALB, se proporciona un certificado SSL al importar un certificado mediante los servicios de IAM o AWS Certificate Manager (ACM) o al crear uno de forma gratuita con ACM. Esto garantiza que el tráfico entre el cliente y ALB esté cifrado.
+ALB routes traffic based on request data. ALB makes routing decisions based on the HTTP protocol, such as URL (/upload) path and host, HTTP headers and method, and the source IP address of the client. This enables granular routing to target groups.
 
-ALB autentica a los usuarios. Con respecto al tema de la seguridad, ALB puede autenticar a los usuarios antes de que se les permita atravesar el equilibrador de carga. ALB utiliza el protocolo OpenID Connect y se integra en otros servicios de AWS para admitir los protocolos, como SAML, LDAP, Microsoft Active Directory, etc.
+ALB sends responses directly to the client. ALB has the ability to respond directly to the client with a fixed response, such as a custom HTML page. It can also send a redirect to the client, which is useful when it must redirect to a specific website or redirect a request from HTTP to HTTPS, so that it removes that work from the backend servers.
 
-ALB protege el tráfico. A fin de evitar que el tráfico llegue al equilibrador de carga, puede configurar un grupo de seguridad para especificar los intervalos de direcciones IP admitidos.
+ALB uses TLS offloading. By talking HTTPS and avoiding the work of backend servers, ALB understands HTTPS traffic. To pass HTTPS traffic through ALB, an SSL certificate is provided by importing a certificate using IAM or AWS Certificate Manager (ACM) services or creating one for free with ACM. This ensures that traffic between the client and ALB is encrypted.
 
-ALB utiliza el algoritmo de enrutamiento de turno rotativo. ALB garantiza que cada servidor reciba el mismo número de solicitudes en general. Este tipo de enrutamiento funciona para la mayoría de las aplicaciones.
+ALB authenticates users. With respect to the security issue, ALB can authenticate users before they are allowed to traverse the load balancer. ALB uses the OpenID Connect protocol and integrates with other AWS services to support protocols such as SAML, LDAP, Microsoft Active Directory, and so on.
 
-ALB utiliza el algoritmo de enrutamiento de solicitudes menos pendiente. Si las solicitudes al backend varían en complejidad donde una solicitud puede necesitar mucho más tiempo de CPU que otra, el algoritmo de solicitud menos pendiente es más adecuado. También es el algoritmo de enrutamiento adecuado para utilizar si los destinos varían en las capacidades de procesamiento. Una solicitud pendiente se produce cuando se envía una solicitud al servidor de backend y aún no se ha recibido una respuesta.
+ALB protects traffic. To prevent traffic from reaching the load balancer, you can configure a security group to specify supported IP address ranges.
 
-Por ejemplo, si las instancias EC2 de un grupo de destino no tienen el mismo tamaño, la utilización de la CPU de un servidor será mayor que la otra si se envía el mismo número de solicitudes a cada servidor mediante el algoritmo de enrutamiento de turno rotativo. Ese mismo servidor también tendrá más solicitudes pendientes. El uso del algoritmo de enrutamiento de solicitudes menos pendiente garantizaría un uso equitativo en todos los destinos.
+ALB uses the rotating shift routing algorithm. ALB ensures that each server receives the same number of requests overall. This type of routing works for most applications.
 
-ALB utiliza sesiones rápidas. Si las solicitudes deben enviarse al mismo servidor de backend porque la aplicación funciona con estado, utilice la característica de sesión rápida. Esta característica utiliza una cookie HTTP para recordar en las conexiones a qué servidor enviar el tráfico.
+ALB uses the least outstanding request routing algorithm. If requests to the backend vary in complexity where one request may need much more CPU time than another, the least pending request algorithm is more appropriate. It is also the appropriate routing algorithm to use if the destinations vary in processing capabilities. A pending request occurs when a request is sent to the backend server and a response has not yet been received.
 
-Por último, ALB es específico para el tráfico HTTP y HTTPS. Si la aplicación utiliza un protocolo diferente, considere el equilibrador de carga de red.
+For example, if the EC2 instances in a target group are not the same size, one server's CPU utilization will be higher than the other if the same number of requests are sent to each server using the rotating shift routing algorithm. That same server will also have more pending requests. Using the least outstanding request routing algorithm would ensure equal usage at all destinations.
 
-### Equilibrador de carga de red (NLB)
+ALB uses fast sessions. If requests must be sent to the same backend server because the application is stateful, use the fast session feature. This feature uses an HTTP cookie to remember on connections which server to send traffic to.
 
-Estas son algunas de las características principales del equilibrador de carga de red.
+Finally, ALB is specific to HTTP and HTTPS traffic. If the application uses a different protocol, consider the network load balancer.
 
-El equilibrador de carga de red admite los protocolos TCP, UDP y TLS. HTTPS utiliza TCP y TLS como protocolos. Sin embargo, NLB funciona en la capa de conexión, por lo que no entiende qué es una solicitud HTTPS. Significa que todas las características necesarias para comprender el protocolo HTTP y HTTPS, como las reglas de enrutamiento basadas en ese protocolo, la autenticación y el algoritmo de enrutamiento de la solicitud menos pendiente, no están disponibles con NLB.
+### Network Load Balancer (NLB)
 
-NLB utiliza un algoritmo de enrutamiento hash de flujo. El algoritmo se basa en lo siguiente:
+These are some of the main features of the Network Load Balancer.
 
-- Protocolo
-- Dirección IP de origen y puerto de origen
-- Dirección IP de destino y puerto de destino
-- Número de secuencia TCP
+The Network Load Balancer supports TCP, UDP and TLS protocols. HTTPS uses TCP and TLS as protocols. However, NLB operates at the connection layer, so it does not understand what an HTTPS request is. It means that all the features needed to understand the HTTP and HTTPS protocol, such as routing rules based on that protocol, authentication and the least pending request routing algorithm, are not available with NLB.
 
-Si todos los parámetros son iguales, los paquetes se envían exactamente al mismo destino. Si alguno de ellos es diferente en los siguientes paquetes, la solicitud podría enviarse a otro destino.
+NLB uses a stream hash routing algorithm. The algorithm is based on the following:
 
-NLB ofrece sesiones rápidas. A diferencia de ALB, estas sesiones se basan en la dirección IP de origen del cliente, en lugar de en una cookie.
+- Protocol
+- Source IP address and source port
+- Destination IP address and destination port
+- TCP Sequence Number
 
-NLB admite la reasignación de TLS. NLB entiende el protocolo TLS. También puede reasignar TLS desde los servidores backend, de forma similar al funcionamiento de ALB.
+If all parameters are the same, the packets are sent to exactly the same destination. If any of them are different in the following packets, the request could be sent to another destination.
 
-NLB gestiona millones de solicitudes por segundo. Si bien ALB también puede admitir este número de solicitudes, tiene que escalarse para alcanzar ese número. Eso lleva tiempo. NLB puede gestionar instantáneamente millones de solicitudes por segundo.
+NLB offers fast sessions. Unlike ALB, these sessions are based on the source IP address of the client, rather than on a cookie.
 
-NLB admite las direcciones IP estáticas y elásticas. En algunas situaciones, un cliente de aplicación tiene que enviar solicitudes directamente a la dirección IP del equilibrador de carga en lugar de utilizar DNS. Por ejemplo, esto resulta útil si la aplicación no puede utilizar DNS o si los clientes que se conectan requieren reglas de firewall basadas en direcciones IP. En este caso, NLB es el tipo correcto de equilibrador de carga que se debe utilizar.
+NLB supports TLS reassignment. NLB understands the TLS protocol. It can also remap TLS from backend servers, similar to the way ALB works.
 
-El procesamiento de lenguaje natural conserva la dirección IP de origen. NLB conserva la dirección IP de origen del cliente al enviar el tráfico al backend. Con ALB, si observa la dirección IP de origen de las solicitudes, encontrará la dirección IP del equilibrador de carga. Mientras esté con NLB, vería la dirección IP real del cliente, requerida por la aplicación de backend en algunos casos.
+NLB handles millions of requests per second. While ALB can also support this number of requests, it has to scale to reach that number. That takes time. NLB can instantly handle millions of requests per second.
 
-### Selección entre los tipos de ELB
+NLB supports both static and elastic IP addresses. In some situations, an application client has to send requests directly to the load balancer's IP address instead of using DNS. For example, this is useful if the application cannot use DNS or if connecting clients require firewall rules based on IP addresses. In this case, NLB is the correct type of load balancer to use.
 
-La selección entre los tipos de servicio ELB se realiza al definir qué característica es necesaria para la aplicación. En la tabla, se presenta una lista de las características principales de los equilibradores de carga.
+Natural language processing preserves the source IP address. NLB retains the source IP address of the client when sending traffic to the backend. With ALB, if you look at the source IP address of the requests, you will find the IP address of the load balancer. While with NLB, you would see the actual IP address of the client, required by the backend application in some cases.
+
+### Selection among ELB types
+
+The selection between ELB service types is made by defining which feature is required for the application. A list of the main features of load balancers is presented in the table.
 
 <p align="center">
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/93f53569-20c8-4716-89c8-aa4b9618671f">
