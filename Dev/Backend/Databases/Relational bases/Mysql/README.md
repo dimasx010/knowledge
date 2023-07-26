@@ -1,36 +1,36 @@
 # MySQL
 
-MySQL es un sistema de gestión de bases de datos relacionales de código abierto creado por MySQL AB para el desarrollo de aplicaciones web. Proporciona soporte para que los desarrolladores web puedan gestionar datos con facilidad utilizando tablas.
+MySQL is an open source relational database management system created by MySQL AB for web application development. It provides support for web developers to easily manage data using tables.
 
-En la mayoría de los casos, MySQL funciona junto con PHP, servidores web Apache y distribuciones de Linux. Es modificable mediante el lenguaje de consulta estructurado (SQL).
+In most cases, MySQL works in conjunction with PHP, Apache web servers and Linux distributions. It is modifiable using Structured Query Language (SQL).
 
-La popularidad de la base de datos relacional aumentó cuando WordPress la adoptó en su sistema. Como la base de datos MySQL es compatible con Linux, se incluye en sus distribuciones, incluyendo Ubuntu.
+The popularity of the relational database increased when WordPress adopted it in its system. As MySQL database is compatible with Linux, it is included in its distributions, including Ubuntu.
 
 <p align="center">
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/cc9d1281-47f7-45e3-b249-b9cbc2e61f17">
 </p>
 
-Estas son las ventajas y desventajas de MySQL frente a MariaDB.
+These are the advantages and disadvantages of MySQL versus MariaDB.
 
 ## Pros:
 
-El enmascaramiento de datos incorporado y las columnas dinámicas hacen que sea un sistema de base de datos seguro y rápido. Gracias a su diseño sencillo y a sus múltiples motores de almacenamiento, MySQL puede garantizar un rendimiento óptimo y un tiempo de actividad continuo.
+Built-in data masking and dynamic columns make it a secure and fast database system. Thanks to its simple design and multiple storage engines, MySQL can guarantee optimal performance and continuous uptime.
 
-Aunque sobresale en la gestión de datos para aplicaciones web, MySQL puede adaptarse a diferentes casos de uso. Por ejemplo, MySQL es adecuado para las plataformas de comercio electrónico, ya que cuenta con un sólido soporte transaccional. También cuenta con características avanzadas de seguridad de datos que protegen las transacciones.
+Although it excels in data management for web applications, MySQL can be adapted to different use cases. For example, MySQL is well suited for e-commerce platforms, as it has strong transactional support. It also has advanced data security features that protect transactions.
 
-Respaldado por Oracle Corporation, MySQL ofrece una excelente compatibilidad. Es compatible con la mayoría de los proveedores de alojamiento y con más de 20 sistemas operativos, por lo que es independiente de la plataforma. Además, MySQL se actualiza constantemente y está bien documentado.
+Backed by Oracle Corporation, MySQL offers excellent compatibility. It is compatible with most hosting providers and more than 20 operating systems, making it platform-independent. In addition, MySQL is constantly updated and well documented.
 
-Por último, MySQL es fácil de usar y personalizable, ya que cuenta con múltiples interfaces de usuario que se adaptan a las distintas preferencias.
+Finally, MySQL is easy to use and customizable, with multiple user interfaces to suit different preferences.
 
-## Contras:
+## Disadvantages:
 
-Migrar de MariaDB a MySQL no es tan fácil como al revés debido a las diferencias de configuración de la replicación.
+Migrating from MariaDB to MySQL is not as easy as the other way around due to replication configuration differences.
 
-MySQL tampoco es compatible con la base de datos Oracle. Una de las razones es que MySQL no soporta PL/SQL, un lenguaje orientado a la aplicación desarrollado por Oracle. En comparación, MariaDB viene con compatibilidad con Oracle PL/SQL, a partir de la versión 10.3.
+MySQL is also not compatible with the Oracle database. One of the reasons is that MySQL does not support PL/SQL, an application-oriented language developed by Oracle. In comparison, MariaDB comes with Oracle PL/SQL support, starting with version 10.3.
 
-Además, MySQL no es adecuado para gestionar datos de gran tamaño, ya que carece de un motor de búsqueda robusto centrado en la memoria y de una solución de procesamiento de datos a gran escala. El modelo de licencia dual de MySQL también bloquea características esenciales como el plugin de pool de hilos detrás de un muro de pago.
+In addition, MySQL is not suitable for managing big data, as it lacks a robust memory-centric search engine and a large-scale data processing solution. MySQL's dual licensing model also locks essential features such as the thread pool plugin behind a paywall.
 
-Las restricciones y la monetización que Oracle ha implementado hacen que MySQL sea difícil de escalar. A pesar de ser de código abierto, Oracle tiene el control total sobre el desarrollo y los parches del sistema de base de datos.
+The restrictions and monetization that Oracle has implemented make MySQL difficult to scale. Despite being open source, Oracle has full control over the development and patching of the database system.
 
 ## References
 - https://www.hostinger.co/tutoriales/mariadb-vs-mysql
