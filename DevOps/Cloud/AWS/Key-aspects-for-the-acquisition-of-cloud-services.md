@@ -1,7 +1,7 @@
 # AWS Shared Responsibility Model
 
 <p align="center">
-  <img src="https://github.com/dimasx010/knowledge/assets/105082657/d6198954-788a-4631-b63a-c4e501bd0a43">
+  <img src="https://github.com/dimasx010/knowledge/assets/105082657/f782a672-a9d3-486e-97a3-07e33db40f7d">
 </p>
 
 Seis áreas clave afectan la forma de comprar la nube: precio, seguridad, residencia de datos, sostenibilidad, gobernanza y términos y condiciones. No entender completamente estas áreas, puede impedirle obtener todos las ventajas de la nube.
@@ -20,7 +20,4 @@ Estos son algunos aprendizajes a tener en cuenta cuando se trata de los aspectos
 
 - Los términos y condiciones de la nube están diseñados para reflejar cómo funciona un modelo de servicios en la nube (no se compran activos físicos). Los CSP operan a una escala masiva de uno a muchos para ofrecer servicios estandarizados y no pueden personalizar los servicios para las necesidades individuales de los clientes. Por lo tanto, es importante que se involucre con los CSP desde el principio para incorporar y utilizar sus términos en la mayor medida posible.
 
-
-## References
-- https://aws.amazon.com/compliance/shared-responsibility-model/
 
