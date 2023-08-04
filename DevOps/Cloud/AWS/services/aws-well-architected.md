@@ -80,6 +80,3 @@ El pilar de optimización de costos se centra en evitar gastos innecesarios. Ent
 - Administración de la demanda y suministro de recursos 
 - Optimización a lo largo del tiempo.
 
-## References
-- https://keepcoding.io/blog/regiones-y-zonas-de-disponibilidad-de-aws/
-- https://aws.amazon.com/en/about-aws/global-infrastructure/?p=ngi&loc=1
