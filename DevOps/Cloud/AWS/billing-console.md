@@ -5,11 +5,11 @@
 </p>
 
 
-La consola de facturación de AWS le permite entender con facilidad los gastos de AWS, ver y pagar facturas, administrar preferencias de facturación y configuración fiscal, y acceder a servicios de administración financiera en la nube adicionales. Evalúe con rapidez si su gasto mensual está en consonancia con periodos anteriores, la previsión o el presupuesto e investigue y tome medidas correctivas a tiempo.
+The AWS Billing Console allows you to easily understand AWS expenses, view and pay bills, manage billing preferences and tax settings, and access additional cloud financial management services. Quickly assess whether your monthly spend is in line with prior periods, forecast or budget and investigate and take timely corrective action.
 
-La página de facturación de AWS le brinda una visión mensual de sus costos facturables. Para los periodos de facturación mensual que aún no se hayan cerrado, la página “Bills” (Facturas) mostrará los cargos estimados más recientes según los servicios medidos hasta la fecha. Las facturas se generan cuando se cierra un periodo de facturación mensual, o cuando las suscripciones o las compras únicas se completan. En el caso de usuarios de AWS Organizations, aquellos que iniciaron sesión en la cuenta de administración pueden ver los cargos consolidados para todas las cuentas miembro, con información a nivel de cuenta disponible en la pestaña “Charges by account” (Cargos por cuenta). La página “Bills” (Facturas) de AWS brinda detalles tanto de servicios proporcionados por AWS como de adquisiciones hechas mediante AWS Marketplace. Para los usuarios de AWS Billing Conductor, la página de facturación de AWS ofrece datos proforma para las cuentas de los miembros y las cuentas principales de un grupo de facturación; las cuentas de administración pueden alternar entre las vistas de datos facturables y proforma.
+The AWS Billing page provides you with a monthly view of your billable costs. For monthly billing periods that have not yet closed, the "Bills" page will display the most recent estimated charges based on services metered to date. Bills are generated when a monthly billing period closes, or when subscriptions or one-time purchases are completed. For AWS Organizations users, those logged into the management account can view consolidated charges for all member accounts, with account-level information available on the "Charges by account" tab. The AWS Bills page provides details for both services provided by AWS and purchases made through the AWS Marketplace. For AWS Billing Conductor users, the AWS Billing page provides proforma data for member accounts and master accounts in a billing group; management accounts can toggle between billable and proforma data views.
 
-## Referencias
-- https://docs.aws.amazon.com/es_es/awsaccountbilling/latest/aboutv2/billing-what-is.html
+## References
+- https://docs.aws.amazon.com/en_en/awsaccountbilling/latest/aboutv2/billing-what-is.html
 
 
