@@ -1,4 +1,4 @@
-# AWS Explorador de costos
+# AWS Cost Explorer
 
 AWS Cost Explorer has a simple interface that allows you to visualize, understand and manage your AWS costs and usage over time. Get started quickly by creating custom reports that analyze cost and usage data. Analyze data on a general basis (e.g., total costs and usage across all accounts) or drill down to identify trends, determine cost drivers, and detect anomalies.
 
