@@ -71,7 +71,6 @@ Entre las recomendaciones que visualizar en este pilar tenemos:
 - Optimización de la ubicación de recursos, datos y procesamiento. 
 
 ### Pilar de optimización de costos
-
 El pilar de optimización de costos se centra en evitar gastos innecesarios. Entre los temas clave se incluyen la comprensión del tiempo dedicado y el control de la asignación de fondos, la selección de recursos para el tipo y la cantidad adecuados y el escalado para cumplir con las necesidades de la empresa sin gastos excesivos, con ello mejoramos:
 
 - Práctica de la administración financiera en la nube.
