@@ -1,21 +1,21 @@
-# AWS Explorador de costos
+# AWS Cost Explorer
 
-Explorador de costos de AWS tiene una interfaz sencilla que permite visualizar, comprender y administrar sus costos y uso de AWS a lo largo del tiempo. Comience rápidamente creando informes personalizados que analicen los datos de costos y uso. Analice los datos con carácter general (por ejemplo, los costos y uso total en todas las cuentas) o analícelos más en profundidad para identificar tendencias, determinar los factores de costo y detectar anomalías.
+AWS Cost Explorer has a simple interface that allows you to visualize, understand and manage your AWS costs and usage over time. Get started quickly by creating custom reports that analyze cost and usage data. Analyze data on a general basis (e.g., total costs and usage across all accounts) or drill down to identify trends, determine cost drivers, and detect anomalies.
 
 <p align="center">
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/7ac9d073-54d7-4d08-a5f1-08052363c67f">
 </p>
 
-Entre los casos de uso tenemos: 
+Among the use cases we have: 
 
-- Creación de aplicaciones personalizadas: 
-​Aproveche el acceso de manera directa al motor de análisis ad-hoc interactivo con el que funciona Explorador de costos de AWS. La API de Explorador de costos le permite consultar mediante programación los datos de costos y uso.
+- Create custom applications: 
+Take advantage of direct access to the interactive ad-hoc analysis engine that powers AWS Cost Explorer. The Cost Explorer API allows you to programmatically query cost and usage data.
 
-​- Uso del filtrado granular
-Visualice, comprenda y administre sus costos y uso de AWS a nivel de granularidad mensual o diario. Además, puede acceder a sus datos con mayor granularidad si habilita la granularidad por hora y recurso.
+- Using granular filtering
+View, understand and manage your AWS costs and usage at a monthly or daily granularity level. In addition, you can access your data at a higher granularity by enabling granularity by hour and resource.
 
-- Previsión de los costos
-Cree una previsión al seleccionar un intervalo de tiempo futuro para el informe. Puede usar la previsión para calcular la factura de AWS y definir alarmas y presupuestos según las predicciones.
+- Cost forecasting
+Create a forecast by selecting a future time interval for the report. You can use the forecast to calculate the AWS bill and set alarms and budgets based on the predictions.
 
-## Referencias
+## References
 - https://github.com/dimasx010/knowledge/assets/105082657/6814e456-8d8c-4860-afbd-cab6b566bbbe
