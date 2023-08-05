@@ -1,21 +1,21 @@
 # AWS Shield
 
-AWS Shield es un servicio de protección contra ataques DDoS que protege las aplicaciones que se ejecutan en AWS.
+AWS Shield is a DDoS attack protection service that protects applications running on AWS.
 
 <p align="center">
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/ae7a311f-2e8c-41d7-8598-a47ce274b34e">
 </p>
 
-## Casos de uso
+## Use cases
 
-### Depure el tráfico sospechoso en capas específicas de manera automática
-Proteja las aplicaciones y APIs de inundaciones SYN, inundaciones UDP u otros ataques de reflexión.
+### Automatically debug suspicious traffic at specific layers
+Protect applications and APIs from SYN floods, UDP floods or other reflection attacks.
 
-### Minimice la latencia y el tiempo de inactividad de la aplicación
-Implemente mitigaciones en línea como el filtrado de paquetes determinista y la configuración de tráfico basada en prioridades para detener ataques a la capa de red básica.
+### Minimize latency and application downtime
+Implement in-line mitigations such as deterministic packet filtering and priority-based traffic shaping to stop attacks at the core network layer.
 
-### Supervise y proteja hasta 1 000 tipos de recursos
-Active la detección, mitigación o protección automática de cada tipo de recurso por cuenta de AWS.
+### Monitor and protect up to 1,000 resource types
+Enable automatic detection, mitigation or protection for each resource type per AWS account.
 
 ## References
 - https://aws.amazon.com/es/shield/
