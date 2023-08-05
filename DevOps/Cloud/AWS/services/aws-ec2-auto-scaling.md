@@ -18,88 +18,90 @@ Adding Amazon EC2 Auto Scaling to your application architecture is one way to ge
 
 - Better cost management. Amazon EC2 Auto Scaling can dynamically scale capacity up and down as needed. Since you pay for the EC2 instances you use, you can save money by launching instances when you need them and terminating them when they are no longer needed.
 
-## Configuración de los componentes de EC2 Auto Scaling
+## Configuration of EC2 Auto Scaling components
 
-Los tres componentes principales de EC2 Auto Scaling son los siguientes:
+The three main components of EC2 Auto Scaling are as follows:
 
-Configuración o plantilla de lanzamiento: ¿Qué recurso debe escalarse automáticamente?
+Configuration or Launch Template: Which resource should be automatically scaled?
 
-Grupo de Auto Scaling EC2: ¿Dónde deben implementarse los recursos?
+EC2 Auto Scaling Group: Where should resources be deployed?
 
-Políticas de escalado: ¿Cuándo deben añadirse o eliminarse los recursos?
+Scaling policies: When should resources be added or removed?
 
-### Plantillas de lanzamiento
+### Launching templates
 
-Se necesitan varios parámetros para crear instancias EC2: ID de Amazon Machine Image (AMI), tipo de instancias, grupo de seguridad, volúmenes adicionales de Amazon Elastic Block Store (EBS) y más. EC2 Auto Scaling también requiere toda esta información para crear la instancia EC2 en su nombre cuando tenga que escalarse. Esta información se almacena en una plantilla de lanzamiento.
+Several parameters are required to create EC2 instances: Amazon Machine Image (AMI) ID, instance type, security group, additional Amazon Elastic Block Store (EBS) volumes, and more. EC2 Auto Scaling also requires all of this information to create the EC2 instance on your behalf when it needs to scale. This information is stored in a launch template.
 
-Puede utilizar una plantilla de lanzamiento para lanzar manualmente una instancia EC2. También puede utilizarla con EC2 Auto Scaling. Asimismo, admite el control de versiones, lo que permite hacer rápidamente una restauración si hay un problema o es necesario especificar una versión predeterminada. De esta forma, mientras iteran en una nueva versión, otros usuarios pueden continuar lanzando instancias EC2 por medio de la versión predeterminada hasta que realice los cambios necesarios.
+You can use a launch template to manually launch an EC2 instance. You can also use it with EC2 Auto Scaling. It also supports version control, which allows you to quickly do a restore if there is a problem or you need to specify a default version. This way, while iterating on a new version, other users can continue to launch EC2 instances via the default version until you make the necessary changes.
 
 <p align="center">
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/2a07da81-0375-4fbf-b62c-d524771d495d">
 </p>
 
-Puede crear una plantilla de lanzamiento de una de estas tres formas.
+You can create a launch template in one of three ways.
 
-La forma más rápida para crear una plantilla es utilizar una instancia EC2 actual. La totalidad de la configuración ya está definida.
+The fastest way to create a template is to use a current EC2 instance. The entire configuration is already defined.
 
-Otra opción es crear una plantilla a partir de una actual o de una versión anterior de una plantilla de lanzamiento.
+Another option is to create a template from a current or previous version of a release template.
 
-La última opción es crear una plantilla desde cero. Deberán definirse las siguientes opciones: ID de la AMI, tipo de instancias, par de claves, grupo de seguridad, almacenamiento y etiquetas de recursos.
+The last option is to create a template from scratch. The following options must be defined: AMI ID, instance type, key pair, security group, storage, and resource tags.
 
-Otra forma de definir lo que Amazon EC2 Auto Scaling tiene que escalar es mediante una configuración de lanzamiento. Es similar a la plantilla de lanzamiento, pero no permite el control de versiones al utilizar una configuración de lanzamiento creada anteriormente como plantilla. Tampoco permite crearla a partir de una instancia EC2 actual. Por estos motivos y para garantizar que obtiene las características más recientes de Amazon EC2, AWS recomienda utilizar una plantilla de lanzamiento en lugar de una configuración de lanzamiento.
+Another way to define what Amazon EC2 Auto Scaling has to scale is through a launch configuration. This is similar to the launch template, but does not allow version control when using a previously created launch configuration as a template. It also does not allow you to create it from a current EC2 instance. For these reasons, and to ensure that you get the latest Amazon EC2 features, AWS recommends using a release template instead of a release configuration.
 
-### Grupos de EC2 Auto Scaling
+### EC2 Auto Scaling Groups
 
-El siguiente componente que necesita EC2 Auto Scaling es un grupo de Auto Scaling EC2. Un grupo de Auto Scaling lo ayuda a definir dónde EC2 Auto Scaling implementa sus recursos. Aquí es donde especifica Amazon VPC y las subredes en las que se debe lanzar la instancia EC2. EC2 Auto Scaling se encarga de crear las instancias EC2 en las subredes, así que seleccione al menos dos subredes que se encuentren en distintas zonas de disponibilidad.
+The next component that EC2 Auto Scaling requires is an EC2 Auto Scaling group. An Auto Scaling group helps you define where EC2 Auto Scaling deploys its resources. This is where you specify Amazon VPC and the subnets on which the EC2 instance should be launched. EC2 Auto Scaling takes care of creating the EC2 instances on the subnets, so select at least two subnets that are in different availability zones.
 
-Con los grupos de Auto Scaling, puede especificar el tipo de compra para las instancias EC2. Puede utilizar solo bajo demanda, solo spot o una combinación de las dos, lo que le permite aprovechar las instancias de spot con una sobrecarga administrativa mínima.
+With Auto Scaling groups, you can specify the type of purchase for EC2 instances. You can use on-demand only, spot only, or a combination of the two, allowing you to leverage spot instances with minimal administrative overhead.
 
-Para especificar cuántas instancias debe lanzar EC2 Auto Scaling, dispone de tres configuraciones de capacidad para configurar el tamaño del grupo.
+To specify how many instances to launch EC2 Auto Scaling, you have three capacity settings to configure the group size.
 
-Mínima: se refiere al número mínimo de instancias que se ejecutan en el grupo de Auto Scaling, incluso si se alcanza el umbral para reducir la cantidad de instancias.
-Máxima: indica el número máximo de instancias que se ejecutan en el grupo de Auto Scaling, incluso si se alcanza el umbral para añadir nuevas instancias.
-Capacidad deseada: indica la cantidad de instancias que debe haber en el grupo de Auto Scaling. Este número solo puede acercarse o ser igual al mínimo o al máximo. EC2 Auto Scaling añade o elimina instancias automáticamente para que coincidan con el número de capacidad deseado.
+Minimum: refers to the minimum number of instances running in the Auto Scaling group, even if the threshold for reducing the number of instances is reached.
+
+Maximum: indicates the maximum number of instances running in the Auto Scaling group, even if the threshold for adding new instances is reached.
+
+Desired capacity: indicates the number of instances that should be in the Auto Scaling group. This number can only be close to or equal to the minimum or maximum. EC2 Auto Scaling automatically adds or removes instances to match the desired capacity number.
 
 <p align="center">
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/d5fee1eb-8bb1-4720-98b7-2e7791bfa82e">
 </p>
 
-Cuando EC2 Auto Scaling elimina instancias EC2 porque el tráfico es mínimo, sigue eliminando instancias EC2 hasta que alcanza una capacidad mínima. Según la aplicación, utilizar un mínimo de dos es una buena idea para garantizar la alta disponibilidad, pero usted sabe cuántas instancias EC2 requiere su aplicación como mínimo en todo momento. Al alcanzar ese límite, incluso si se indica a EC2 Auto Scaling que elimine una instancia, no lo hace para garantizar que se mantenga el mínimo.
+When EC2 Auto Scaling removes EC2 instances because traffic is minimal, it continues to remove EC2 instances until it reaches a minimum capacity. Depending on the application, using a minimum of two is a good idea to ensure high availability, but you know how many EC2 instances your application requires as a minimum at all times. When that limit is reached, even if EC2 Auto Scaling is instructed to remove an instance, it does not do so to ensure that the minimum is maintained.
 
-Por otro lado, cuando el tráfico sigue aumentando, EC2 Auto Scaling sigue añadiendo instancias EC2. Significa que el costo de su aplicación también seguirá aumentando. Por eso debe fijar un monto máximo para asegurarse de que no supere el presupuesto.
+On the other hand, when traffic continues to increase, EC2 Auto Scaling keeps adding EC2 instances. It means that the cost of your application will also continue to increase. That's why you should set a maximum amount to make sure you don't go over budget.
 
-La capacidad deseada es la cantidad de instancias EC2 que EC2 Auto Scaling crea en el momento de crear el grupo. Si ese número disminuye, EC2 Auto Scaling elimina la instancia más antigua de forma predeterminada. Si ese número aumenta, EC2 Auto Scaling crea nuevas instancias por medio de la plantilla de lanzamiento.
+The desired capacity is the number of EC2 instances that EC2 Auto Scaling creates at the time the group is created. If that number decreases, EC2 Auto Scaling deletes the oldest instance by default. If that number increases, EC2 Auto Scaling creates new instances via the launch template.
 
-### Disponibilidad con EC2 Auto Scaling
+### Availability with EC2 Auto Scaling
 
-Se utilizan diferentes números de capacidad mínima, máxima y deseada para ajustar dinámicamente la capacidad. Sin embargo, si prefiere utilizar EC2 Auto Scaling para la administración de flotas, puede configurar las tres configuraciones en el mismo número, por ejemplo cuatro, como se muestra en la imagen. EC2 Auto Scaling garantizará que si una instancia EC2 pasa a tener mal estado, la reemplaza para garantizar que siempre haya cuatro instancias EC2 disponibles. De esta forma, se garantiza una alta disponibilidad para sus aplicaciones.
+Different minimum, maximum and desired capacity numbers are used to dynamically adjust the capacity. However, if you prefer to use EC2 Auto Scaling for fleet management, you can set all three settings to the same number, for example four, as shown in the image. EC2 Auto Scaling will ensure that if an EC2 instance becomes unhealthy, it replaces it to ensure that there are always four EC2 instances available. This ensures high availability for your applications.
 
 <p align="center">
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/8ca5ac45-3bcc-40d0-8fd4-91927390a82c">
 </p>
 
-Automatización con políticas de escalado
+Automation with scaling policies
 
-De forma predeterminada, un grupo de Auto Scaling se mantendrá en la capacidad deseada inicial. Si bien es posible cambiar manualmente la capacidad deseada, también puede utilizar políticas de escalado.
+By default, an Auto Scaling group will be kept at the initial desired capacity. While it is possible to manually change the desired capacity, you can also use scaling policies.
 
-En el módulo sobre monitoreo de AWS, aprendió acerca de las métricas y las alarmas de Amazon CloudWatch. Las métricas se utilizan para conservar la información sobre los distintos atributos de la instancia EC2, como el porcentaje de la CPU. Las alarmas se utilizan para especificar una acción cuando se alcanza un umbral. Las métricas y las alarmas son lo que utilizan las políticas de escalado para saber cuándo actuar. Por ejemplo, puede configurar una alarma que indique cuando la utilización de la CPU supera el 70 % en toda la flota de instancias EC2 y desencadenar una política de escalado a fin de añadir una instancia EC2.
+In the AWS Monitoring module, you learned about Amazon CloudWatch metrics and alarms. Metrics are used to keep information about various attributes of the EC2 instance, such as CPU percentage. Alarms are used to specify an action when a threshold is reached. Metrics and alarms are what scaling policies use to know when to take action. For example, you can configure an alarm to indicate when CPU utilization exceeds 70% across the fleet of EC2 instances and trigger a scaling policy to add an EC2 instance.
 
-Hay tres tipos de políticas de escalado disponibles: escalado simple, de pasos, y de seguimiento de destino.
+Three types of scaling policies are available: simple scaling, step scaling, and target tracking.
 
-Política de escalado simple
+Simple escalation policy
 
-Una política de escalado sencilla le permite hacer exactamente lo que se describe en este módulo. Utiliza una alarma de CloudWatch y especifica qué hacer cuando se activa. Puede tratarse de un número de instancias EC2 que se deben añadir o quitar, o de un número específico en el que establecer la capacidad deseada. Puede especificar un porcentaje del grupo en lugar de utilizar una cantidad de instancias EC2, lo que hace que el grupo crezca o se reduzca con mayor rapidez.
+A simple escalation policy allows you to do exactly what is described in this module. It uses a CloudWatch alarm and specifies what to do when it is triggered. This can be a number of EC2 instances to add or remove, or a specific number on which to set the desired capacity. You can specify a percentage of the pool instead of using a number of EC2 instances, which makes the pool grow or shrink faster.
 
-Una vez activada la política de escalado, espera un periodo de recuperación antes de realizar cualquier otra acción. Es importante porque las instancias EC2 tardan tiempo en iniciarse, y la alarma de CloudWatch podría activarse mientras se inicia la instancia EC2. Por ejemplo, podría decidir añadir una instancia EC2 si la utilización de la CPU en todas las instancias superara el 65 %. No quiere añadir más instancias hasta que la nueva instancia EC2 acepte el tráfico. Sin embargo, ¿qué ocurriría si la utilización de la CPU superara el 85 % en el grupo de Auto Scaling? Es posible que añadir una instancia no sea la decisión correcta. En cambio, es posible que quiera añadir otro paso en la política de escalado. Lamentablemente, una política de escalado simple no puede ayudar con eso.
+Once the scaling policy is enabled, wait for a recovery period before taking any further action. This is important because EC2 instances take time to start up, and the CloudWatch alarm could be triggered while the EC2 instance is starting up. For example, you might decide to add an EC2 instance if the CPU utilization across all instances exceeds 65%. You do not want to add more instances until the new EC2 instance accepts the traffic. However, what would happen if the CPU utilization exceeded 85% in the Auto Scaling group? Adding an instance may not be the right decision. Instead, you may want to add another step in the scaling policy. Unfortunately, a simple scaling policy can't help with that.
 
-Política de escalado por pasos
+Stepwise scaling policy
 
-Aquí es donde es útil una política de escalado por pasos. Las políticas de escalado por pasos responden a las alarmas adicionales incluso mientras se está realizando una actividad de escalado o un reemplazo de comprobaciones de estado. Al igual que en el ejemplo anterior, podría decidir añadir dos instancias más cuando la utilización de la CPU sea del 85 % y cuatro instancias más cuando sea del 95 %.
+This is where a step escalation policy is useful. Stepwise scaling policies respond to additional alarms even while a scaling activity or status check replacement is in progress. As in the previous example, you could decide to add two more instances when CPU utilization is 85% and four more instances when it is 95%.
 
-Decidir cuándo añadir y quitar instancias de acuerdo con las alarmas de CloudWatch podría parecer una tarea difícil. Por eso existe el tercer tipo de política de escalado: el seguimiento de destino.
+Deciding when to add and remove instances according to CloudWatch alarms might seem like a difficult task. That's why there is the third type of scaling policy: target tracking.
 
-Política de escalado de seguimiento de destino
-Si la aplicación se escala según la utilización promedio de la CPU, la utilización de la red promedio (dentro o fuera) o el recuento de solicitudes, este tipo de política de escalado es el que se debe utilizar. Todo lo que tiene que proporcionar es el valor de destino al que se va a dar seguimiento, y se crean automáticamente las alarmas de CloudWatch necesarias.
+Target tracking scaling policy
+If the application scales based on average CPU utilization, average network utilization (in or out) or request count, this type of scaling policy is the one to use. All you have to provide is the target value to be tracked, and the necessary CloudWatch alarms are automatically created.
 
 ## References
 - https://docs.aws.amazon.com/en_en/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html
