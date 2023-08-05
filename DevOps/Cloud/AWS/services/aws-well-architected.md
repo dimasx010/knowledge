@@ -1,81 +1,85 @@
 # AWS Well Architected
 
-AWS Well-Architected ayuda a los arquitectos de la nube a crear una infraestructura segura, de alto rendimiento, resistente y eficiente para una variedad de aplicaciones y cargas de trabajo. Este marco, creado en torno a seis pilares (excelencia operativa, seguridad, fiabilidad, eficiencia de rendimiento, optimización de costos y sostenibilidad), ofrece un enfoque coherente para que los clientes y los socios evalúen las arquitecturas e implementen diseños escalables.
+AWS Well-Architected helps cloud architects create a secure, high-performance, resilient and efficient infrastructure for a variety of applications and workloads. This framework, built around six pillars (operational excellence, security, reliability, performance efficiency, cost optimization and sustainability), provides a consistent approach for customers and partners to evaluate architectures and implement scalable designs.
 
-AWS Well-Architected Framework incluye enfoques de dominios específicos, laboratorios prácticos y AWS Well-Architected Tool. AWS Well-Architected Tool, disponible sin costo alguno en la consola de administración de AWS, proporciona un mecanismo para evaluar regularmente las cargas de trabajo, identificar los problemas de alto riesgo y registrar las mejoras.
+The AWS Well-Architected Framework includes domain-specific approaches, hands-on labs, and the AWS Well-Architected Tool. AWS Well-Architected Tool, available at no cost in the AWS Management Console, provides a mechanism to regularly assess workloads, identify high-risk issues, and record improvements.
 
 <p align="center">
   <img src="https://github.com/dimasx010/knowledge/assets/105082657/3c227a4f-a8a0-42be-aac6-e78a4c0dd39f">
 </p>
 
-## AWS Well-Architected y los seis pilares
+## AWS Well-Architected and the Six Pillars
 
-AWS Well-Architected Framework describe los conceptos clave, los principios de diseño y las prácticas recomendadas de arquitectura para diseñar y ejecutar cargas de trabajo en la nube. Responda un conjunto de preguntas básicas para descubrir hasta qué punto su arquitectura está en consonancia con las prácticas recomendadas en la nube y obtenga orientación para mejorarla.
+AWS Well-Architected Framework describes key concepts, design principles, and architectural best practices for designing and running workloads in the cloud. Answer a set of basic questions to discover how well your architecture aligns with cloud best practices and get guidance on how to improve it.
 
-### Pilar de excelencia operativa
-El pilar de la excelencia operativa se concentra en ejecutar y monitorear los sistemas y en mejorar constantemente los procesos y los procedimientos. Entre los temas clave se incluyen la automatización de cambios, la respuesta a eventos y la definición de estándares para administrar las operaciones diarias, con esto mejoramos: 
+### Operational excellence pillar
 
-- La organización
-- Preparación
-- Operación
-- Evolución
+The operational excellence pillar focuses on executing and monitoring systems and constantly improving processes and procedures. Key issues include automating changes, responding to events and defining standards to manage daily operations, thereby improving: 
 
-Entre las recomendaciones que visualizar en este pilar tenemos: 
+- The organization
+- Preparedness
+- Operation
+- Evolution
 
-- Comprender las prioridades del negocio.
-- Diseñar en función a las operaciones.
-- Evaluar la preparación operativa. 
-- Comprender la carga de trabajo y el estado operativo
-- Prepararse para los eventos y responder a ellos. 
-- Aprender de la experiencia, compartir aprendizajes y realizar mejoras. 
+Among the recommendations to visualize in this pillar we have: 
 
-### Pilar de seguridad
-El pilar de la seguridad se concentra en proteger la información y los sistemas. Entre los temas clave se incluyen la confidencialidad y la integridad de los datos, la administración de los permisos de usuarios y el establecimiento de controles para detectar eventos de seguridad, con ello afectamos: 
+- Understand business priorities.
+- Design according to operations.
+- Assess operational readiness. 
+- Understand workload and operational status.
+- Prepare for and respond to events. 
+- Learn from experience, share learnings and make improvements. 
 
-- La administración de identidades de acceso. 
-- Detección
-- Protección de la infraestructura
-- Protección de datos
-- Respuesta ante incidentes.
+### Safety pillar
 
-Entre las recomendaciones que visualizar en este pilar tenemos: 
+The security pillar focuses on protecting information and systems. Key issues include confidentiality and data integrity, administration of user permissions and the establishment of controls to detect security events, thereby affecting: 
 
-- Proteger la información, los sistemas y los activos.
-- Proteger las credenciales de la cuenta raiz root
-- Cifrar de varias formas los datos en reposo y en tránsito en AWS si corresponde.
-- Garantizar que solo los usuarios autenticados y autorizados puedan acceder a sus recursos. 
-- Utilizar los controles de detección para localizar o identificar una infraccion de seguridad. 
+- The administration of access identities. 
+- Detection
+- Infrastructure protection
+- Data protection
+- Incident response.
 
-### Pilar de fiabilidad
-El pilar de fiabilidad se centra en las cargas de trabajo que realizan las funciones previstas y en cómo recuperarse rápidamente de los errores para cumplir con las demandas. Entre los temas clave se incluyen el diseño de sistemas distribuidos, la planificación de la recuperación y cómo adaptarse a los requisitos cambiantes, mejoramos: 
+Among the recommendations to be visualized in this pillar we have: 
 
-- Conceptos básicos
-- Arquitectura de cargas de trabajo
-- Administración de cambios
-- Administración de errores
+- Protect information, systems and assets.
+- Protect root account credentials.
+- Encrypt data at rest and in transit in AWS in various ways if applicable.
+- Ensure that only authenticated and authorized users can access your resources. 
+- Use detection controls to locate or identify a security breach.
 
-### Pilar de eficacia del rendimiento
-El pilar de eficacia del rendimiento se centra en la asignación estructurada y simplificada de TI y en los recursos informáticos. Entre los temas clave se incluyen la selección de los tipos y tamaños de recursos optimizados para los requisitos de la carga de trabajo, la supervisión del rendimiento y el mantenimiento de la eficacia a medida que evolucionan las necesidades de la empresa, mejora:
+### Reliability pillar
 
-- Selección de recursos
-- Revisión
-- Monitoreo
-- Análisis de ventajas y desventajas.
+The reliability pillar focuses on workloads performing their intended functions and how to recover quickly from failures to meet demands. Key topics include distributed system design, recovery planning and how to adapt to changing requirements, we improve: 
 
-Entre las recomendaciones que visualizar en este pilar tenemos: 
+- Basics
+- Workload architecture
+- Change management
+- Error Management
 
-- Utilización de recursos de cómputo de manera eficaz para satisfacer los requisitos del sistema.
-- Selección de los tipos de recursos adecuados.
-- Punto de referencia y prueba de carga
-- Monitoreo de rendimiento
-- Optimización de la ubicación de recursos, datos y procesamiento. 
+### Performance efficiency pillar
 
-### Pilar de optimización de costos
-El pilar de optimización de costos se centra en evitar gastos innecesarios. Entre los temas clave se incluyen la comprensión del tiempo dedicado y el control de la asignación de fondos, la selección de recursos para el tipo y la cantidad adecuados y el escalado para cumplir con las necesidades de la empresa sin gastos excesivos, con ello mejoramos:
+The performance efficiency pillar focuses on structured and simplified IT allocation and computing resources. Key topics include selecting the types and sizes of resources optimized for workload requirements, monitoring performance, and maintaining efficiency as business needs evolve, improve:
 
-- Práctica de la administración financiera en la nube.
-- Conocimiento del gasto y del uso
-- Recursos Rentables
-- Administración de la demanda y suministro de recursos 
-- Optimización a lo largo del tiempo.
+- Resource Selection
+- Reviewing
+- Monitoring
+- Trade-off analysis.
 
+Among the recommendations to visualize in this pillar we have: 
+
+- Utilization of computational resources in an efficient manner to satisfy system requirements.
+- Selection of appropriate resource types.
+- Benchmark and load testing
+- Performance monitoring
+- Optimization of resource location, data and processing.
+
+### Cost optimization pillar
+
+The cost optimization pillar focuses on avoiding unnecessary expenses. Key issues include understanding time spent and controlling the allocation of funds, selecting resources for the right type and amount, and scaling to meet business needs without overspending, thereby improving:
+
+- Financial management practice in the cloud.
+- Knowledge of spending and usage.
+- Profitable Resources
+- Resource demand and supply management 
+- Optimization over time.
