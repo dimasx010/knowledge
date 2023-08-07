@@ -8,16 +8,16 @@ Amazon Inspector es un servicio de administración automatizada de vulnerabilida
 
 ## Casos de uso
 
-- Descubra rápidamente las vulnerabilidades de día cero en las cargas de trabajo de computación
+### Descubra rápidamente las vulnerabilidades de día cero en las cargas de trabajo de computación
 Automatice el descubrimiento, acelere el enrutamiento de vulnerabilidades y reduzca el MTTR con más de 50 fuentes de inteligencia sobre vulnerabilidades.
 
-- Priorización de la corrección de parches
+### Priorización de la corrección de parches
 Utilice la información actual sobre vulnerabilidades y exposiciones comunes (CVE) y la accesibilidad a la red para crear puntuaciones de riesgo contextuales a fin de priorizar y resolver los recursos vulnerables.
 
-- Cumplimiento de los requisitos de conformidad
+### Cumplimiento de los requisitos de conformidad
 Respalde los requisitos de conformidad y las prácticas recomendadas para NIST CSF, PCI DSS y otras regulaciones con análisis de Amazon Inspector.
 
-- Mejore la visibilidad con SBOM
+### Mejore la visibilidad con SBOM
 Exporte la SBOM consolidada para los recursos supervisados a Amazon S3 y obtenga información mediante los paneles de Amazon Athena y Amazon QuickSight.##
 
 ## References
