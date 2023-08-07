@@ -21,4 +21,4 @@ Respalde los requisitos de conformidad y las prácticas recomendadas para NIST C
 Exporte la SBOM consolidada para los recursos supervisados a Amazon S3 y obtenga información mediante los paneles de Amazon Athena y Amazon QuickSight.##
 
 ## References
-- https://keepcoding.io/blog/aplicaciones-cloud-aws-amplify/
+- https://aws.amazon.com/es/inspector/#:~:text=Amazon%20Inspector%20es%20un%20servicio,exposici%C3%B3n%20involuntaria%20a%20la%20red.
