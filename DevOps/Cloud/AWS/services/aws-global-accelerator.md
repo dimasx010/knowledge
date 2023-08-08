@@ -1,9 +1,9 @@
-# AWS Amplify
+# AWS Global Accelerator
 
 AWS Global Accelerator es un servicio de redes que ayuda a mejorar la disponibilidad, el rendimiento y la seguridad de sus aplicaciones públicas. Global Accelerator proporciona dos direcciones IP públicas estáticas globales que actúan como un punto de entrada fijo a los puntos de conexión de sus aplicaciones, como equilibradores de carga de aplicación, equilibradores de carga de red, instancias de Amazon Elastic Compute Cloud (EC2) y direcciones IP elásticas.
 
 <p align="center">
-  <img src="https://github.com/dimasx010/knowledge/assets/105082657/c454082f-f932-4778-a4cd-5f13f97d1e06">
+  <img src="https://github.com/dimasx010/knowledge/assets/105082657/9a1f0578-9911-478b-a4ae-f6288637c52b">
 </p>
 
 ## Casos de uso
