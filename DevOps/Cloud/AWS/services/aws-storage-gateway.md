@@ -23,4 +23,4 @@ AWS Storage Gateway existe en tres modalidades:
 - Tape Gateway, que presenta una librería de cintas virtual en su red local y es compatible con las principales aplicaciones de respaldos disponibles en el mercado. Bajo esta modalidad, usted puede apalancar servicios de almacenamiento como Amazon S3 Deep Archive para archivar sus respaldos con un costo muy bajo por TB.
 
 ## References
-- https://keepcoding.io/blog/aplicaciones-cloud-aws-amplify/
+- https://aws.amazon.com/es/blogs/aws-spanish/almacenamiento-hibrido-para-el-centro-de-datos-con-aws-storage-gateway/#:~:text=AWS%20Storage%20Gateway%20es%20un,manera%20transparente%20y%20sin%20contratiempos.
