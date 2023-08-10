@@ -54,4 +54,4 @@ AWS Organizations es un servicio global con un único punto de enlace que funcio
 AWS Organizations es una característica de su Cuenta de AWS que se ofrece sin cargo adicional. Solo se le cobrará cuando acceda a otros servicios AWS de las cuentas de su organización
 
 ## References
-- https://keepcoding.io/blog/aplicaciones-cloud-aws-amplify/
+- https://docs.aws.amazon.com/es_es/organizations/latest/userguide/orgs_introduction.html
