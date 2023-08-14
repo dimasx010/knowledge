@@ -1,4 +1,4 @@
-# AWS Amplify
+# AWS Braket
 
 Amazon Braket es un servicio de informática cuántica completamente administrado que se diseñó para ayudar a acelerar la investigación científica y el desarrollo de software para la informática cuántica.
 
